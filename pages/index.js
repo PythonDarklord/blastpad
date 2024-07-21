@@ -31,7 +31,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.favorites}>
-          <h2 style={{"font-size": "20px; color: 0, 0, 0"}}>Favorites</h2>
+          <h2 style={{"font-size": "20px", color: "rgb(255, 255, 255)"}}>Favorites</h2>
           </div>
         <h1 className={styles.title}> BlastPad </h1>
         <form onSubmit={handleSubmt}>

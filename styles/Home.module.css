@@ -25,3 +25,8 @@
   color: var(--purple);
   font-size: 75px;
 }
+.favorites {
+  margin: auto;
+  width: 25%;
+  padding: 5px;
+}
