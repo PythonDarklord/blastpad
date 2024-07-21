@@ -4,6 +4,11 @@
     --font-jetbrains: 'JetBrains Mono', monospace;
     --purple: #8304d1;
     --background: black;
+    
+    /* Colors for the subsection backgrounds */
+    --favoritesColor: #F6D454;
+    --emailsColor: rgb(165, 64, 64);
+
 }
 body {
   font-family: var(--font-jetbrains);

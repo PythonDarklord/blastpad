@@ -11,6 +11,7 @@
   box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
   background-color: var(--background);
   padding: 0 1ch;
+  margin-bottom: 5vb;
 }
 .search:focus {
   outline: 2px solid var(--purple);
@@ -29,14 +30,31 @@
   font-size: 60px;
   margin: 0;
 }
-.favorites {
+.scrollBox {
+  height: 45%;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Subsection styles */
+.subsection {
+  display: inline-block;
+  margin: 2vb;
   align-self: flex-start;
-  height: 20vh;
-  width: 25vw;
-  padding: 5px;
   text-align: center;
 }
 .subheader {
-  color: var(--purple);
+  color: black;
   font-size: 25px;
+  text-align: left;
+  margin: 1vi;
+}
+.favorites {
+  height: 25vh;
+  width: 30vw;
+  padding: 5px;
+}
+.emails {
+  height: 25vh;
+  width:50vw;
 }

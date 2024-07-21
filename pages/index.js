@@ -55,12 +55,30 @@ export default function Home() {
             />
           </form>
         </div>
-
-        <div className={styles.favorites}>
-          <h2 className={styles.subheader}> Favorites </h2>
-          <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
-          
+        
+        {/* Favorites Section */}
+        <div className={styles.subsection} style={{"background": "var(--favoritesColor)"}}>
+          <div className={styles.favorites}>
+            <h2 className={styles.subheader}> Favorites </h2>
+            <div className={styles.scrollBox}>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
+          </div>
         </div>
+
+        <div className={styles.subsection} style={{"background": "var(--emailsColor"}}>
+          <div className={styles.emails}>
+            <h2 className={styles.subheader}> Emails </h2>
+          </div>
+        </div>
+        
         {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} addMethod={addFavorite} />}
           
       </main>
