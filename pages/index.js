@@ -42,11 +42,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.favorites}>
-          <h2 style={{"font-size": "20px", color: "rgb(255, 255, 255)"}}>Favorites</h2>
-        </div>
-
-          <div className={styles.titlesearch}>
           <h1 className={styles.title}> BlastPad </h1>
           <form onSubmit={handleSubmt}>
             <input
@@ -57,8 +52,6 @@ export default function Home() {
               className={styles.search}
             />
           </form>
-          </div>
-
         <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
         {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} addMethod={addFavorite} />}
       </main>
