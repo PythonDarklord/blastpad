@@ -40,9 +40,9 @@ export default function Home() {
     setFavoritePopup(false);
     console.log(`{${name}: ${url}}`);
     var names = [];
-    names.appendChild(name);
+    names.push(name);
     var urls = [];
-    urls.appendChild(url);
+    urls.push(url);
   };
 
   const listFavorite = () => {
@@ -51,13 +51,13 @@ export default function Home() {
     for (i = 0; i < names.length; ++i) {
       let li = document.createElement("li");
       li.innerText - names[i];
-      list.appendChild(li);
+      nameslist.push(li);
     }
     let urlslist = document.getElementById("favoritesList");
     for (i = 0; i < urls.length; ++i) {
       let li = document.createElement("li");
       li.innerText - urls[i];
-      list.appendChild(li);
+      nameslist.push(li);
     }
   };
 
@@ -90,7 +90,9 @@ export default function Home() {
             <div className={styles.favorites}>
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
-                <ul id="favoritesList" addMethod={listFavorite}></ul>
+                <ul id="favoritesList">
+                  
+                </ul>
               </div>
               <button onClick={() => setFavoritePopup(true)}>
                 Add Favorite
