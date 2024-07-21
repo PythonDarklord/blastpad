@@ -1,5 +1,5 @@
 .fullscreen {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -8,6 +8,7 @@
     justify-content: center;
 }
 .popup {
+    position: relative;
     border: 2px solid var(--purple);
     border-radius: 10px;
     width: 40vw;
@@ -16,20 +17,69 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--background);
+    color: white;
+    -webkit-box-shadow:0px 0px 91px 60px rgba(131,4,177,0.39);
+    -moz-box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
+    box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
 }
 .form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
     gap: 20px;
     font-size: x-large;
+}
+.form h2 {
+    margin: 0;
+}
+.form input {
+    outline: white;
+    background-color: var(--background);
+    border: 2px solid white;
+    font-size: x-large;
+    font-family: var(--font-jetbrains);
+    color: white;
+    padding: 0.6ch 1ch;
+    border-radius: 12px;
+    width: 100%;
+}
+.form button {
+    background-color: var(--background);
+    font-family: var(--font-jetbrains);
+    color: white;
+    font-size: x-large;
+    padding: 0.6ch 1ch;
+    border: 2px solid white;
+    border-radius: 12px;
+
 }
 .popup > form > div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: var(--background);
+}
+@media (pointer: fine) {
+    .close {
+        cursor: pointer;
+    }
+    .form button {
+        cursor: pointer;
+    }
 }
