@@ -39,14 +39,17 @@ export default function Home() {
     const url = e.target.url.value;
     setFavoritePopup(false);
     console.log(`{${name}: ${url}}`);
+  };
+
+  const listFavorite = (e) => {
+    //List for favorites
+    e.preventDefault();
+    const name = e.target.name.value;
+    const url = e.target.url.value;
     var names = [];
     names.push(name);
     var urls = [];
     urls.push(url);
-  };
-
-  const listFavorite = () => {
-    //List for favorites
     let nameslist = document.getElementById("favoritesList");
     for (i = 0; i < names.length; ++i) {
       let li = document.createElement("li");
