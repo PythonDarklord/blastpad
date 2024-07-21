@@ -12,9 +12,12 @@ export default function Home() {
 
   useEffect(() => {
     const cookies = document.cookie;
-    console.log(cookies);
-    //document.cookie = "favorites = {}"
-  });
+    if (cookies.includes("favorites")) {
+      console.log(cookies);
+    } else {
+      document.cookie = "favorites = {}";
+    }
+  }, []);
 
   const handleSubmt = (e) => {
     e.preventDefault();
