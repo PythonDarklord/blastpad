@@ -9,4 +9,5 @@ body {
   font-family: var(--font-jetbrains);
   margin: 0;
   background-color: var(--background);
+  color: white;
 }

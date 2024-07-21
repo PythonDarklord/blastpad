@@ -24,9 +24,10 @@
   height: 100vh;
 }
 .title {
-  display: inline;
+  text-align: center;
   color: var(--purple);
-  font-size: 75px;
+  font-size: 60px;
+  margin: 0;
 }
 .favorites {
   align-self: flex-start;
@@ -34,4 +35,8 @@
   width: 25vw;
   padding: 5px;
   text-align: center;
+}
+.subheader {
+  color: var(--purple);
+  font-size: 25px;
 }
