@@ -29,6 +29,17 @@
   font-size: 75px;
 }
 .favorites {
-  width: 25%;
+  align-self: flex-start;
+  height: 20vh;
+  width: 25vw;
   padding: 5px;
+  text-align: center;
+}
+.titlesearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20vw;
+  height: 40vh;
 }

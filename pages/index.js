@@ -44,17 +44,21 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.favorites}>
           <h2 style={{"font-size": "20px", color: "rgb(255, 255, 255)"}}>Favorites</h2>
+        </div>
+
+          <div className={styles.titlesearch}>
+          <h1 className={styles.title}> BlastPad </h1>
+          <form onSubmit={handleSubmt}>
+            <input
+              type="text"
+              placeholder="Prepare for blastoff!"
+              id="query"
+              name="query"
+              className={styles.search}
+            />
+          </form>
           </div>
-        <h1 className={styles.title}> BlastPad </h1>
-        <form onSubmit={handleSubmt}>
-          <input
-            type="text"
-            placeholder="Prepare for blastoff!"
-            id="query"
-            name="query"
-            className={styles.search}
-          />
-        </form>
+
         <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
         {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} addMethod={addFavorite} />}
       </main>
