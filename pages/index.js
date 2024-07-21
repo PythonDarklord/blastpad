@@ -1,25 +1,27 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
+import AddFavorite from "@/components/addFavorite";
 
 export default function Home() {
+  const [favoritePopup, setFavoritePopup] = useState(false)
 
   useEffect(() => {
     document.getElementById("query").focus();
-  })
+  });
 
   const handleSubmt = (e) => {
     e.preventDefault();
     console.log(e.target.query.value);
     const query = e.target.query.value;
-    const encodedQuery = encodeURIComponent(query);
-    const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-    window.open(googleSearchUrl, "_blank");
-
+    if (query[0] === '/') {
+      window.open('https://' + query.replace('/', ''), "_blank");
+    } else {
+      const encodedQuery = encodeURIComponent(query);
+      const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
+      window.open(googleSearchUrl, "_blank");
+    }
   };
-
-  // TODO:
-  // Add google search functionality
 
   return (
     <>
@@ -35,8 +37,19 @@ export default function Home() {
           </div>
         <h1 className={styles.title}> BlastPad </h1>
         <form onSubmit={handleSubmt}>
-          <input type="text" placeholder="Prepare for blastoff!" id="query" name="query" className={styles.search} />
+          <input
+            type="text"
+            placeholder="Prepare for blastoff!"
+            id="query"
+            name="query"
+            className={styles.search}
+          />
         </form>
+        <div className={styles.favorites}>
+          <h2 style={{ "font-size": "20px; color: 0, 0, 0" }}>Favorites</h2>
+        </div>
+        <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
+        {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} />}
       </main>
     </>
   );
