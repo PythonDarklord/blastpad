@@ -29,8 +29,12 @@ export default function Home() {
     }
   };
 
-  const addFavorite = () => {
+  const addFavorite = (e) => {
     //TODO: logic for adding favorite
+    e.preventDefault();
+    const name = e.target.name.value;
+    const url = e.target.url.value;
+    console.log(`{${name}: ${url}}`);
   };
 
   return (
