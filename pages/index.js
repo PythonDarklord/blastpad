@@ -1,8 +1,11 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
+import AddFavorite from "@/components/addFavorite";
 
 export default function Home() {
+  const [favoritePopup, setFavoritePopup] = useState(false)
+
   useEffect(() => {
     document.getElementById("query").focus();
   });
@@ -19,9 +22,6 @@ export default function Home() {
       window.open(googleSearchUrl, "_blank");
     }
   };
-
-  // TODO:
-  // Add google search functionality
 
   return (
     <>
@@ -45,6 +45,8 @@ export default function Home() {
         <div className={styles.favorites}>
           <h2 style={{ "font-size": "20px; color: 0, 0, 0" }}>Favorites</h2>
         </div>
+        <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
+        {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} />}
       </main>
     </>
   );
