@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const cookies = document.cookie
-    console.log(cookies[favorites])
+    console.log(cookies)
     //document.cookie = "favorites = {}"
   });
 
