@@ -36,12 +36,13 @@
     height: 45%;
     width: 100%;
     overflow: auto;
+    list-style-type: none;
 }
 
 /* Subsection styles */
 .subsection {
     display: inline-block;
-    margin: 2vb;
+    margin: 0vb;
     align-self: flex-start;
     text-align: center;
 }
@@ -53,12 +54,11 @@
 }
 .favorites {
     height: 25vh;
-    width: 30vw;
-    padding: 5px;
+    width: 34vw;
 }
 .emails {
     height: 25vh;
-    width: 50vw;
+    width: 64vw;
 }
 .tiles {
     display: flex;
