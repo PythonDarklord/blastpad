@@ -10,6 +10,12 @@ export default function Home() {
     document.getElementById("query").focus();
   });
 
+  useEffect(() => {
+    const cookies = document.cookie
+    console.log(cookies[favorites])
+    //document.cookie = "favorites = {}"
+  });
+
   const handleSubmt = (e) => {
     e.preventDefault();
     console.log(e.target.query.value);
