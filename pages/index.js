@@ -4,15 +4,15 @@ import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
 
 export default function Home() {
-  const [favoritePopup, setFavoritePopup] = useState(false)
+  const [favoritePopup, setFavoritePopup] = useState(false);
 
   useEffect(() => {
     document.getElementById("query").focus();
   });
 
   useEffect(() => {
-    const cookies = document.cookie
-    console.log(cookies)
+    const cookies = document.cookie;
+    console.log(cookies);
     //document.cookie = "favorites = {}"
   });
 
@@ -20,8 +20,8 @@ export default function Home() {
     e.preventDefault();
     console.log(e.target.query.value);
     const query = e.target.query.value;
-    if (query[0] === '/') {
-      window.open('https://' + query.replace('/', ''), "_blank");
+    if (query[0] === "/") {
+      window.open("https://" + query.replace("/", ""), "_blank");
     } else {
       const encodedQuery = encodeURIComponent(query);
       const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
@@ -31,7 +31,7 @@ export default function Home() {
 
   const addFavorite = () => {
     //TODO: logic for adding favorite
-  }
+  };
 
   return (
     <>
@@ -42,7 +42,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
         <div>
           <h1 className={styles.title}> BlastPad </h1>
           <form onSubmit={handleSubmt}>
@@ -55,32 +54,42 @@ export default function Home() {
             />
           </form>
         </div>
-        
-        {/* Favorites Section */}
-        <div className={styles.subsection} style={{"background": "var(--favoritesColor)"}}>
-          <div className={styles.favorites}>
-            <h2 className={styles.subheader}> Favorites </h2>
-            <div className={styles.scrollBox}>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+        <div className={styles.tiles}>
+          <div
+            className={styles.subsection}
+            style={{ background: "var(--favoritesColor)" }}
+          >
+            <div className={styles.favorites}>
+              <h2 className={styles.subheader}> Favorites </h2>
+              <div className={styles.scrollBox}>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <button onClick={() => setFavoritePopup(true)}>
+                Add Favorite
+              </button>
             </div>
-            <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
+          </div>
+          <div
+            className={styles.subsection}
+            style={{ background: "var(--emailsColor" }}
+          >
+            <div className={styles.emails}>
+              <h2 className={styles.subheader}> Emails </h2>
+            </div>
           </div>
         </div>
-
-        <div className={styles.subsection} style={{"background": "var(--emailsColor"}}>
-          <div className={styles.emails}>
-            <h2 className={styles.subheader}> Emails </h2>
-          </div>
-        </div>
-        
-        {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} addMethod={addFavorite} />}
-          
+        {favoritePopup && (
+          <AddFavorite
+            closeMethod={() => setFavoritePopup(false)}
+            addMethod={addFavorite}
+          />
+        )}
       </main>
     </>
   );

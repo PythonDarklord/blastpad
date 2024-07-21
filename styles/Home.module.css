@@ -1,60 +1,72 @@
 .search {
-  border: 2px solid var(--background);
-  width: 60vw;
-  height: 10vh;
-  border-radius: 2vh;
-  font-family: var(--font-jetbrains);
-  font-size: xx-large;
-  color: rgba(255, 255, 255, 0.658);
-  -webkit-box-shadow:0px 0px 91px 60px rgba(131,4,177,0.39);
-  -moz-box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
-  box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
-  background-color: var(--background);
-  padding: 0 1ch;
-  margin-bottom: 5vb;
+    border: 2px solid var(--background);
+    width: 60vw;
+    height: 10vh;
+    border-radius: 2vh;
+    font-family: var(--font-jetbrains);
+    font-size: xx-large;
+    color: rgba(255, 255, 255, 0.658);
+    -webkit-box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
+    -moz-box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
+    box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
+    background-color: var(--background);
+    padding: 0 1ch;
+    margin-bottom: 5vb;
 }
 .search:focus {
-  outline: 2px solid var(--purple);
+    outline: 2px solid var(--purple);
 }
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100vw;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 .title {
-  text-align: center;
-  color: var(--purple);
-  font-size: 60px;
-  margin: 0;
+    text-align: center;
+    color: var(--purple);
+    font-size: 60px;
+    margin: 0;
 }
 .scrollBox {
-  height: 45%;
-  width: 100%;
-  overflow: auto;
+    height: 45%;
+    width: 100%;
+    overflow: auto;
 }
 
 /* Subsection styles */
 .subsection {
-  display: inline-block;
-  margin: 2vb;
-  align-self: flex-start;
-  text-align: center;
+    display: inline-block;
+    margin: 2vb;
+    align-self: flex-start;
+    text-align: center;
 }
 .subheader {
-  color: black;
-  font-size: 25px;
-  text-align: left;
-  margin: 1vi;
+    color: black;
+    font-size: 25px;
+    text-align: left;
+    margin: 1vi;
 }
 .favorites {
-  height: 25vh;
-  width: 30vw;
-  padding: 5px;
+    height: 25vh;
+    width: 30vw;
+    padding: 5px;
 }
 .emails {
-  height: 25vh;
-  width:50vw;
+    height: 25vh;
+    width: 50vw;
+}
+.tiles {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: row;
 }
