@@ -40,9 +40,9 @@ export default function Home() {
     setFavoritePopup(false);
     console.log(`{${name}: ${url}}`);
     var names = [];
-    names.appendChild(name);
+    names.push(name);
     var urls = [];
-    urls.appendChild(url);
+    urls.push(url);
   };
 
   const listFavorite = () => {
