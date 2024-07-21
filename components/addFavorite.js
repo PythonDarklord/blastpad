@@ -1,6 +1,6 @@
 import styles from '@/styles/addFavorite.module.css'
 
-export default function AddFavorite({ closeMethod }) {
+export default function AddFavorite({ closeMethod, addMethod }) {
 
 
   return (
@@ -17,7 +17,7 @@ export default function AddFavorite({ closeMethod }) {
             <input id='address' name='address' type='url'></input>
           </div>
           <div>
-            <button>Add</button>
+            <button onClick={addMethod}>Add</button>
           </div>
         </form>
       </div>

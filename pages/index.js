@@ -23,6 +23,10 @@ export default function Home() {
     }
   };
 
+  const addFavorite = () => {
+    //TODO: logic for adding favorite
+  }
+
   return (
     <>
       <Head>
@@ -49,7 +53,7 @@ export default function Home() {
           <h2 style={{ "font-size": "20px; color: 0, 0, 0" }}>Favorites</h2>
         </div>
         <button onClick={() => setFavoritePopup(true)}>Add Favorite</button>
-        {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} />}
+        {favoritePopup && <AddFavorite closeMethod={() => setFavoritePopup(false)} addMethod={addFavorite} />}
       </main>
     </>
   );
