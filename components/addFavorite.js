@@ -3,19 +3,19 @@ import styles from '@/styles/addFavorite.module.css'
 export default function AddFavorite({ closeMethod, addMethod }) {
 
 
-  getName(() => {
+  const getName = () => {
     var name = document.getElementById('name').value;
     var names = [];
     names.append(name);
     return names;
-  });
+  };
 
-  getURL(() => {
+  const getURL = () => {
     var url = document.getElementById('url').value;
     var urls = []
     urls.append(url);
     return urls;
-  });
+  };
 
   return (
     <div className={styles.fullscreen}>
