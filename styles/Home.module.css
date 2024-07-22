@@ -34,14 +34,21 @@
     margin: 2%;
 }
 .scrollBox {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #25252511;
+    border-radius: 10px;
     height: 45%;
-    width: 100%;
+    width: 98%;
     overflow: auto;
     list-style-type: none;
 }
 
 /* Subsection styles */
 .subsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 15px;
     display: inline-block;
     margin: 0vb;
