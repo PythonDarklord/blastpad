@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
 import settingsMenu from "@/components/settingsMenu"
 import SettingsMenu from "@/components/settingsMenu";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
