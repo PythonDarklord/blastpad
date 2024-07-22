@@ -13,10 +13,16 @@
     padding: 0 1ch;
     margin-top: 3vb;
     margin-bottom: 6vb;
+    transition-duration: 0.2s;
 }
 
 .search:focus {
     outline: 2px solid var(--purple);
+}
+
+.search:hover {
+    width: 62vw;
+    height: 10vh;
 }
 
 .main {
@@ -90,6 +96,12 @@
     margin: 0vb;
     align-self: flex-start;
     text-align: center;
+    transition-duration: 0.2s;
+}
+
+.subsection:hover {
+    position: relative;
+    bottom: 5px;
 }
 
 .subheader {
