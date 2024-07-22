@@ -64,8 +64,10 @@
   position: absolute;
   left: 5vb;
   top: 6vb;
+}
 
-
+#favoritesList {
+    list-style-type: none;
 }
 
 /* Subsection styles */
