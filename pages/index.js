@@ -14,7 +14,12 @@ export default function Home() {
   useEffect(() => {
     const cookies = document.cookie;
     if (cookies.includes("favorites")) {
-      console.log(cookies);
+      const cookiesList = cookies.split(";");
+      const favoritesCookie = cookiesList
+        .filter((item) => item.includes("favorites="))[0]
+        .replace("favorites=", "");
+      const cookieData = JSON.parse(favoritesCookie);
+      setFavorites(cookieData);
     } else {
       document.cookie = "favorites = {}";
     }
@@ -39,7 +44,14 @@ export default function Home() {
     const url = e.target.url.value;
     setFavoritePopup(false);
     setFavorites([...favorites, { name: name, url: url }]);
-    document.cookie = `favorites: ${favorites}`;
+    var now = new Date();
+    var expires = new Date(
+      now.getFullYear() + 10,
+      now.getMonth(),
+      now.getDate(),
+    );
+    var expiresFormatted = expires.toUTCString();
+    document.cookie = `favorites = ${JSON.stringify(favorites)}; expires=${expiresFormatted}`;
   };
 
   const listFavorite = (e) => {
@@ -95,11 +107,11 @@ export default function Home() {
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
                 <ul id="favoritesList">
-                  {/* {favorites.map((item) => (
+                  {favorites.map((item) => (
                     <li>
                       <a href={item.url}>{item.name}</a>
                     </li>
-                  ))} */}
+                  ))}
                 </ul>
               </div>
               <button onClick={() => setFavoritePopup(true)}>
