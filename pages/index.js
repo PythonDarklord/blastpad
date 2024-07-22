@@ -107,7 +107,7 @@ export default function Home() {
             <div className={styles.favorites}>
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
-                <ul id="favoritesList" style={"list-style-type: none"}>
+                <ul id="favoritesList">
                   {favorites.map((item) => (
                     <li>
                       <a href={item.url} target="_blank">{item.name}</a>
