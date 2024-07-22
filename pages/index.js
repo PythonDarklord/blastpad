@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
+import { hasCookie, getCookie, setCookie } from "cookies-next";
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
@@ -12,16 +13,9 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const cookies = document.cookie;
-    if (cookies.includes("favorites")) {
-      const cookiesList = cookies.split(";");
-      const favoritesCookie = cookiesList
-        .filter((item) => item.includes("favorites="))[0]
-        .replace("favorites=", "");
-      const cookieData = JSON.parse(favoritesCookie);
-      setFavorites(cookieData);
-    } else {
-      document.cookie = "favorites = []";
+    if (hasCookie("favorites")) {
+      const favoritesCookie = getCookie("favorites");
+      setFavorites(favoritesCookie);
     }
   }, []);
 
@@ -44,14 +38,7 @@ export default function Home() {
     const url = e.target.url.value;
     setFavoritePopup(false);
     setFavorites([...favorites, { name: name, url: url }]);
-    var now = new Date();
-    var expires = new Date(
-      now.getFullYear() + 10,
-      now.getMonth(),
-      now.getDate(),
-    );
-    var expiresFormatted = expires.toUTCString();
-    document.cookie = `favorites = ${JSON.stringify(favorites)}; expires=${expiresFormatted}`;
+    setCookie("favorites", JSON.stringify(favorites));
   };
 
   return (
@@ -88,15 +75,7 @@ export default function Home() {
             <div className={styles.favorites}>
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
-                <ul id="favoritesList">
-                  {favorites.map((item) => (
-                    <li>
-                      <a href={item.url} target="_blank">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <ul id="favoritesList">{favorites}</ul>
               </div>
               <button
                 className={styles.button}
