@@ -71,10 +71,13 @@
     position: absolute;
     left: 3%;
     top: 35%;
+    transition-duration: 0.2s;
 }
-
 .setcog:hover {
     cursor: pointer;
+    height: 5.5vh;
+    top: 33%;
+    transform: rotate(90deg);
 }
 
 /* Subsection styles */

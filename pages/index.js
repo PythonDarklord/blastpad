@@ -128,7 +128,7 @@ export default function Home() {
         {settingsPopup && (
           <SettingsMenu
             closeMethod={() => setSettingsPopup(false)}
-            addMethod={settingsMenu}
+            applyMethod={settingsMenu}
           />
         )}
       </main>
