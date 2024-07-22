@@ -39,7 +39,7 @@ export default function Home() {
     const url = e.target.url.value;
     setFavoritePopup(false);
     console.log(`{${name}: ${url}}`);
-    
+
   };
 
   return (
@@ -72,11 +72,11 @@ export default function Home() {
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
                 <ul id="favoritesList">
-                  {favorites.map((item) => (
+                  {/* {favorites.map((item) => (
                     <li>
                       <a href={item.url}>{item.name}</a>
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               </div>
               <button onClick={() => setFavoritePopup(true)}>
