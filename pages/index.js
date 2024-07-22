@@ -74,6 +74,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+      <img src="settings.png" className={styles.setcog} alt="Settings Cog"></img>
         <div>
           <h1 className={styles.title}> BlastPad </h1>
           <form onSubmit={handleSubmt}>
