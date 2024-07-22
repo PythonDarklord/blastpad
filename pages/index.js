@@ -54,29 +54,6 @@ export default function Home() {
     document.cookie = `favorites = ${JSON.stringify(favorites)}; expires=${expiresFormatted}`;
   };
 
-  const listFavorite = (e) => {
-    //List for favorites
-    e.preventDefault();
-    const name = e.target.name.value;
-    const url = e.target.url.value;
-    var names = [];
-    names.push(name);
-    var urls = [];
-    urls.push(url);
-    let nameslist = document.getElementById("favoritesList");
-    for (i = 0; i < names.length; ++i) {
-      let li = document.createElement("li");
-      li.innerText - names[i];
-      nameslist.push(li);
-    }
-    let urlslist = document.getElementById("favoritesList");
-    for (i = 0; i < urls.length; ++i) {
-      let li = document.createElement("li");
-      li.innerText - urls[i];
-      nameslist.push(li);
-    }
-  };
-
   return (
     <>
       <Head>
