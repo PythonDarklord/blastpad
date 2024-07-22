@@ -110,7 +110,7 @@ export default function Home() {
                 <ul id="favoritesList" style={"list-style-type: none"}>
                   {favorites.map((item) => (
                     <li>
-                      <a href={item.url} type="_blank">{item.name}</a>
+                      <a href={item.url} target="_blank">{item.name}</a>
                     </li>
                   ))}
                 </ul>
