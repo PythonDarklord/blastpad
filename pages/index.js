@@ -2,10 +2,13 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
+import settingsMenu from "@/components/settingsMenu"
+import SettingsMenu from "@/components/settingsMenu";
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [settingsPopup, setSettingsPopup] = useState(false);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -63,23 +66,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <header style={{position: "relative", width: "100%"}}>
-          <img
-            src="settings.png"
-            className={styles.setcog}
-            alt="Settings Cog"
-          ></img>
+        <header style={{ position: "relative", width: "100%" }}>
+            <img
+              onClick={() => setSettingsPopup(true)}
+              src="settings.png"
+              className={styles.setcog}
+              alt="Settings Cog"
+            />
           <h1 className={styles.title}> BlastPad </h1>
         </header>
-          <form onSubmit={handleSubmt}>
-            <input
-              type="text"
-              placeholder="Prepare for blastoff!"
-              id="query"
-              name="query"
-              className={styles.search}
-            />
-          </form>
+        <form onSubmit={handleSubmt}>
+          <input
+            type="text"
+            placeholder="Prepare for blastoff!"
+            id="query"
+            name="query"
+            className={styles.search}
+          />
+        </form>
         <div className={styles.tiles}>
           <div
             className={styles.subsection}
@@ -119,6 +123,12 @@ export default function Home() {
           <AddFavorite
             closeMethod={() => setFavoritePopup(false)}
             addMethod={addFavorite}
+          />
+        )}
+        {settingsPopup && (
+          <SettingsMenu
+            closeMethod={() => setSettingsPopup(false)}
+            addMethod={settingsMenu}
           />
         )}
       </main>

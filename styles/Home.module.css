@@ -14,9 +14,11 @@
     margin-top: 3vb;
     margin-bottom: 6vb;
 }
+
 .search:focus {
     outline: 2px solid var(--purple);
 }
+
 .main {
     display: flex;
     flex-direction: column;
@@ -27,12 +29,14 @@
     margin: 0;
     padding: 0;
 }
+
 .title {
     text-align: center;
     color: var(--purple);
     font-size: 70px;
     margin: 4vb;
 }
+
 .scrollBox {
     margin-left: auto;
     margin-right: auto;
@@ -43,27 +47,34 @@
     overflow: auto;
     text-align: center;
 }
+
 .button {
-  background-color: var(--buttonBackground);
-  border: 2px solid var(--buttonHover);
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  cursor: pointer;
-  height: 15%;
-  width: 25%;
-  margin-top: 1.5%;
+    background-color: var(--buttonBackground);
+    border: 2px solid var(--buttonHover);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    height: 15%;
+    width: 25%;
+    margin-top: 1.5%;
 }
+
 .button:hover {
-  background-color: var(--buttonHover);
-  color: white;
+    background-color: var(--buttonHover);
+    color: white;
 }
+
 .setcog {
-  height: 5vh;
-  position: absolute;
-  left: 3%;
-  top: 35%;
+    height: 5vh;
+    position: absolute;
+    left: 3%;
+    top: 35%;
+}
+
+.setcog:hover {
+    cursor: pointer;
 }
 
 /* Subsection styles */
@@ -77,23 +88,28 @@
     align-self: flex-start;
     text-align: center;
 }
+
 .subheader {
     color: black;
     font-size: 25px;
     text-align: left;
     margin: 1vi;
 }
+
 .favorites {
     height: 30vh;
     width: 34vw;
 }
+
 .favoritesList {
     list-style-type: none;
 }
+
 .emails {
     height: 30vh;
     width: 64vw;
 }
+
 .tiles {
     display: flex;
     width: 100%;
