@@ -1,6 +1,6 @@
 import styles from "@/styles/addFavorite.module.css";
 
-export default function SettingsMenu( {closeMethod, applyMethod} ) {
+export default function SettingsMenu({ closeMethod, applyMethod }) {
     return (
         <div className={styles.fullscreen}>
             <div className={styles.popup}>
