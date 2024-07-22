@@ -41,7 +41,7 @@
     height: 55%;
     width: 98%;
     overflow: auto;
-    list-style-type: none;
+    text-align: center;
 }
 .button {
   background-color: var(--buttonBackground);
@@ -52,8 +52,8 @@
   transition-duration: 0.2s;
   cursor: pointer;
   height: 15%;
-  width: 20%;
-  margin-top: 2.78%;
+  width: 25%;
+  margin-top: 1.5%;
 }
 .button:hover {
   background-color: var(--buttonHover);
@@ -64,10 +64,6 @@
   position: absolute;
   left: 5vb;
   top: 6vb;
-}
-
-#favoritesList {
-    list-style-type: none;
 }
 
 /* Subsection styles */
@@ -90,6 +86,9 @@
 .favorites {
     height: 30vh;
     width: 34vw;
+}
+.favoritesList {
+    list-style-type: none;
 }
 .emails {
     height: 30vh;
