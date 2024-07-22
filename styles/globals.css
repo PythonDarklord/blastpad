@@ -4,7 +4,9 @@
     --font-jetbrains: 'JetBrains Mono', monospace;
     --purple: #8304d1;
     --background: black;
-    
+    --buttonBackground: rgb(255, 255, 255);
+    --buttonHover: black;
+
     /* Colors for the subsection backgrounds */
     --favoritesColor: #F6D454;
     --emailsColor: rgb(165, 64, 64);

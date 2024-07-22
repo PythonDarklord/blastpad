@@ -31,17 +31,41 @@
     text-align: center;
     color: var(--purple);
     font-size: 70px;
-    margin: 2%;
+    margin: 4vb;
 }
 .scrollBox {
     margin-left: auto;
     margin-right: auto;
     background-color: #25252511;
     border-radius: 10px;
-    height: 45%;
+    height: 55%;
     width: 98%;
     overflow: auto;
     list-style-type: none;
+}
+.button {
+  background-color: var(--buttonBackground);
+  border: 2px solid var(--buttonHover);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  height: 15%;
+  width: 20%;
+  margin-top: 2.78%;
+}
+.button:hover {
+  background-color: var(--buttonHover);
+  color: white;
+}
+.setcog {
+  height: 5vh;
+  position: absolute;
+  left: 5vb;
+  top: 6vb;
+
+
 }
 
 /* Subsection styles */
@@ -62,11 +86,11 @@
     margin: 1vi;
 }
 .favorites {
-    height: 25vh;
+    height: 30vh;
     width: 34vw;
 }
 .emails {
-    height: 25vh;
+    height: 30vh;
     width: 64vw;
 }
 .tiles {
