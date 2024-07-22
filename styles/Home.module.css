@@ -97,6 +97,8 @@
     margin: 0vb;
     align-self: flex-start;
     text-align: center;
+    position: relative;
+    bottom: 0px;
     transition-duration: 0.2s;
 }
 
