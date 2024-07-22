@@ -5,6 +5,7 @@ import AddFavorite from "@/components/addFavorite";
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -33,13 +34,35 @@ export default function Home() {
   };
 
   const addFavorite = (e) => {
-    //TODO: logic for adding favorite
     e.preventDefault();
     const name = e.target.name.value;
     const url = e.target.url.value;
     setFavoritePopup(false);
-    console.log(`{${name}: ${url}}`);
+    setFavorites([...favorites, { name: name, url: url }]);
+    document.cookie = `favorites: ${favorites}`;
+  };
 
+  const listFavorite = (e) => {
+    //List for favorites
+    e.preventDefault();
+    const name = e.target.name.value;
+    const url = e.target.url.value;
+    var names = [];
+    names.push(name);
+    var urls = [];
+    urls.push(url);
+    let nameslist = document.getElementById("favoritesList");
+    for (i = 0; i < names.length; ++i) {
+      let li = document.createElement("li");
+      li.innerText - names[i];
+      nameslist.push(li);
+    }
+    let urlslist = document.getElementById("favoritesList");
+    for (i = 0; i < urls.length; ++i) {
+      let li = document.createElement("li");
+      li.innerText - urls[i];
+      nameslist.push(li);
+    }
   };
 
   return (
