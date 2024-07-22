@@ -21,7 +21,7 @@ export default function Home() {
       const cookieData = JSON.parse(favoritesCookie);
       setFavorites(cookieData);
     } else {
-      document.cookie = "favorites = {}";
+      document.cookie = "favorites = []";
     }
   }, []);
 
@@ -86,7 +86,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <img src="settings.png" className={styles.setcog} alt="Settings Cog"></img>
+        <img
+          src="settings.png"
+          className={styles.setcog}
+          alt="Settings Cog"
+        ></img>
         <div>
           <h1 className={styles.title}> BlastPad </h1>
           <form onSubmit={handleSubmt}>
@@ -110,13 +114,17 @@ export default function Home() {
                 <ul id="favoritesList">
                   {favorites.map((item) => (
                     <li>
-                      <a href={item.url} target="_blank">{item.name}</a>
+                      <a href={item.url} target="_blank">
+                        {item.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
-              <button className={styles.button} 
-              onClick={() => setFavoritePopup(true)}>
+              <button
+                className={styles.button}
+                onClick={() => setFavoritePopup(true)}
+              >
                 Add Favorite
               </button>
             </div>
