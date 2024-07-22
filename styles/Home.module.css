@@ -57,7 +57,7 @@
 }
 .button:hover {
   background-color: var(--buttonHover);
-  color: red;
+  color: white;
 }
 .setcog {
   height: 5vh;
