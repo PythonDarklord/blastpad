@@ -102,7 +102,8 @@ export default function Home() {
                   ))} */}
                 </ul>
               </div>
-              <button onClick={() => setFavoritePopup(true)}>
+              <button className={styles.button} 
+              onClick={() => setFavoritePopup(true)}>
                 Add Favorite
               </button>
             </div>

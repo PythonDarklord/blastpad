@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5vh;
     font-size: x-large;
 }
 .form h2 {
