@@ -63,13 +63,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <img
-          src="settings.png"
-          className={styles.setcog}
-          alt="Settings Cog"
-        ></img>
-        <div>
+        <header style={{position: "relative", width: "100%"}}>
+          <img
+            src="settings.png"
+            className={styles.setcog}
+            alt="Settings Cog"
+          ></img>
           <h1 className={styles.title}> BlastPad </h1>
+        </header>
           <form onSubmit={handleSubmt}>
             <input
               type="text"
@@ -79,7 +80,6 @@ export default function Home() {
               className={styles.search}
             />
           </form>
-        </div>
         <div className={styles.tiles}>
           <div
             className={styles.subsection}
