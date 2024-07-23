@@ -24,7 +24,7 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
                     <h2>Settings</h2>
                     <div>
                         <label htmlFor="favoritesColor">Favorites Color: </label>
-                        <select id="favoritesColor" name="favoritesColor">
+                        <select id="favoritesColor" name="favoritesColor" className={styles.dropdown}>
                             <option value="yellow">Yellow</option>
                             <option value="crimson">Crimson</option>
                             <option value="brown">Brown</option>
@@ -32,7 +32,7 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
                     </div>
                     <div>
                         <label htmlFor="emailColor">Email Color: </label>
-                        <select id="emailColor" name="emailColor">
+                        <select id="emailColor" name="emailColor" className={styles.dropdown}>
                             <option value="yellow">Yellow</option>
                             <option value="crimson">Crimson</option>
                             <option value="brown">Brown</option>

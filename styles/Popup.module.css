@@ -76,6 +76,17 @@
     border-radius: 4px;
     background-color: var(--background);
 }
+
+.dropdown {
+    width: 10vw;
+    height: 3vh;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-jetbrains);
+    background-color: var(--background);
+}
+
 @media (pointer: fine) {
     .close {
         cursor: pointer;

@@ -6,6 +6,8 @@ import SettingsMenu from "@/components/settingsMenu";
 import settingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
 import addEmail from "@/components/addEmail";
+import AddTask from "@/components/addTask";
+import addTask from "@/components/addTask";
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
@@ -13,6 +15,7 @@ export default function Home() {
   const [settingsPopup, setSettingsPopup] = useState(false);
   const [emailPopup, setEmailPopup] = useState(false);
   const [emails, setEmails] = useState([]);
+  const [toDoPopup, setToDoPopup] = useState(false);
 
 
   //W3Schools Cookie Code (Andy take a look)
@@ -235,6 +238,7 @@ export default function Home() {
               </div>
               <button
                 className={styles.button}
+                onClick={() => setToDoPopup(true)}
               >
                 Add Task
               </button>
@@ -276,6 +280,12 @@ export default function Home() {
           <AddEmail
             closeMethod={() => setEmailPopup(false)}
             addMethod={addEmail}
+          />
+        )}
+        {toDoPopup && (
+          <AddTask
+            closeMethod={() => setToDoPopup(false)}
+            addMethod={addTask}
           />
         )}
       </main>
