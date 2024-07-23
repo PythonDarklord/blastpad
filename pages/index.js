@@ -171,6 +171,7 @@ export default function Home() {
         {/* Subsections */}
         
         <div className={styles.tiles}>
+
           <div
             className={styles.subsection}
             style={{ background: "var(--favoritesColor)" }}
@@ -196,6 +197,7 @@ export default function Home() {
               </button>
             </div>
           </div>
+
           <div
             className={styles.subsection}
             style={{ background: "var(--emailsColor" }}
@@ -221,6 +223,40 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          <div
+            className={styles.subsection}
+            style={{ background: "var(--toDoColor" }}
+          >
+            <div className={styles.toDo}>
+              <h2 className={styles.subheader}> To-Do </h2>
+              <div className={styles.scrollBox}>
+                
+              </div>
+              <button
+                className={styles.button}
+              >
+                Add Task
+              </button>
+            </div>
+          </div>
+
+          <div
+            className={styles.subsection}
+            style={{ background: "var(--notesColor" }}
+          >
+            <div className={styles.notes}>
+              <h2 className={styles.subheader}> Notes </h2>
+              <div className={styles.scrollBox}>
+                
+              </div>
+              <button 
+              className={styles.button}>
+                Add Note
+              </button>
+            </div>
+          </div>
+          
         </div>
         
 
