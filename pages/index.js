@@ -79,6 +79,7 @@ export default function Home() {
             id="query"
             name="query"
             className={styles.search}
+            autoComplete="off"
           />
         </form>
         <div className={styles.tiles}>
