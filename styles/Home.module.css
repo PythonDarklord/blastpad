@@ -138,6 +138,11 @@
         font-size: 20px;
         width: 80vw;
     }
+    .search:focus {
+        outline: 2px solid var(--purple);
+        width: 80vw;
+        height: 10vh;
+    }
     .tiles {
         flex-direction: column;
         align-content: center;
