@@ -36,7 +36,7 @@ export default function Home() {
       const cookiesList = cookies.split(";");
       const emailsCookie = cookiesList
         .filter((item) => item.includes("emails="))[0]
-        .replace("emails=", "");
+        .replace("emails", "");
       const cookieData = JSON.parse(emailsCookie);
       setFavorites(cookieData);
     } else {
@@ -166,7 +166,7 @@ export default function Home() {
                 <ul id="emailsList" className={styles.list}>
                   {emails.map((item) => (
                     <li>
-                      <a href={item.email.padStart(1, "mailto:")} target="_blank">
+                      <a href={"mailto:" + item.email} target="_blank">
                         {item.name}
                       </a>
                     </li>
