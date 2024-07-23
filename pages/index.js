@@ -2,13 +2,17 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
-import settingsMenu from "@/components/settingsMenu";
 import SettingsMenu from "@/components/settingsMenu";
+import settingsMenu from "@/components/settingsMenu";
+import AddEmail from "@/components/addEmail";
+import addEmail from "@/components/addEmail";
 
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [settingsPopup, setSettingsPopup] = useState(false);
+  const [emailPopup, setEmailPopup] = useState(false);
+  const [emails, setEmails] = useState([]);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -56,6 +60,24 @@ export default function Home() {
     var expiresFormatted = expires.toUTCString();
     document.cookie = `favorites = ${JSON.stringify(
       favorites
+    )}; expires=${expiresFormatted}`;
+  };
+
+  const addEmail = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    setEmailPopup(false);
+    setEmails([...emails, { name: name, email: email }]);
+    var now = new Date();
+    var expires = new Date(
+      now.getFullYear() + 10,
+      now.getMonth(),
+      now.getDate()
+    );
+    var expiresFormatted = expires.toUTCString();
+    document.cookie = `emails = ${JSON.stringify(
+      emails
     )}; expires=${expiresFormatted}`;
   };
 
@@ -119,6 +141,23 @@ export default function Home() {
           >
             <div className={styles.emails}>
               <h2 className={styles.subheader}> Emails </h2>
+              <div className={styles.scrollBox}>
+                <ul id="emailsList" className={styles.favoritesList}>
+                  {emails.map((item) => (
+                    <li>
+                      <a href={item.url} target="_blank">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button
+                className={styles.button}
+                onClick={() => setEmailPopup(true)}
+              >
+                Add Email
+              </button>
             </div>
           </div>
         </div>
@@ -132,6 +171,12 @@ export default function Home() {
           <SettingsMenu
             closeMethod={() => setSettingsPopup(false)}
             applyMethod={settingsMenu}
+          />
+        )}
+        {emailPopup && (
+          <AddEmail
+            closeMethod={() => setEmailPopup(false)}
+            applyMethod={addEmail}
           />
         )}
       </main>
