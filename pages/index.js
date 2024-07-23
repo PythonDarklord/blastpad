@@ -19,8 +19,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const cookies = document.cookie;
-    if (cookies.includes("favorites")) {
+    const cookiesFav = document.cookie[0];
+    if (cookiesFav.includes("favorites")) {
       const cookiesList = cookies.split(";");
       const favoritesCookie = cookiesList
         .filter((item) => item.includes("favorites="))[0]
@@ -29,6 +29,18 @@ export default function Home() {
       setFavorites(cookieData);
     } else {
       document.cookie = "favorites = []";
+    }
+
+    const cookiesEm = document.cookie[1];
+    if (cookiesEm.includes("emails")) {
+      const cookiesList = cookies.split(";");
+      const emailsCookie = cookiesList
+        .filter((item) => item.includes("emails="))[0]
+        .replace("emails=", "");
+      const cookieData = JSON.parse(emailsCookie);
+      setFavorites(cookieData);
+    } else {
+      document.cookie = "emails = []";
     }
   }, []);
 
@@ -83,12 +95,18 @@ export default function Home() {
 
   return (
     <>
+
+      {/* Tab Metadata */}
+
       <Head>
         <title>BlastPad</title>
         <meta name="description" content="Prepare for launch!" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* Header and Searchbar */}
+
       <main className={styles.main}>
         <header className={styles.header}>
           <img
@@ -109,6 +127,9 @@ export default function Home() {
             autoComplete="off"
           />
         </form>
+
+        {/* Subsections */}
+        
         <div className={styles.tiles}>
           <div
             className={styles.subsection}
@@ -145,7 +166,7 @@ export default function Home() {
                 <ul id="emailsList" className={styles.list}>
                   {emails.map((item) => (
                     <li>
-                      <a href={item.url} target="_blank">
+                      <a href={item.email.padStart(1, "mailto:")} target="_blank">
                         {item.name}
                       </a>
                     </li>
@@ -161,6 +182,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+
         {favoritePopup && (
           <AddFavorite
             closeMethod={() => setFavoritePopup(false)}
@@ -176,7 +199,7 @@ export default function Home() {
         {emailPopup && (
           <AddEmail
             closeMethod={() => setEmailPopup(false)}
-            applyMethod={addEmail}
+            addMethod={addEmail}
           />
         )}
       </main>
