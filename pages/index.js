@@ -69,7 +69,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <header className={styles.header}>
-
+          <img
+            onClick={() => setSettingsPopup(true)}
+            src="settings.png"
+            className={styles.setcog}
+            alt="Settings Cog"
+          />
           <h1 className={styles.title}> BlastPad </h1>
         </header>
         <form onSubmit={handleSubmt} className={styles.searchForm}>
