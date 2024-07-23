@@ -61,7 +61,7 @@ export default function Home() {
   useEffect(() => {
     const cookiesFav = document.cookie[0];
     if (cookiesFav.includes("favorites")) {
-      const cookiesList = cookies.split(";");
+      const cookiesList = cookiesFav.split(";");
       const favoritesCookie = cookiesList
         .filter((item) => item.includes("favorites="))[0]
         .replace("favorites=", "");
@@ -73,7 +73,7 @@ export default function Home() {
 
     const cookiesEm = document.cookie[1];
     if (cookiesEm.includes("emails")) {
-      const cookiesList = cookies.split(";");
+      const cookiesList = cookiesEm.split(";");
       const emailsCookie = cookiesList
         .filter((item) => item.includes("emails="))[0]
         .replace("emails", "");
