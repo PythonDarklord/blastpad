@@ -260,6 +260,18 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          <div
+            className={styles.subsection}
+            style={{ background: "var(--historyColor" }}
+          >
+            <div className={styles.history}>
+              <h2 className={styles.subheader}> Recent History </h2>
+              <div className={styles.scrollBox}>
+                
+              </div>
+            </div>
+          </div>
           
         </div>
         

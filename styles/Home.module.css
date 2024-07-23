@@ -142,6 +142,13 @@
     height: 30vh;
     width: 34vw;
 }
+.history {
+    height: 30vh;
+    width: 98vw;
+}
+.history .scrollBox {
+    height: 80%;
+}
 
 
 @media (max-width: 768px) {
