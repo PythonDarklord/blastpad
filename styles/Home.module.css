@@ -145,6 +145,18 @@
     .subsection {
         width: 90%;
     }
+    .favorites {
+        width: 100%;
+    }
+    .emails {
+        width: 100%;
+    }
+    .button {
+        font-size: 12px;
+        height: 20%;
+        width: 40%;
+        margin-top: 1.5%;
+    }
 }
 @media (pointer: fine) {
     .subsection:hover {
