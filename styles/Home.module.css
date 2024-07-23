@@ -110,8 +110,9 @@
     width: 34vw;
 }
 
-.favoritesList {
+.list {
     list-style-type: none;
+    padding: 0;
 }
 
 .emails {

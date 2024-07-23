@@ -117,7 +117,7 @@ export default function Home() {
             <div className={styles.favorites}>
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
-                <ul id="favoritesList" className={styles.favoritesList}>
+                <ul id="favoritesList" className={styles.list}>
                   {favorites.map((item) => (
                     <li>
                       <a href={item.url} target="_blank">
@@ -142,7 +142,7 @@ export default function Home() {
             <div className={styles.emails}>
               <h2 className={styles.subheader}> Emails </h2>
               <div className={styles.scrollBox}>
-                <ul id="emailsList" className={styles.favoritesList}>
+                <ul id="emailsList" className={styles.list}>
                   {emails.map((item) => (
                     <li>
                       <a href={item.url} target="_blank">
