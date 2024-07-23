@@ -14,6 +14,34 @@ export default function Home() {
   const [emailPopup, setEmailPopup] = useState(false);
   const [emails, setEmails] = useState([]);
 
+
+  //W3Schools Cookie Code (Andy take a look)
+
+  // function setCookie(cname, cvalue, exdays) {
+  //   const d = new Date();
+  //   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  //   let expires = "expires="+ d.toUTCString();
+  //   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  // }
+
+  // function getCookie(cname) {
+  //   let name = cname + "=";
+  //   let decodedCookie = decodeURIComponent(document.cookie);
+  //   let ca = decodedCookie.split(';');
+  //   for(let i = 0; i <ca.length; i++) {
+  //     let c = ca[i];
+  //     while (c.charAt(0) == ' ') {
+  //       c = c.substring(1);
+  //     }
+  //     if (c.indexOf(name) == 0) {
+  //       return c.substring(name.length, c.length);
+  //     }
+  //   }
+  //   return "";
+  // }
+
+
+
   useEffect(() => {
     document.getElementById("query").focus();
   });
@@ -25,8 +53,8 @@ export default function Home() {
       const favoritesCookie = cookiesList
         .filter((item) => item.includes("favorites="))[0]
         .replace("favorites=", "");
-      const cookieData = JSON.parse(favoritesCookie);
-      setFavorites(cookieData);
+      const favoritesCookieData = JSON.parse(favoritesCookie);
+      setFavorites(favoritesCookieData);
     } else {
       document.cookie = "favorites = []";
     }
@@ -37,8 +65,8 @@ export default function Home() {
       const emailsCookie = cookiesList
         .filter((item) => item.includes("emails="))[0]
         .replace("emails", "");
-      const cookieData = JSON.parse(emailsCookie);
-      setFavorites(cookieData);
+      const emailsCookieData = JSON.parse(emailsCookie);
+      setFavorites(emailsCookieData);
     } else {
       document.cookie = "emails = []";
     }
