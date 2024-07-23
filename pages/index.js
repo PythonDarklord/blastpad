@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
-import settingsMenu from "@/components/settingsMenu"
+import settingsMenu from "@/components/settingsMenu";
 import SettingsMenu from "@/components/settingsMenu";
 
 export default function Home() {
@@ -51,10 +51,12 @@ export default function Home() {
     var expires = new Date(
       now.getFullYear() + 10,
       now.getMonth(),
-      now.getDate(),
+      now.getDate()
     );
     var expiresFormatted = expires.toUTCString();
-    document.cookie = `favorites = ${JSON.stringify(favorites)}; expires=${expiresFormatted}`;
+    document.cookie = `favorites = ${JSON.stringify(
+      favorites
+    )}; expires=${expiresFormatted}`;
   };
 
   return (
@@ -66,16 +68,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <header style={{ position: "relative", width: "100%" }}>
-            <img
-              onClick={() => setSettingsPopup(true)}
-              src="settings.png"
-              className={styles.setcog}
-              alt="Settings Cog"
-            />
+        <header className={styles.header}>
+
           <h1 className={styles.title}> BlastPad </h1>
         </header>
-        <form onSubmit={handleSubmt}>
+        <form onSubmit={handleSubmt} className={styles.searchForm}>
           <input
             type="text"
             placeholder="Prepare for blastoff!"
