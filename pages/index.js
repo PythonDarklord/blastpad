@@ -59,7 +59,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const cookiesFav = document.cookie[0];
+    const cookiesFav = document.cookie;
     if (cookiesFav.includes("favorites")) {
       const cookiesList = cookiesFav.split(";");
       const favoritesCookie = cookiesList
