@@ -70,6 +70,14 @@
     text-align: center;
 }
 
+.textBox {
+    width: 95%;
+    height: 90%;
+    overflow: auto;
+    background-color: #00000000;
+    text-align: left;
+}
+
 .button {
     background-color: var(--buttonBackground);
     border: 2px solid var(--buttonHover);

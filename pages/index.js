@@ -252,12 +252,8 @@ export default function Home() {
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
               <div className={styles.scrollBox}>
-                
+                <textarea id="notes" name="notes"className={styles.textBox}></textarea>
               </div>
-              <button 
-              className={styles.button}>
-                Add Note
-              </button>
             </div>
           </div>
 
