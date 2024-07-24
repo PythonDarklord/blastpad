@@ -1,4 +1,4 @@
-import styles from "@/styles/addFavorite.module.css";
+import styles from "@/styles/Popup.module.css";
 
 export default function SettingsMenu({ closeMethod, applyMethod }) {
     return (

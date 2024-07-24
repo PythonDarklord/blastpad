@@ -1,6 +1,6 @@
 import styles from "@/styles/Popup.module.css";
 
-export default function AddFavorite({ closeMethod, addMethod }) {
+export default function AddEmail({ closeMethod, addMethod }) {
   return (
     <div className={styles.fullscreen}>
       <div className={styles.popup}>
@@ -21,14 +21,14 @@ export default function AddFavorite({ closeMethod, addMethod }) {
           </svg>
         </button>
         <form className={styles.form} onSubmit={(e) => addMethod(e)}>
-          <h2>Add Favorite</h2>
+          <h2>Add Email</h2>
           <div>
             <label htmlFor="name">Name: </label>
             <input id="name" name="name" type="text"></input>
           </div>
           <div>
-            <label htmlFor="url">URL: </label>
-            <input id="url" name="url" type="url"></input>
+            <label htmlFor="email">Email: </label>
+            <input id="email" name="email" type="email"></input>
           </div>
           <div>
             <button>Add</button>
