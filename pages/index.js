@@ -268,7 +268,9 @@ export default function Home() {
             <div className={styles.history}>
               <h2 className={styles.subheader}> Recent History </h2>
               <div className={styles.scrollBox}>
-                
+                  <ul >
+                    window.history()
+                  </ul>
               </div>
             </div>
           </div>
