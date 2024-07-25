@@ -1,5 +1,6 @@
 import styles from "@/styles/Popup.module.css";
 
+
 export default function SettingsMenu({ closeMethod, applyMethod }) {
     return (
         <div className={styles.fullscreen}>

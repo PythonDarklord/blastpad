@@ -105,6 +105,13 @@ export default function Home() {
       }
   }
 
+  const changeColor = (color, panel) => {
+    let r = document.querySelector(':root');
+    let panelColor = panel + "Color";
+    r.style.setProperty("--" + panelColor, color);
+  }
+
+
   return (
     <>
       {/* Tab Metadata */}
@@ -269,7 +276,7 @@ export default function Home() {
         {settingsPopup && (
           <SettingsMenu
             closeMethod={() => setSettingsPopup(false)}
-            applyMethod={SettingsMenu}
+            applyMethod={changeColor}
           />
         )}
         {emailPopup && (
