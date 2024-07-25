@@ -119,21 +119,23 @@ export default function Home() {
   };
 
   const addEmail = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
+    // e.preventDefault();
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // setEmailPopup(false);
+    // setEmails([...emails, { name: name, email: email }]);
+    // var now = new Date();
+    // var expires = new Date(
+    //   now.getFullYear() + 10,
+    //   now.getMonth(),
+    //   now.getDate()
+    // );
+    // var expiresFormatted = expires.toUTCString();
+    // document.cookie = `emails = ${JSON.stringify(
+    //   emails
+    // )}; expires=${expiresFormatted}`;
+    localStorage.setItem('name', e.target.name.value);
     setEmailPopup(false);
-    setEmails([...emails, { name: name, email: email }]);
-    var now = new Date();
-    var expires = new Date(
-      now.getFullYear() + 10,
-      now.getMonth(),
-      now.getDate()
-    );
-    var expiresFormatted = expires.toUTCString();
-    document.cookie = `emails = ${JSON.stringify(
-      emails
-    )}; expires=${expiresFormatted}`;
   };
 
   return (
