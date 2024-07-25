@@ -17,7 +17,6 @@ export default function Home() {
   const [emails, setEmails] = useState([]);
   const [toDoPopup, setToDoPopup] = useState(false);
 
-
   //W3Schools Cookie Code (Andy take a look)
 
   // function setCookie(cname, cvalue, exdays) {
@@ -55,24 +54,14 @@ export default function Home() {
   //   }
   // }
 
-
-
   useEffect(() => {
     document.getElementById("query").focus();
   });
 
   useEffect(() => {
-    const cookiesFav = document.cookie;
-    if (cookiesFav.includes("favorites")) {
-      const cookiesList = cookiesFav.split(";");
-      const favoritesCookie = cookiesList
-        .filter((item) => item.includes("favorites="))[0]
-        .replace("favorites=", "");
-      const favoritesCookieData = JSON.parse(favoritesCookie);
-      setFavorites(favoritesCookieData);
-    } else {
-      document.cookie = "favorites = []";
-    }
+    const storedFavorites = localStorage.getItem("favorites");
+    const parsedFavorites = JSON.parse(storedFavorites);
+    setFavorites(parsedFavorites);
 
     const cookiesEm = document.cookie[1];
     if (cookiesEm.includes("emails")) {
@@ -106,16 +95,7 @@ export default function Home() {
     const url = e.target.url.value;
     setFavoritePopup(false);
     setFavorites([...favorites, { name: name, url: url }]);
-    var now = new Date();
-    var expires = new Date(
-      now.getFullYear() + 10,
-      now.getMonth(),
-      now.getDate()
-    );
-    var expiresFormatted = expires.toUTCString();
-    document.cookie = `favorites = ${JSON.stringify(
-      favorites
-    )}; expires=${expiresFormatted}`;
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   };
 
   const addEmail = (e) => {
@@ -128,17 +108,16 @@ export default function Home() {
     var expires = new Date(
       now.getFullYear() + 10,
       now.getMonth(),
-      now.getDate()
+      now.getDate(),
     );
     var expiresFormatted = expires.toUTCString();
     document.cookie = `emails = ${JSON.stringify(
-      emails
+      emails,
     )}; expires=${expiresFormatted}`;
   };
 
   return (
     <>
-
       {/* Tab Metadata */}
 
       <Head>
@@ -172,9 +151,8 @@ export default function Home() {
         </form>
 
         {/* Subsections */}
-        
-        <div className={styles.tiles}>
 
+        <div className={styles.tiles}>
           <div
             className={styles.subsection}
             style={{ background: "var(--favoritesColor)" }}
@@ -233,9 +211,7 @@ export default function Home() {
           >
             <div className={styles.toDo}>
               <h2 className={styles.subheader}> To-Do </h2>
-              <div className={styles.scrollBox}>
-                
-              </div>
+              <div className={styles.scrollBox}></div>
               <button
                 className={styles.button}
                 onClick={() => setToDoPopup(true)}
@@ -252,7 +228,11 @@ export default function Home() {
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
               <div className={styles.scrollBox}>
-                <textarea id="notes" name="notes"className={styles.textBox}></textarea>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  className={styles.textBox}
+                ></textarea>
               </div>
             </div>
           </div>
@@ -264,15 +244,11 @@ export default function Home() {
             <div className={styles.history}>
               <h2 className={styles.subheader}> Recent History </h2>
               <div className={styles.scrollBox}>
-                  <ul >
-                    window.history()
-                  </ul>
+                <ul>window.history()</ul>
               </div>
             </div>
           </div>
-          
         </div>
-        
 
         {favoritePopup && (
           <AddFavorite

@@ -24,11 +24,11 @@ export default function AddFavorite({ closeMethod, addMethod }) {
           <h2>Add Favorite</h2>
           <div>
             <label htmlFor="name">Name: </label>
-            <input id="name" name="name" type="text"></input>
+            <input id="name" name="name" type="text" required></input>
           </div>
           <div>
             <label htmlFor="url">URL: </label>
-            <input id="url" name="url" type="url"></input>
+            <input id="url" name="url" type="url" required></input>
           </div>
           <div>
             <button>Add</button>
