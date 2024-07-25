@@ -93,7 +93,7 @@ export default function Home() {
     const name = e.target.name.value;
     const priority = e.target.priority.value;
     setToDoPopup(false);
-    setTasks([...emails, { name: name, priority: priority }]);
+    setTasks([...tasks, { name: name, priority: priority }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
 
@@ -203,6 +203,7 @@ export default function Home() {
                   <th>Status</th>
                 </tr>
                 </thead>
+                
                 {tasks &&
                     tasks.map((item) => (
                       <tbody>
@@ -214,11 +215,15 @@ export default function Home() {
                         {item.priority}
                       </td>
                       <td>
-
+                        <input id="done" type="checkbox"></input>
+                          {/* Each item in this table has a checkbox,
+                          these items need to be deleted if that 
+                          box is checked. Done==true if statement? */}
                       </td>
                         </tr>
                         </tbody>
-                    ))}
+                  
+                  ))}
               </table>
               </div>
               <button
