@@ -20,6 +20,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+<<<<<<< Updated upstream
+=======
+    const storedFavorites = localStorage.getItem("favorites");
+    if (storedFavorites) {
+      const parsedFavorites = JSON.parse(storedFavorites);
+      setFavorites(parsedFavorites);
+    }
+    setLoadedFavorites(true);
+>>>>>>> Stashed changes
 
       const storedFavorites = localStorage.getItem("favorites");
       const parsedFavorites = JSON.parse(storedFavorites);
