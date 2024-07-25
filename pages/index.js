@@ -213,7 +213,7 @@ export default function Home() {
                     <td>
 
                     </td>
-                    </tr>
+                     </tr>
                     ))}
               </table>
               </div>
