@@ -12,6 +12,7 @@ import addTask from "@/components/addTask";
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [loadedFavorites, setLoadedFavorites] = useState(false);
   const [settingsPopup, setSettingsPopup] = useState(false);
   const [emailPopup, setEmailPopup] = useState(false);
   const [emails, setEmails] = useState([]);
@@ -56,12 +57,13 @@ export default function Home() {
 
   useEffect(() => {
     document.getElementById("query").focus();
-  });
+  }, []);
 
   useEffect(() => {
     const storedFavorites = localStorage.getItem("favorites");
     const parsedFavorites = JSON.parse(storedFavorites);
     setFavorites(parsedFavorites);
+    setLoadedFavorites(true);
 
     const cookiesEm = document.cookie[1];
     if (cookiesEm.includes("emails")) {
@@ -75,6 +77,11 @@ export default function Home() {
       document.cookie = "emails = []";
     }
   }, []);
+
+  useEffect(() => {
+    loadedFavorites &&
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   const handleSubmt = (e) => {
     e.preventDefault();
@@ -114,7 +121,7 @@ export default function Home() {
     // document.cookie = `emails = ${JSON.stringify(
     //   emails
     // )}; expires=${expiresFormatted}`;
-    localStorage.setItem('name', e.target.name.value);
+    localStorage.setItem("name", e.target.name.value);
     setEmailPopup(false);
     setEmails([...emails, { name: name, email: email }]);
     var now = new Date();
@@ -174,13 +181,14 @@ export default function Home() {
               <h2 className={styles.subheader}> Favorites </h2>
               <div className={styles.scrollBox}>
                 <ul id="favoritesList" className={styles.list}>
-                  {favorites.map((item) => (
-                    <li>
-                      <a href={item.url} target="_blank">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
+                  {favorites &&
+                    favorites.map((item) => (
+                      <li>
+                        <a href={item.url} target="_blank">
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
               <button
