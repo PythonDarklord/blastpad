@@ -20,24 +20,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-<<<<<<< Updated upstream
-=======
     const storedFavorites = localStorage.getItem("favorites");
     if (storedFavorites) {
       const parsedFavorites = JSON.parse(storedFavorites);
       setFavorites(parsedFavorites);
     }
     setLoadedFavorites(true);
->>>>>>> Stashed changes
-
-      const storedFavorites = localStorage.getItem("favorites");
-      const parsedFavorites = JSON.parse(storedFavorites);
-      setFavorites(parsedFavorites);
-      setLoadedFavorites(true);
 
     const storedEmails = localStorage.getItem("emails");
-    const parsedEmails = JSON.parse(storedEmails);
-    setEmails(parsedEmails);
+    if (storedEmails) {
+      const parsedEmails = JSON.parse(storedEmails);
+      setEmails(parsedEmails);
+    }
     setLoadedEmails(true);
   }, []);
 
@@ -210,8 +204,7 @@ export default function Home() {
           >
             <div className={styles.history}>
               <h2 className={styles.subheader}> Recent History </h2>
-              <div className={styles.scrollBox}>
-              </div>
+              <div className={styles.scrollBox}></div>
             </div>
           </div>
         </div>
