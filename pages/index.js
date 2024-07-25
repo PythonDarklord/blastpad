@@ -3,12 +3,8 @@ import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
 import SettingsMenu from "@/components/settingsMenu";
-import settingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
-import addEmail from "@/components/addEmail";
 import AddTask from "@/components/addTask";
-import addTask from "@/components/addTask";
-
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
