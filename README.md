@@ -1,11 +1,10 @@
 # BlastPad
 
 ## TODOS:
-- [ ] Save Favorites between sessions
-- [ ] Save emails between sessions
+- [x] Save Favorites between sessions
+- [x] Save emails between sessions
 - [ ] Add To-Do Functionality
-- [~] Add Notes Funtionality
+- [ ] Add Notes Funtionality
     - [ ] Notes Saving
-    - [+] Basic Notes Functionality
-- [ ] Figure out Cookies
+    - [x] Basic Notes Functionality
 - [ ] Integrate Recent Search History panel
