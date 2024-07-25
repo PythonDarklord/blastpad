@@ -16,6 +16,7 @@ export default function Home() {
   const [settingsPopup, setSettingsPopup] = useState(false);
   const [emailPopup, setEmailPopup] = useState(false);
   const [emails, setEmails] = useState([]);
+  const [loadedEmails, setLoadedEmails] = useState(false);
   const [toDoPopup, setToDoPopup] = useState(false);
 
   useEffect(() => {
@@ -39,12 +40,17 @@ export default function Home() {
     } else {
       document.cookie = "emails = []";
     }
+    setLoadedEmails(true);
   }, []);
 
   useEffect(() => {
     loadedFavorites &&
       localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
+
+  useEffect(() => {
+    loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
+  }, [emails]);
 
   const handleSubmt = (e) => {
     e.preventDefault();
@@ -149,13 +155,14 @@ export default function Home() {
               <h2 className={styles.subheader}> Emails </h2>
               <div className={styles.scrollBox}>
                 <ul id="emailsList" className={styles.list}>
-                  {emails.map((item) => (
-                    <li>
-                      <a href={"mailto:" + item.email} target="_blank">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
+                  {emails &&
+                    emails.map((item) => (
+                      <li>
+                        <a href={"mailto:" + item.email} target="_blank">
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
               <button
