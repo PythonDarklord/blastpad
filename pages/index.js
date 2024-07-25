@@ -20,22 +20,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const storedFavorites = localStorage.getItem("favorites");
-    const parsedFavorites = JSON.parse(storedFavorites);
-    setFavorites(parsedFavorites);
-    setLoadedFavorites(true);
 
-    const cookiesEm = document.cookie[1];
-    if (cookiesEm.includes("emails")) {
-      const cookiesList = cookiesEm.split(";");
-      const emailsCookie = cookiesList
-        .filter((item) => item.includes("emails="))[0]
-        .replace("emails", "");
-      const emailsCookieData = JSON.parse(emailsCookie);
-      setFavorites(emailsCookieData);
-    } else {
-      document.cookie = "emails = []";
-    }
+      const storedFavorites = localStorage.getItem("favorites");
+      const parsedFavorites = JSON.parse(storedFavorites);
+      setFavorites(parsedFavorites);
+      setLoadedFavorites(true);
+
+    const storedEmails = localStorage.getItem("emails");
+    const parsedEmails = JSON.parse(storedEmails);
+    setEmails(parsedEmails);
     setLoadedEmails(true);
   }, []);
 
@@ -74,8 +67,8 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
-    setFavoritePopup(false);
-    setFavorites([...favorites, { name: name, url: email }]);
+    setEmailPopup(false);
+    setEmails([...emails, { name: name, email: email }]);
     localStorage.setItem("emails", JSON.stringify(emails));
   };
 
@@ -209,7 +202,6 @@ export default function Home() {
             <div className={styles.history}>
               <h2 className={styles.subheader}> Recent History </h2>
               <div className={styles.scrollBox}>
-                <ul>window.history()</ul>
               </div>
             </div>
           </div>
