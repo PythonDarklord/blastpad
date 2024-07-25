@@ -71,7 +71,7 @@ export default function Home() {
     const name = e.target.name.value;
     const email = e.target.email.value;
     setEmailPopup(false);
-    setEmails([...emails, { name: name, url: email }]);
+    setEmails([...emails, { name: name, email: email }]);
     localStorage.setItem("emails", JSON.stringify(emails));
   };
 
