@@ -87,6 +87,15 @@
     background-color: var(--background);
 }
 
+@media (max-width: 850px) {
+    .form {
+        gap: 2vh;
+        text-align: center;
+    }
+    .popup {
+        width: 80vw;
+    }
+}
 @media (pointer: fine) {
     .close {
         cursor: pointer;
