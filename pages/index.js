@@ -14,6 +14,8 @@ export default function Home() {
   const [emails, setEmails] = useState([]);
   const [loadedEmails, setLoadedEmails] = useState(false);
   const [toDoPopup, setToDoPopup] = useState(false);
+  const [tasks, setTasks] = useState([]);
+  const [loadedTasks, setLoadedTasks] = useState(false);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -33,6 +35,13 @@ export default function Home() {
       setEmails(parsedEmails);
     }
     setLoadedEmails(true);
+
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      const parsedTasks = JSON.parse(storedTasks);
+      setEmails(parsedTasks);
+    }
+    setLoadedTasks(true);
   }, []);
 
   useEffect(() => {
@@ -43,6 +52,10 @@ export default function Home() {
   useEffect(() => {
     loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
   }, [emails]);
+
+  useEffect(() => {
+    loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleSubmt = (e) => {
     e.preventDefault();
@@ -73,6 +86,15 @@ export default function Home() {
     setEmailPopup(false);
     setEmails([...emails, { name: name, email: email }]);
     localStorage.setItem("emails", JSON.stringify(emails));
+  };
+
+  const addTask = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const priority = e.target.priority.value;
+    setToDoPopup(false);
+    setTasks([...emails, { name: name, priority: priority }]);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   };
 
   return (
@@ -172,7 +194,29 @@ export default function Home() {
           >
             <div className={styles.toDo}>
               <h2 className={styles.subheader}> To-Do </h2>
-              <div className={styles.scrollBox}></div>
+              <div className={styles.scrollBox}>
+              <table id="tasksTable" className={styles.table}>
+                <tr>
+                  <th>Name</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                </tr>
+                {tasks &&
+                    tasks.map((item) => (
+                      <tr>
+                    <td>
+                      {item.name}
+                    </td>
+                    <td>
+                      {item.priority}
+                    </td>
+                    <td>
+
+                    </td>
+                    </tr>
+                    ))}
+              </table>
+              </div>
               <button
                 className={styles.button}
                 onClick={() => setToDoPopup(true)}
@@ -197,16 +241,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div
-            className={styles.subsection}
-            style={{ background: "var(--historyColor" }}
-          >
-            <div className={styles.history}>
-              <h2 className={styles.subheader}> Recent History </h2>
-              <div className={styles.scrollBox}></div>
-            </div>
-          </div>
         </div>
 
         {favoritePopup && (
@@ -218,7 +252,7 @@ export default function Home() {
         {settingsPopup && (
           <SettingsMenu
             closeMethod={() => setSettingsPopup(false)}
-            applyMethod={settingsMenu}
+            applyMethod={SettingsMenu}
           />
         )}
         {emailPopup && (

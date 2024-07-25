@@ -68,6 +68,9 @@
     width: 98%;
     overflow: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .textBox {
@@ -89,6 +92,21 @@
     height: 15%;
     width: 25%;
     margin-top: 1.5%;
+}
+
+.table {
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 98%;
+}
+
+.table td {
+    border: 1px solid black;
+}
+
+.table th {
+    border: 1px solid black;
 }
 
 /* Subsection styles */
@@ -150,14 +168,6 @@
     height: 30vh;
     width: 34vw;
 }
-.history {
-    height: 30vh;
-    width: 98vw;
-}
-.history .scrollBox {
-    height: 80%;
-}
-
 
 @media (max-width: 850px) {
     .title {

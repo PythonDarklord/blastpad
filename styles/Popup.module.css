@@ -44,7 +44,7 @@
     color: white;
     padding: 0.6ch 1ch;
     border-radius: 12px;
-    width: 100%;
+    width: 60%;
 }
 .form button {
     background-color: var(--background);

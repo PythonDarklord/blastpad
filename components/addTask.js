@@ -24,9 +24,10 @@ export default function AddTask({ closeMethod, addMethod }) {
           <h2>Add Task</h2>
           <div>
             <label htmlFor="name">Task Name: </label>
-            <input id="name" name="name" type="text"></input>
+            <input id="name" name="name" type="text" required></input>
           </div>
           <div>
+            <label>Priority: </label>
             <select id="priority" className={styles.dropdown}>
                 <option value="High">High</option>
                 <option value="Medium">Medium</option>
