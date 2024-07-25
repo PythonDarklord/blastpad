@@ -18,43 +18,6 @@ export default function Home() {
   const [emails, setEmails] = useState([]);
   const [toDoPopup, setToDoPopup] = useState(false);
 
-  //W3Schools Cookie Code (Andy take a look)
-
-  // function setCookie(cname, cvalue, exdays) {
-  //   const d = new Date();
-  //   d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  //   let expires = "expires="+ d.toUTCString();
-  //   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  // }
-
-  // function getCookie(cname) {
-  //   let name = cname + "=";
-  //   let decodedCookie = decodeURIComponent(document.cookie);
-  //   let ca = decodedCookie.split(';');
-  //   for(let i = 0; i <ca.length; i++) {
-  //     let c = ca[i];
-  //     while (c.charAt(0) == ' ') {
-  //       c = c.substring(1);
-  //     }
-  //     if (c.indexOf(name) == 0) {
-  //       return c.substring(name.length, c.length);
-  //     }
-  //   }
-  //   return "";
-  // }
-
-  // function checkCookie() {
-  //   let user = getCookie("username");
-  //   if (user != "") {
-  //     alert("Welcome again " + user);
-  //   } else {
-  //     user = prompt("Please enter your name:", "");
-  //     if (user != "" && user != null) {
-  //       setCookie("username", user, 365);
-  //     }
-  //   }
-  // }
-
   useEffect(() => {
     document.getElementById("query").focus();
   }, []);
@@ -106,34 +69,12 @@ export default function Home() {
   };
 
   const addEmail = (e) => {
-    // e.preventDefault();
-    // const name = e.target.name.value;
-    // const email = e.target.email.value;
-    // setEmailPopup(false);
-    // setEmails([...emails, { name: name, email: email }]);
-    // var now = new Date();
-    // var expires = new Date(
-    //   now.getFullYear() + 10,
-    //   now.getMonth(),
-    //   now.getDate()
-    // );
-    // var expiresFormatted = expires.toUTCString();
-    // document.cookie = `emails = ${JSON.stringify(
-    //   emails
-    // )}; expires=${expiresFormatted}`;
-    localStorage.setItem("name", e.target.name.value);
-    setEmailPopup(false);
-    setEmails([...emails, { name: name, email: email }]);
-    var now = new Date();
-    var expires = new Date(
-      now.getFullYear() + 10,
-      now.getMonth(),
-      now.getDate(),
-    );
-    var expiresFormatted = expires.toUTCString();
-    document.cookie = `emails = ${JSON.stringify(
-      emails,
-    )}; expires=${expiresFormatted}`;
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    setFavoritePopup(false);
+    setFavorites([...favorites, { name: name, url: email }]);
+    localStorage.setItem("emails", JSON.stringify(emails));
   };
 
   return (
