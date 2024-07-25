@@ -39,7 +39,7 @@ export default function Home() {
     const storedTasks = localStorage.getItem("tasks");
     if (storedTasks) {
       const parsedTasks = JSON.parse(storedTasks);
-      setEmails(parsedTasks);
+      setTasks(parsedTasks);
     }
     setLoadedTasks(true);
   }, []);
@@ -92,10 +92,18 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const priority = e.target.priority.value;
+    const status = document.getElementById("status").value;
     setToDoPopup(false);
-    setTasks([...tasks, { name: name, priority: priority }]);
+    setTasks([...tasks, { name: name, priority: priority, status: status}]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
+
+  const checkStatus = () => {
+      const status = document.getElementById("status").value;
+      if(status == "off"){
+        
+      }
+  }
 
   return (
     <>
@@ -215,7 +223,7 @@ export default function Home() {
                         {item.priority}
                       </td>
                       <td>
-                        <input id="done" type="checkbox"></input>
+                        <input id="status" type="checkbox"></input>
                           {/* Each item in this table has a checkbox,
                           these items need to be deleted if that 
                           box is checked. Done==true if statement? */}
