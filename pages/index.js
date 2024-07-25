@@ -196,24 +196,28 @@ export default function Home() {
               <h2 className={styles.subheader}> To-Do </h2>
               <div className={styles.scrollBox}>
               <table id="tasksTable" className={styles.table}>
+                <thead>
                 <tr>
                   <th>Name</th>
                   <th>Priority</th>
                   <th>Status</th>
                 </tr>
+                </thead>
                 {tasks &&
                     tasks.map((item) => (
-                      <tr>
-                    <td>
-                      {item.name}
-                    </td>
-                    <td>
-                      {item.priority}
-                    </td>
-                    <td>
+                      <tbody>
+                        <tr>
+                      <td>
+                        {item.name}
+                      </td>
+                      <td>
+                        {item.priority}
+                      </td>
+                      <td>
 
-                    </td>
-                     </tr>
+                      </td>
+                        </tr>
+                        </tbody>
                     ))}
               </table>
               </div>
