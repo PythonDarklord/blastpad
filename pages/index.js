@@ -97,11 +97,11 @@ export default function Home() {
     setTasks([...tasks, { name: name, priority: priority, status: status}]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
-
+// Something like this?
   const checkStatus = () => {
       const status = document.getElementById("status").value;
       if(status == "off"){
-        
+
       }
   }
 
