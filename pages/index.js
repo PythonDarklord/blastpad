@@ -24,15 +24,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const storedFavorites = localStorage.getItem("favorites");
-    const parsedFavorites = JSON.parse(storedFavorites);
-    setFavorites(parsedFavorites);
-    setLoadedFavorites(true);
+
+      const storedFavorites = localStorage.getItem("favorites");
+      const parsedFavorites = JSON.parse(storedFavorites);
+      setFavorites(parsedFavorites);
+      setLoadedFavorites(true);
 
     const storedEmails = localStorage.getItem("emails");
     const parsedEmails = JSON.parse(storedEmails);
-    setFavorites(parsedEmails);
-    setLoadedFavorites(true);
+    setEmails(parsedEmails);
+    setLoadedEmails(true);
   }, []);
 
   useEffect(() => {
