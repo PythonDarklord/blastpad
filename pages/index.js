@@ -18,6 +18,7 @@ export default function Home() {
   const [loadedTasks, setLoadedTasks] = useState(false);
   const [panelColors, setPanelColors] = useState([]);
   const [loadedPanelColors, setLoadedPanelColors] = useState(false);
+  const [notes, setNotes] = useState([]);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -65,6 +66,12 @@ export default function Home() {
   useEffect(() => {
     loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+
+  useEffect(() => {
+    loadedPanelColors && localStorage.setItem("panelColors", JSON.stringify(panelColors));
+  }, [panelColors]);
+
+  
 
   const handleSubmt = (e) => {
     e.preventDefault();
@@ -114,6 +121,12 @@ export default function Home() {
       tasks.splice("", index);
     }
   };
+
+  const saveNotes = (e) => {
+    const note = e.target.notes.value;
+    setNotes(...notes, {note: note});
+    localStorage.setItem("notes", JSON.stringifty(note));
+  }
 
   const setColor = (e) => {
     e.preventDefault();
@@ -252,8 +265,8 @@ export default function Home() {
                           <td>{item.name}</td>
                           <td>{item.priority}</td>
                           <td>
-                            <input name= "status" id="status" type="checkbox"
-                            onClick={() => checkStatus()}></input>
+                            <input name="status" id="status" type="checkbox"
+                              onClick={() => checkStatus()}></input>
                           </td>
                         </tr>
                       </tbody>
@@ -275,13 +288,17 @@ export default function Home() {
           >
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
-              <div className={styles.scrollBox}>
-                <textarea
-                  id="notes"
-                  name="notes"
-                  className={styles.textBox}
-                ></textarea>
-              </div>
+              <form onSubmit={(e) => saveNotes(e)} className={styles.scrollBox}>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    className={styles.textBox}
+                  ></textarea>
+                <button
+                  className={styles.button}>
+                  Save
+                </button>
+              </form>
             </div>
           </div>
         </div>
