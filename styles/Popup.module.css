@@ -94,7 +94,7 @@
 
 @media (max-width: 850px) {
     .form {
-        gap: 3vh;
+        gap: 2vh;
         text-align: center;
         font-size: 22px;
     }
