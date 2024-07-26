@@ -105,6 +105,15 @@ export default function Home() {
       }
   }
 
+  const setColor = (e) => {
+    e.preventDefault();
+    const favoritesPanel = e.target.favoritesColor.id;
+    const emailsPanel = e.target.emailsColor.id;
+    setSettingsPopup(false);
+    console.log(favoritesPanel);
+    console.log(emailsPanel);
+  }
+
   const changeColor = (color, panel) => {
     let r = document.querySelector(':root');
     let panelColor = panel + "Color";
@@ -276,7 +285,7 @@ export default function Home() {
         {settingsPopup && (
           <SettingsMenu
             closeMethod={() => setSettingsPopup(false)}
-            applyMethod={changeColor}
+            applyMethod={setColor}
           />
         )}
         {emailPopup && (
