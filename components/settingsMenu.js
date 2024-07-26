@@ -32,7 +32,7 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
           </div>
           <div>
             <label htmlFor="emailColor">Email Color: </label>
-            <input id="emailColor" name="emailColor" type="color"></input>
+            <input id="emailColor" name="emailColor" type="color" defaultValue={{color: "var(--emailsColor)"}}></input>
           </div>
           <div>
             <label htmlFor="toDoColor">To-Do Color: </label>

@@ -164,7 +164,6 @@ export default function Home() {
     let r = document.querySelector(":root");
     let panelColor = panel + "Color";
     r.style.setProperty("--" + panelColor, color);
-    console.log("--" + panelColor, color);
   };
 
   return (
