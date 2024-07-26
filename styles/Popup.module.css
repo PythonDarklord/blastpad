@@ -100,6 +100,7 @@
     .popup {
         width: 80vw;
         height: 50vh;
+        font-size: 24px;
     }
 }
 @media (max-height: 1100px) {
