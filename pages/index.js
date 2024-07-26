@@ -19,6 +19,7 @@ export default function Home() {
   const [panelColors, setPanelColors] = useState([]);
   const [loadedPanelColors, setLoadedPanelColors] = useState(false);
   const [notes, setNotes] = useState([]);
+  const [loadedNotes, setLoadedNotes] = useState(false);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -52,7 +53,15 @@ export default function Home() {
       setPanelColors(parsedPanelColors);
     }
     setLoadedPanelColors(true);
+
+    const storedNotes = localStorage.getItem("notes");
+    if (storedNotes) {
+      const parsedNotes = JSON.parse(storedNotes);
+      setNotes(parsedNotes);
+    }
+    setLoadedNotes(true);
   }, []);
+  
 
   useEffect(() => {
     loadedFavorites &&
@@ -70,6 +79,10 @@ export default function Home() {
   useEffect(() => {
     loadedPanelColors && localStorage.setItem("panelColors", JSON.stringify(panelColors));
   }, [panelColors]);
+
+  useEffect(() => {
+    loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   
 
@@ -108,7 +121,7 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const priority = e.target.priority.value;
-    const status = document.target.status.value;
+    const status = document.getElementById("status").value;
     setToDoPopup(false);
     setTasks([...tasks, { name: name, priority: priority, status: status }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -124,7 +137,7 @@ export default function Home() {
 
   const saveNotes = (e) => {
     const note = e.target.notes.value;
-    setNotes(...notes, {note: note});
+    setNotes([...notes, {note: note}]);
     localStorage.setItem("notes", JSON.stringifty(note));
   }
 
