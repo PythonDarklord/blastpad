@@ -106,8 +106,8 @@ export default function Home() {
   }
 
   const setColor = (e) => {
-    const favoritesColor = e.getElementById("favoritesColor").value;
-    const emailsColor = e.getElementById("emailsColor").value;
+    const favoritesColor = e.target.getElementById("favoritesColor").value;
+    const emailsColor = e.target.getElementById("emailsColor").value;
     setSettingsPopup(false);
     changeColor(favoritesColor, "favorites")
     console.log(favoritesColor);
