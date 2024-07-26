@@ -6,7 +6,7 @@
 - [ ] Add To-Do Functionality
     - [x] Able to Add Items
     - [ ] Able to mark items as done
-- [ ] Add Notes Funtionality
-    - [ ] Notes Saving
+- [X] Add Notes Funtionality
+    - [X] Notes Saving
     - [x] Basic Notes Functionality
 - [ ] Make Colors Save
