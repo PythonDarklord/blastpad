@@ -24,23 +24,19 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
           <h2>Settings</h2>
           <div>
             <label htmlFor="favoritesColor">Favorites Color: </label>
-            <input
-              type="color"
-              id="favoritesColor"
-              name="favoritesColor"
-            ></input>
+            <input className={styles.colorInput} type="color" id="favoritesColor" name="favoritesColor" defaultValue={"#F6D454"}></input>
           </div>
           <div>
             <label htmlFor="emailColor">Email Color: </label>
-            <input id="emailColor" name="emailColor" type="color" defaultValue={{color: "var(--emailsColor)"}}></input>
+            <input className={styles.colorInput} id="emailColor" name="emailColor" type="color" defaultValue={"#a54040"}></input>
           </div>
           <div>
             <label htmlFor="toDoColor">To-Do Color: </label>
-            <input id="toDoColor" name="toDoColor" type="color"></input>
+            <input className={styles.colorInput} id="toDoColor" name="toDoColor" type="color" defaultValue={"#5dc55d"}></input>
           </div>
           <div>
             <label htmlFor="notesColor">Notes Color: </label>
-            <input id="notesColor" name="notesColor" type="color"></input>
+            <input className={styles.colorInput} id="notesColor" name="notesColor" type="color" defaultValue={"#6880ce"}></input>
           </div>
           <div>
             <button>Apply</button>

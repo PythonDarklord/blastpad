@@ -32,6 +32,11 @@
     gap: 1.5vh;
     font-size: x-large;
 }
+
+.colorInput {
+    height: 60%;
+}
+
 .form h2 {
     margin: 0;
 }
@@ -89,11 +94,23 @@
 
 @media (max-width: 850px) {
     .form {
-        gap: 2vh;
+        gap: 1.5vh;
         text-align: center;
     }
     .popup {
         width: 80vw;
+    }
+}
+@media (max-height: 1100px) {
+    .form {
+        gap: 0.05vh;
+        font-size: 22px;
+    }
+}
+@media (max-width: 340px) {
+    .form {
+        gap: 0.05vh;
+        font-size: 22px;
     }
 }
 @media (pointer: fine) {

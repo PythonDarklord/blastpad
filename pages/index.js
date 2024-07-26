@@ -232,7 +232,7 @@ export default function Home() {
 
           <div
             className={styles.subsection}
-            style={{ background: "var(--emailsColor" }}
+            style={{ background: "var(--emailsColor)" }}
           >
             <div className={styles.emails}>
               <h2 className={styles.subheader}> Emails </h2>
