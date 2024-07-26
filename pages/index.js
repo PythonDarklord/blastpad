@@ -18,7 +18,7 @@ export default function Home() {
   const [loadedTasks, setLoadedTasks] = useState(false);
   const [panelColors, setPanelColors] = useState([]);
   const [loadedPanelColors, setLoadedPanelColors] = useState(false);
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState("");
   const [loadedNotes, setLoadedNotes] = useState(false);
 
   useEffect(() => {
@@ -140,7 +140,7 @@ export default function Home() {
 
   const saveNotes = (e) => {
     const note = e.target.notes.value;
-    setNotes([...notes, {note: note}]);
+    setNotes(note);
     localStorage.setItem("notes", JSON.stringifty(note));
   }
 
@@ -309,7 +309,9 @@ export default function Home() {
                     id="notes"
                     name="notes"
                     className={styles.textBox}
-                  ></textarea>
+                    defaultValue={notes}
+                  >
+                  </textarea>
                 <button
                   className={styles.button}>
                   Save
