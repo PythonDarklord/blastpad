@@ -9,3 +9,4 @@
 - [ ] Add Notes Funtionality
     - [ ] Notes Saving
     - [x] Basic Notes Functionality
+- [ ] Make Colors Save

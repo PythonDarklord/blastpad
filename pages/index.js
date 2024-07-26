@@ -121,17 +121,20 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const priority = e.target.priority.value;
-    const status = document.getElementById("status").value;
+    const getStatus = document.getElementById('status').value;
     setToDoPopup(false);
-    setTasks([...tasks, { name: name, priority: priority, status: status }]);
+    setTasks([...tasks, { name: name, priority: priority, status: getStatus }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
   // Something like this?
   const checkStatus = () => {
     const status = document.getElementById("status").value;
     if (status == "on") {
-      const index = tasks.indexOf(status);
-      tasks.splice("", index);
+      console.log("on");
+      //'on' pops up in console, but the list does not get changed.
+      const index = tasks.indexOf(this);
+      //need to use setTasks? How?
+      tasks.splice(" ", index);
     }
   };
 
