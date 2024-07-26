@@ -96,11 +96,11 @@
     .form {
         gap: 1.5vh;
         text-align: center;
+        font-size: 22px;
     }
     .popup {
         width: 80vw;
         height: 50vh;
-        font-size: 24px;
     }
 }
 @media (max-height: 1100px) {
