@@ -242,7 +242,7 @@ export default function Home() {
                         <input id="status" type="checkbox"></input>
                           {/* Each item in this table has a checkbox,
                           these items need to be deleted if that 
-                          box is checked. Done==true if statement? */}
+                          box is checked. */}
                       </td>
                         </tr>
                         </tbody>
