@@ -94,32 +94,32 @@ export default function Home() {
     const priority = e.target.priority.value;
     const status = document.getElementById("status").value;
     setToDoPopup(false);
-    setTasks([...tasks, { name: name, priority: priority, status: status}]);
+    setTasks([...tasks, { name: name, priority: priority, status: status }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
-// Something like this?
+  // Something like this?
   const checkStatus = () => {
-      const status = document.getElementById("status").value;
-      if(status == "off"){
-
-      }
-  }
+    const status = document.getElementById("status").value;
+    if (status == "off") {
+    }
+  };
 
   const setColor = (e) => {
-    const favoritesColor = e.target.getElementById("favoritesColor").value;
-    const emailsColor = e.target.getElementById("emailsColor").value;
+    e.preventDefault();
+    const favoritesColor = e.target.favoritesColor.value;
+    const emailsColor = e.target.emailColor.value;
     setSettingsPopup(false);
-    changeColor(favoritesColor, "favorites")
+    changeColor(favoritesColor, "favorites");
     console.log(favoritesColor);
     changeColor(emailsColor, "emails");
-  }
+  };
 
   const changeColor = (color, panel) => {
-    let r = document.querySelector(':root');
+    let r = document.querySelector(":root");
     let panelColor = panel + "Color";
     r.style.setProperty("--" + panelColor, color);
-  }
-
+    console.log("--" + panelColor, color);
+  };
 
   return (
     <>
@@ -167,8 +167,8 @@ export default function Home() {
               <div className={styles.scrollBox}>
                 <ul id="favoritesList" className={styles.list}>
                   {favorites &&
-                    favorites.map((item) => (
-                      <li>
+                    favorites.map((item, index) => (
+                      <li key={index}>
                         <a href={item.url} target="_blank">
                           {item.name}
                         </a>
@@ -194,8 +194,8 @@ export default function Home() {
               <div className={styles.scrollBox}>
                 <ul id="emailsList" className={styles.list}>
                   {emails &&
-                    emails.map((item) => (
-                      <li>
+                    emails.map((item, index) => (
+                      <li key={index}>
                         <a href={"mailto:" + item.email} target="_blank">
                           {item.name}
                         </a>
@@ -219,36 +219,31 @@ export default function Home() {
             <div className={styles.toDo}>
               <h2 className={styles.subheader}> To-Do </h2>
               <div className={styles.scrollBox}>
-              <table id="tasksTable" className={styles.table}>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Priority</th>
-                  <th>Status</th>
-                </tr>
-                </thead>
-                
-                {tasks &&
+                <table id="tasksTable" className={styles.table}>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Priority</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  {tasks &&
                     tasks.map((item) => (
                       <tbody>
                         <tr>
-                      <td>
-                        {item.name}
-                      </td>
-                      <td>
-                        {item.priority}
-                      </td>
-                      <td>
-                        <input id="status" type="checkbox"></input>
-                          {/* Each item in this table has a checkbox,
-                          these items need to be deleted if that 
+                          <td>{item.name}</td>
+                          <td>{item.priority}</td>
+                          <td>
+                            <input id="status" type="checkbox"></input>
+                            {/* Each item in this table has a checkbox,
+                          these items need to be deleted if that
                           box is checked. */}
-                      </td>
+                          </td>
                         </tr>
-                        </tbody>
-                  
-                  ))}
-              </table>
+                      </tbody>
+                    ))}
+                </table>
               </div>
               <button
                 className={styles.button}
