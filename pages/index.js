@@ -16,6 +16,8 @@ export default function Home() {
   const [toDoPopup, setToDoPopup] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [loadedTasks, setLoadedTasks] = useState(false);
+  const [panelColors, setPanelColors] = useState([]);
+  const [loadedPanelColors, setLoadedPanelColors] = useState(false);
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -42,6 +44,13 @@ export default function Home() {
       setTasks(parsedTasks);
     }
     setLoadedTasks(true);
+
+    const storedPanelColors = localStorage.getItem("panelColors");
+    if (storedPanelColors) {
+      const parsedPanelColors = JSON.parse(storedPanelColors);
+      setPanelColors(parsedPanelColors);
+    }
+    setLoadedPanelColors(true);
   }, []);
 
   useEffect(() => {
@@ -92,7 +101,7 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const priority = e.target.priority.value;
-    const status = document.getElementById("status").value;
+    const status = document.target.status.value;
     setToDoPopup(false);
     setTasks([...tasks, { name: name, priority: priority, status: status }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -100,7 +109,9 @@ export default function Home() {
   // Something like this?
   const checkStatus = () => {
     const status = document.getElementById("status").value;
-    if (status == "off") {
+    if (status == "on") {
+      const index = tasks.indexOf(status);
+      tasks.splice("", index);
     }
   };
 
@@ -108,10 +119,16 @@ export default function Home() {
     e.preventDefault();
     const favoritesColor = e.target.favoritesColor.value;
     const emailsColor = e.target.emailColor.value;
+    const toDoColor = e.target.toDoColor.value;
+    const notesColor = e.target.notesColor.value;
     setSettingsPopup(false);
     changeColor(favoritesColor, "favorites");
-    console.log(favoritesColor);
     changeColor(emailsColor, "emails");
+    changeColor(toDoColor, "toDo");
+    changeColor(notesColor, "notes");
+
+    // setPanelColors([...panelColors, { name: name, priority: priority, status: status }]);
+    // localStorage.setItem("panelColors", JSON.stringify(panelColors));
   };
 
   const changeColor = (color, panel) => {
@@ -235,10 +252,8 @@ export default function Home() {
                           <td>{item.name}</td>
                           <td>{item.priority}</td>
                           <td>
-                            <input id="status" type="checkbox"></input>
-                            {/* Each item in this table has a checkbox,
-                          these items need to be deleted if that
-                          box is checked. */}
+                            <input name= "status" id="status" type="checkbox"
+                            onClick={() => checkStatus()}></input>
                           </td>
                         </tr>
                       </tbody>

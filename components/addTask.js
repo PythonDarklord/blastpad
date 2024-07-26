@@ -28,7 +28,7 @@ export default function AddTask({ closeMethod, addMethod }) {
           </div>
           <div>
             <label>Priority: </label>
-            <select id="priority" className={styles.dropdown}>
+            <select id="priority" name="priority" className={styles.dropdown}>
                 <option value="High">High</option>
                 <option value="Medium">Medium</option>
                 <option value="Low">Low</option>

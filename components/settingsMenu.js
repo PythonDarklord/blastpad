@@ -35,6 +35,14 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
             <input id="emailColor" name="emailColor" type="color"></input>
           </div>
           <div>
+            <label htmlFor="toDoColor">To-Do Color: </label>
+            <input id="toDoColor" name="toDoColor" type="color"></input>
+          </div>
+          <div>
+            <label htmlFor="notesColor">Notes Color: </label>
+            <input id="notesColor" name="notesColor" type="color"></input>
+          </div>
+          <div>
             <button>Apply</button>
           </div>
         </form>
