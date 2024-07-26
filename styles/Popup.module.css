@@ -102,6 +102,9 @@
         width: 80vw;
         height: 50vh;
     }
+    .form button {
+        font-size: large;
+    }
 }
 @media (max-height: 1100px) {
     .form {
