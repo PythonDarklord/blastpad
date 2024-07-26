@@ -106,12 +106,12 @@ export default function Home() {
   }
 
   const setColor = (e) => {
-    e.preventDefault();
-    const favoritesPanel = e.target.favoritesColor.id;
-    const emailsPanel = e.target.emailsColor.id;
+    const favoritesColor = e.getElementById("favoritesColor").value;
+    const emailsColor = e.getElementById("emailsColor").value;
     setSettingsPopup(false);
-    console.log(favoritesPanel);
-    console.log(emailsPanel);
+    changeColor(favoritesColor, "favorites")
+    console.log(favoritesColor);
+    changeColor(emailsColor, "emails");
   }
 
   const changeColor = (color, panel) => {
