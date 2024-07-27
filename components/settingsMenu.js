@@ -1,5 +1,16 @@
 import styles from "@/styles/Popup.module.css";
 
+let r = document.querySelector(":root");
+
+const color = {
+
+  getHex(panelName){
+    const colorVar = "--" + panelName;
+    const panelColor = r.getElementsByClassName(colorVar);
+    console.log(panelColor);
+  }
+};
+
 export default function SettingsMenu({ closeMethod, applyMethod }) {
   return (
     <div className={styles.fullscreen}>
@@ -24,7 +35,7 @@ export default function SettingsMenu({ closeMethod, applyMethod }) {
           <h2>Settings</h2>
           <div>
             <label htmlFor="favoritesColor">Favorites Color: </label>
-            <input className={styles.colorInput} type="color" id="favoritesColor" name="favoritesColor" defaultValue={"#F6D454"}></input>
+            <input className={styles.colorInput} type="color" id="favoritesColor" name="favoritesColor" defaultValue={color.getHex("favoritesColor")}></input>
           </div>
           <div>
             <label htmlFor="emailColor">Email Color: </label>
