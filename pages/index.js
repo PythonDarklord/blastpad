@@ -5,6 +5,7 @@ import AddFavorite from "@/components/addFavorite";
 import SettingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
 import AddTask from "@/components/addTask";
+import { Html } from "next/document";
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
@@ -155,16 +156,28 @@ export default function Home() {
     changeColor(emailsColor, "emails");
     changeColor(toDoColor, "toDo");
     changeColor(notesColor, "notes");
-
-    // setPanelColors([...panelColors, { name: name, priority: priority, status: status }]);
-    // localStorage.setItem("panelColors", JSON.stringify(panelColors));
   };
 
   const changeColor = (color, panel) => {
     let r = document.querySelector(":root");
     let panelColor = panel + "Color";
     r.style.setProperty("--" + panelColor, color);
+    //Only runs for the notesColor
+    setPanelColors([...panelColors, { name: panelColor, color: color }]);
+    localStorage.setItem("panelColors", JSON.stringify(panelColors));
   };
+
+  const color = {
+  getHex(panelName){
+    // let r = document.querySelector(":root");
+    // const colorVar = "--" + panelName;
+    // const panelColor = r.style;
+    // console.log(panelColor[0]);
+    // console.log(panelColor);
+    const panelColor = panelName + "Color";
+    localStorage.getItem(panelColor);
+  }
+};
 
   return (
     <>
@@ -328,6 +341,7 @@ export default function Home() {
         )}
         {settingsPopup && (
           <SettingsMenu
+            color = {color}
             closeMethod={() => setSettingsPopup(false)}
             applyMethod={setColor}
           />
