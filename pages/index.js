@@ -45,6 +45,7 @@ export default function Home() {
     if (storedTasks) {
       const parsedTasks = JSON.parse(storedTasks);
       setTasks(parsedTasks);
+      console.log(tasks);
     }
     setLoadedTasks(true);
 
@@ -62,7 +63,6 @@ export default function Home() {
     }
     setLoadedNotes(true);
   }, []);
-  
 
   useEffect(() => {
     loadedFavorites &&
@@ -78,14 +78,13 @@ export default function Home() {
   }, [tasks]);
 
   useEffect(() => {
-    loadedPanelColors && localStorage.setItem("panelColors", JSON.stringify(panelColors));
+    loadedPanelColors &&
+      localStorage.setItem("panelColors", JSON.stringify(panelColors));
   }, [panelColors]);
 
   useEffect(() => {
     loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
-
-  
 
   const handleSubmt = (e) => {
     e.preventDefault();
@@ -122,28 +121,27 @@ export default function Home() {
     e.preventDefault();
     const name = e.target.name.value;
     const priority = e.target.priority.value;
-    const getStatus = document.getElementById('status').value;
+    const getStatus = false;
     setToDoPopup(false);
     setTasks([...tasks, { name: name, priority: priority, status: getStatus }]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
-  // Something like this?
-  const checkStatus = () => {
-    const status = document.getElementById("status").value;
-    if (status == "on") {
-      console.log("on");
-      //'on' pops up in console, but the list does not get changed.
-      const index = tasks.indexOf(this);
-      //need to use setTasks? How?
-      tasks.splice(" ", index);
-    }
+
+  const checkStatus = (e, name) => {
+    const status = e.target.checked;
+    const newTasks = tasks.map((item) =>
+      item.name === name ? { ...item, status: status } : item,
+    );
+    setTasks(newTasks);
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
   };
 
   const saveNotes = (e) => {
+    e.preventDefault();
     const note = e.target.notes.value;
     setNotes(note);
-    localStorage.setItem("notes", JSON.stringifty(note));
-  }
+    localStorage.setItem("notes", JSON.stringify(note));
+  };
 
   const setColor = (e) => {
     e.preventDefault();
@@ -168,16 +166,16 @@ export default function Home() {
   };
 
   const color = {
-  getHex(panelName){
-    // let r = document.querySelector(":root");
-    // const colorVar = "--" + panelName;
-    // const panelColor = r.style;
-    // console.log(panelColor[0]);
-    // console.log(panelColor);
-    const panelColor = panelName + "Color";
-    localStorage.getItem(panelColor);
-  }
-};
+    getHex(panelName) {
+      // let r = document.querySelector(":root");
+      // const colorVar = "--" + panelName;
+      // const panelColor = r.style;
+      // console.log(panelColor[0]);
+      // console.log(panelColor);
+      const panelColor = panelName + "Color";
+      localStorage.getItem(panelColor);
+    },
+  };
 
   return (
     <>
@@ -285,20 +283,24 @@ export default function Home() {
                       <th>Status</th>
                     </tr>
                   </thead>
-
-                  {tasks &&
-                    tasks.map((item) => (
-                      <tbody>
-                        <tr>
+                  <tbody>
+                    {tasks &&
+                      tasks.map((item, index) => (
+                        <tr key={index}>
                           <td>{item.name}</td>
                           <td>{item.priority}</td>
                           <td>
-                            <input name="status" id="status" type="checkbox"
-                              onClick={() => checkStatus()}></input>
+                            <input
+                              name="status"
+                              id="status"
+                              type="checkbox"
+                              onClick={(e) => checkStatus(e, item.name)}
+                              checked={item.status}
+                            />
                           </td>
                         </tr>
-                      </tbody>
-                    ))}
+                      ))}
+                  </tbody>
                 </table>
               </div>
               <button
@@ -317,17 +319,13 @@ export default function Home() {
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
               <form onSubmit={(e) => saveNotes(e)} className={styles.scrollBox}>
-                  <textarea
-                    id="notes"
-                    name="notes"
-                    className={styles.textBox}
-                    defaultValue={notes}
-                  >
-                  </textarea>
-                <button
-                  className={styles.button}>
-                  Save
-                </button>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  className={styles.textBox}
+                  defaultValue={notes}
+                ></textarea>
+                <button className={styles.button}>Save</button>
               </form>
             </div>
           </div>
@@ -341,7 +339,7 @@ export default function Home() {
         )}
         {settingsPopup && (
           <SettingsMenu
-            color = {color}
+            color={color}
             closeMethod={() => setSettingsPopup(false)}
             applyMethod={setColor}
           />
