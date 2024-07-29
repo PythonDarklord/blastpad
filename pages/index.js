@@ -137,8 +137,7 @@ export default function Home() {
   };
 
   const saveNotes = (e) => {
-    e.preventDefault();
-    const note = e.target.notes.value;
+    const note = e.target.value;
     setNotes(note);
     localStorage.setItem("notes", JSON.stringify(note));
   };
@@ -318,14 +317,14 @@ export default function Home() {
           >
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
-              <form onSubmit={(e) => saveNotes(e)} className={styles.scrollBox}>
+              <form className={styles.scrollBox}>
                 <textarea
                   id="notes"
                   name="notes"
                   className={styles.textBox}
                   defaultValue={notes}
+                  onChange={(e) => saveNotes(e)}
                 ></textarea>
-                <button className={styles.button}>Save</button>
               </form>
             </div>
           </div>
