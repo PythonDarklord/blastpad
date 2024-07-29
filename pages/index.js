@@ -172,7 +172,8 @@ export default function Home() {
       // console.log(panelColor[0]);
       // console.log(panelColor);
       const panelColor = panelName + "Color";
-      localStorage.getItem(panelColor);
+      const gotItem = localStorage.getItem("panelColors");
+      console.log(gotItem);
     },
   };
 
