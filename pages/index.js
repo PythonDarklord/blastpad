@@ -150,8 +150,8 @@ export default function Home() {
 
   const color = {
     getHex(panelName) {
-      let r = document.querySelector(":root");
-      const colorVar = "--" + panelName;
+      // let r = document.querySelector(":root");
+      // const colorVar = "--" + panelName;
       const panelColor = panelName + "Color";
       console.log(localStorage.getItem(panelColor));
       return localStorage.getItem(panelColor);
