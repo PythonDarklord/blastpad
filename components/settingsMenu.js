@@ -29,11 +29,11 @@ export default function SettingsMenu({color, closeMethod, applyMethod }) {
           </div>
           <div>
             <label htmlFor="emailColor">Email Color: </label>
-            <input className={styles.colorInput} id="emailColor" name="emailColor" type="color" defaultValue={"#a54040"}></input>
+            <input className={styles.colorInput} id="emailColor" name="emailColor" type="color" defaultValue={color.getHex("email")}></input>
           </div>
           <div>
             <label htmlFor="toDoColor">To-Do Color: </label>
-            <input className={styles.colorInput} id="toDoColor" name="toDoColor" type="color" defaultValue={"#5dc55d"}></input>
+            <input className={styles.colorInput} id="toDoColor" name="toDoColor" type="color" defaultValue={color.getHex("toDo")}></input>
           </div>
           <div>
             <label htmlFor="notesColor">Notes Color: </label>
