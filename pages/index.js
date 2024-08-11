@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import {useEffect, useState} from "react";
+import { useState, useEffect } from "react";
 import AddFavorite from "@/components/addFavorite";
 import SettingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
 import AddTask from "@/components/addTask";
-
+import { Html } from "next/document";
 export default function Home() {
   const [favoritePopup, setFavoritePopup] = useState(false);
   const [favorites, setFavorites] = useState([]);
@@ -17,6 +17,8 @@ export default function Home() {
   const [toDoPopup, setToDoPopup] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [loadedTasks, setLoadedTasks] = useState(false);
+  const [panelColors, setPanelColors] = useState([]);
+  const [loadedPanelColors, setLoadedPanelColors] = useState(false);
   const [notes, setNotes] = useState("");
   const [loadedNotes, setLoadedNotes] = useState(false);
   const [loadedFavoritesColor, setLoadedFavoritesColor] = useState(false);
@@ -55,6 +57,13 @@ export default function Home() {
       console.log(tasks);
     }
     setLoadedTasks(true);
+
+    const storedPanelColors = localStorage.getItem("panelColors");
+    if (storedPanelColors) {
+      const parsedPanelColors = JSON.parse(storedPanelColors);
+      setPanelColors(parsedPanelColors);
+    }
+    setLoadedPanelColors(true);
 
     const storedNotes = localStorage.getItem("notes");
     if (storedNotes) {
@@ -106,10 +115,15 @@ export default function Home() {
   }, [tasks]);
 
   useEffect(() => {
+    loadedPanelColors &&
+      localStorage.setItem("panelColors", JSON.stringify(panelColors));
+  }, [panelColors]);
+
+  useEffect(() => {
     loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-  const handleSubmit = (e) => {
+  const handleSubmt = (e) => {
     e.preventDefault();
     console.log(e.target.query.value);
     const query = e.target.query.value;
@@ -183,16 +197,21 @@ export default function Home() {
     let r = document.querySelector(":root");
     let panelColor = panel + "Color";
     r.style.setProperty("--" + panelColor, color);
-      localStorage.setItem(panelColor, JSON.stringify(color));
+    //Only runs for the notesColor
+    setPanelColors([...panelColors, { name: panelColor, color: color }]);
+    localStorage.setItem("panelColors", JSON.stringify(panelColors));
   };
 
   const color = {
     getHex(panelName) {
       // let r = document.querySelector(":root");
       // const colorVar = "--" + panelName;
+      // const panelColor = r.style;
+      // console.log(panelColor[0]);
+      // console.log(panelColor);
       const panelColor = panelName + "Color";
-      console.log(localStorage.getItem(panelColor));
-      return localStorage.getItem(panelColor);
+      const gotItem = localStorage.getItem("panelColors");
+      console.log(gotItem);
     },
   };
 
@@ -219,7 +238,7 @@ export default function Home() {
           />
           <h1 className={styles.title}> BlastPad </h1>
         </header>
-        <form onSubmit={handleSubmit} className={styles.searchForm}>
+        <form onSubmit={handleSubmt} className={styles.searchForm}>
           <input
             type="text"
             placeholder="Prepare for blastoff!"
