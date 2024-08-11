@@ -1,5 +1,8 @@
 import styles from "@/styles/Popup.module.css";
-
+import favoritesColor from "@/pages/index.js"
+import emailsColor from "@/pages/index.js"
+import tasksColor from "@/pages/index.js"
+import notesColor from "@/pages/index.js"
 
 export default function SettingsMenu({color, closeMethod, applyMethod }) {
   return (
@@ -25,19 +28,19 @@ export default function SettingsMenu({color, closeMethod, applyMethod }) {
           <h2>Settings</h2>
           <div>
             <label htmlFor="favoritesColor">Favorites Color: </label>
-            <input className={styles.colorInput} type="color" id="favoritesColor" name="favoritesColor" defaultValue={"#F6D454"}></input>
+            <input className={styles.colorInput} type="color" id="favoritesColor" name="favoritesColor" defaultValue={favoritesColor}></input>
           </div>
           <div>
             <label htmlFor="emailColor">Email Color: </label>
-            <input className={styles.colorInput} id="emailColor" name="emailColor" type="color" defaultValue={color.getHex("email")}></input>
+            <input className={styles.colorInput} id="emailColor" name="emailColor" type="color" defaultValue={emailsColor}></input>
           </div>
           <div>
             <label htmlFor="toDoColor">To-Do Color: </label>
-            <input className={styles.colorInput} id="toDoColor" name="toDoColor" type="color" defaultValue={color.getHex("toDo")}></input>
+            <input className={styles.colorInput} id="toDoColor" name="toDoColor" type="color" defaultValue={tasksColor}></input>
           </div>
           <div>
             <label htmlFor="notesColor">Notes Color: </label>
-            <input className={styles.colorInput} id="notesColor" name="notesColor" type="color" defaultValue={color.getHex("notes")}></input>
+            <input className={styles.colorInput} id="notesColor" name="notesColor" type="color" defaultValue={notesColor}></input>
           </div>
           <div>
             <button>Apply</button>

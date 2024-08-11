@@ -19,6 +19,15 @@ export default function Home() {
   const [loadedTasks, setLoadedTasks] = useState(false);
   const [notes, setNotes] = useState("");
   const [loadedNotes, setLoadedNotes] = useState(false);
+  const [loadedFavoritesColor, setLoadedFavoritesColor] = useState(false);
+  const [favoritesColor, setFavoritesColor] = useState("");
+  const [loadedEmailsColor, setLoadedEmailsColor] = useState(false);
+  const [emailsColor, setEmailsColor] = useState("");
+  const [loadedNotesColor, setLoadedNotesColor] = useState(false);
+  const [notesColor, setNotesColor] = useState("");
+  const [loadedTasksColor, setLoadedTasksColor] = useState(false);
+  const [tasksColor, setTasksColor] = useState("");
+
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -53,6 +62,34 @@ export default function Home() {
       setNotes(parsedNotes);
     }
     setLoadedNotes(true);
+
+    const storedFavoritesColor = localStorage.getItem("favoritesColor");
+    if (storedFavoritesColor) {
+      const parsedFavoritesColor = JSON.parse(storedFavoritesColor);
+      setFavoritesColor(parsedFavoritesColor);
+    }
+    setLoadedFavoritesColor(true);
+
+    const storedEmailsColor = localStorage.getItem("emailsColor");
+    if (storedEmailsColor) {
+      const parsedEmailsColor = JSON.parse(storedEmailsColor);
+      setEmailsColor(parsedEmailsColor);
+    }
+    setLoadedEmailsColor(true);
+
+    const storedTasksColor = localStorage.getItem("toDoColor");
+    if (storedTasksColor) {
+      const parsedTasksColor = JSON.parse(storedTasksColor);
+      setTasksColor(parsedTasksColor);
+    }
+    setLoadedTasksColor(true);
+
+    const storedNotesColor = localStorage.getItem("notesColor");
+    if (storedNotesColor) {
+      const parsedNotesColor = JSON.parse(storedNotesColor);
+      setNotesColor(parsedNotesColor);
+    }
+    setLoadedNotesColor(true);
   }, []);
 
   useEffect(() => {
@@ -139,6 +176,7 @@ export default function Home() {
     changeColor(emailsColor, "emails");
     changeColor(toDoColor, "toDo");
     changeColor(notesColor, "notes");
+    location.reload()
   };
 
   const changeColor = (color, panel) => {
@@ -197,7 +235,7 @@ export default function Home() {
         <div className={styles.tiles}>
           <div
             className={styles.subsection}
-            style={{ background: "var(--favoritesColor)" }}
+            style={{ background: favoritesColor}}
           >
             <div className={styles.favorites}>
               <h2 className={styles.subheader}> Favorites </h2>
@@ -224,7 +262,7 @@ export default function Home() {
 
           <div
             className={styles.subsection}
-            style={{ background: "var(--emailsColor)" }}
+            style={{ background: emailsColor }}
           >
             <div className={styles.emails}>
               <h2 className={styles.subheader}> Emails </h2>
@@ -251,7 +289,7 @@ export default function Home() {
 
           <div
             className={styles.subsection}
-            style={{ background: "var(--toDoColor" }}
+            style={{ background: tasksColor }}
           >
             <div className={styles.toDo}>
               <h2 className={styles.subheader}> To-Do </h2>
@@ -295,7 +333,7 @@ export default function Home() {
 
           <div
             className={styles.subsection}
-            style={{ background: "var(--notesColor" }}
+            style={{ background: notesColor }}
           >
             <div className={styles.notes}>
               <h2 className={styles.subheader}> Notes </h2>
