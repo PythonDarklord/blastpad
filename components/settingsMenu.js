@@ -1,15 +1,4 @@
 import styles from "@/styles/Popup.module.css";
-import {useEffect, useState} from "react";
-
-const updatePanelColors = (e, panelColors, setPanelColors) => {
-    const id = e.target.id;
-    let value;
-    const updatedPanelColors = {
-        ...panelColors,
-        [id]: value,
-    };
-}
-
 const updateSettings = (e, settings, setSettings) => {
     const id = e.target.id;
     const value = e.target.value;
@@ -20,7 +9,7 @@ const updateSettings = (e, settings, setSettings) => {
     setSettings(updatedSettings);
 };
 
-export default function SettingsMenu({panelColors, setPanelColors, closeMethod, applyMethod, setSettings, settings}) {
+export default function SettingsMenu({closeMethod, setSettings, settings}) {
     return (
         <div className={styles.fullscreen}>
             <div className={styles.popup}>
@@ -40,7 +29,7 @@ export default function SettingsMenu({panelColors, setPanelColors, closeMethod, 
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-                <form className={styles.form} onSubmit={(e) => updateSettings(e, settings, setSettings)}>
+                <form className={styles.form} onChange={(e) => updateSettings(e, settings, setSettings)}>
                     <h2>Settings</h2>
                     <div>
                         <label htmlFor="favoritesColor">Favorites Color: </label>
