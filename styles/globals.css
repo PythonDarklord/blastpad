@@ -7,12 +7,6 @@
     --buttonBackground: rgb(255, 255, 255);
     --buttonHover: black;
 
-    /* Colors for the subsection backgrounds */
-    --favoritesColor: #F6D454;
-    --emailsColor: #a54040;
-    --toDoColor: #5dc55d;
-    --notesColor: #6880ce;
-
 }
 body {
   font-family: var(--font-jetbrains);

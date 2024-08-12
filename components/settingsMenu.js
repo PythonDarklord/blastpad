@@ -52,7 +52,6 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                                defaultValue={settings.notesColor}></input>
                     </div>
                     <div>
-                        <button>Apply</button>
                     </div>
                 </form>
             </div>

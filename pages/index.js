@@ -32,10 +32,10 @@ export default function Home() {
       setSettings(storedSettings);
     } else {
       setSettings({
-        'favoritesColor': '#ffffff',
-        'emailsColor': '#ffffff',
-        'notesColor': '#ffffff',
-        'todoColor': '#ffffff'
+        'favoritesColor': '#F6D454',
+        'emailsColor': '#a54040',
+        'notesColor': '#5dc55d',
+        'todoColor': '#6880ce'
       });
     }
     setLoadedSettings(true)
