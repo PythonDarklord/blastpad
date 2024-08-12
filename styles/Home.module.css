@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
 }
+
 .header {
     width: 100%;
     display: flex;
@@ -15,6 +16,7 @@
     position: relative;
     margin-top: 2vh;
 }
+
 .setcog {
     position: absolute;
     left: 2vw;
@@ -23,18 +25,21 @@
     height: 5vh;
     transition-duration: 0.2s;
 }
+
 .title {
     text-align: center;
     color: var(--purple);
     font-size: 70px;
     margin: 0;
 }
+
 .searchForm {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
+
 .search {
     border: 2px solid var(--background);
     width: 60vw;
@@ -173,35 +178,44 @@
     .title {
         font-size: 48px;
     }
+
     .search {
         font-size: 20px;
         width: 80vw;
     }
+
     .search:focus {
         outline: 2px solid var(--purple);
         width: 80vw;
         height: 10vh;
     }
+
     .tiles {
         margin: 38vb 0;
         flex-direction: row;
         align-content: center;
     }
+
     .subsection {
         width: 90%;
     }
+
     .favorites {
         width: 100%;
     }
+
     .emails {
         width: 100%;
     }
+
     .toDo {
-        width:100%;
+        width: 100%;
     }
+
     .notes {
-        width:100%;
+        width: 100%;
     }
+
     .button {
         font-size: 12px;
         height: 20%;
@@ -209,21 +223,25 @@
         margin-top: 1.5%;
     }
 }
+
 @media (pointer: fine) {
     .subsection:hover {
         position: relative;
         bottom: 5px;
     }
+
     .setcog:hover {
         cursor: pointer;
         height: 5.5vh;
         top: 33%;
         transform: rotate(90deg);
     }
+
     .button:hover {
         background-color: var(--buttonHover);
         color: white;
     }
+
     @media (min-width: 768px) {
         .search:hover {
             width: 62vw;
