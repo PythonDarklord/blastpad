@@ -123,7 +123,7 @@ export default function Home() {
     loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-  const handleSubmt = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.query.value);
     const query = e.target.query.value;
@@ -238,7 +238,7 @@ export default function Home() {
           />
           <h1 className={styles.title}> BlastPad </h1>
         </header>
-        <form onSubmit={handleSubmt} className={styles.searchForm}>
+        <form onSubmit={handleSubmit} className={styles.searchForm}>
           <input
             type="text"
             placeholder="Prepare for blastoff!"
