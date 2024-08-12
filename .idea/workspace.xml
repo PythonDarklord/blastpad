@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Colors save when changed">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settingsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/settingsMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-    </list>
-    <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/settingsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/settingsMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
+    <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,59 +18,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/components/settingsMenu.js">
-      <ranges>
-        <range start1="1" end1="2" start2="1" end2="2" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-        <range start1="3" end1="48" start2="3" end2="77" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/README.md">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="8" end1="9" start2="9" end2="10" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/pages/index.js">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="7" end1="8" start2="7" end2="9" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="9" end1="23" start2="10" end2="26" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="24" end1="27" start2="27" end2="45" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-        <range start1="28" end1="35" start2="46" end2="53" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="36" end1="42" start2="54" end2="60" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="43" end1="50" start2="61" end2="68" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="51" end1="57" start2="69" end2="82" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="58" end1="65" start2="83" end2="94" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-        <range start1="66" end1="70" start2="95" end2="99" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="71" end1="74" start2="100" end2="103" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="75" end1="78" start2="104" end2="107" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="79" end1="83" start2="108" end2="112" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="84" end1="87" start2="113" end2="116" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="88" end1="100" start2="117" end2="129" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-        <range start1="101" end1="109" start2="130" end2="138" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="110" end1="118" start2="139" end2="147" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="119" end1="128" start2="148" end2="157" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="129" end1="137" start2="158" end2="166" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="138" end1="143" start2="167" end2="172" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="144" end1="156" start2="173" end2="185" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="157" end1="165" start2="186" end2="194" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="166" end1="178" start2="195" end2="207" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="179" end1="182" start2="208" end2="211" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="183" end1="189" start2="212" end2="218" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="190" end1="191" start2="219" end2="220" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="192" end1="212" start2="221" end2="241" changelist="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" />
-        <range start1="213" end1="214" start2="242" end2="243" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="215" end1="242" start2="244" end2="271" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="243" end1="269" start2="272" end2="298" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="270" end1="313" start2="299" end2="342" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="314" end1="321" start2="343" end2="350" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="322" end1="327" start2="351" end2="356" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="328" end1="332" start2="357" end2="361" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-        <range start1="333" end1="361" start2="362" end2="393" changelist="474f5f09-db44-4301-a753-599e0b4c9a21" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -89,7 +30,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,7 +85,7 @@
       <workItem from="1723349852290" duration="2762000" />
       <workItem from="1723408125070" duration="35000" />
       <workItem from="1723412937394" duration="1000" />
-      <workItem from="1723416411621" duration="4764000" />
+      <workItem from="1723416411621" duration="5096000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -170,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723352567223</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1723421728690</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723421728690</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +139,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edited Color saving method" />
     <MESSAGE value="Colors save when changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Colors save when changed" />
+    <MESSAGE value="Update index.js" />
+    <MESSAGE value="Changes" />
+    <MESSAGE value="Changes by ocean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by ocean" />
   </component>
 </project>
