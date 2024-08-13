@@ -63,7 +63,7 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                 </div>
 
                 <div>
-                    <button onClick{...() => defaultSettings(settings, setSettings)}> Reset to
+                    <button onClick={() => defaultSettings(settings, setSettings)}> Reset to
                         Default
                     </button>
                 </div>
