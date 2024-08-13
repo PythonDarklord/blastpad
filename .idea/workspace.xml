@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Moved Task Panel to it's own component">
-      <change beforePath="$PROJECT_DIR$/components/panels/notesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/notesPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="" />
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,7 @@
       <workItem from="1723426396997" duration="38000" />
       <workItem from="1723515232944" duration="22000" />
       <workItem from="1723518665679" duration="3041000" />
-      <workItem from="1723555381861" duration="1272000" />
+      <workItem from="1723555381861" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -214,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723556295989</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Moved Notes Panel to it's own component">
+      <option name="closed" value="true" />
+      <created>1723556709161</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723556709161</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +244,7 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="Reset Color Button" />
     <MESSAGE value="Moved Task Panel to it's own component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved Task Panel to it's own component" />
+    <MESSAGE value="Moved Notes Panel to it's own component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved Notes Panel to it's own component" />
   </component>
 </project>

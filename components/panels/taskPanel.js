@@ -84,10 +84,10 @@ export default function TaskPanel() {
             <div className={styles.toDo}>
                 <h2 className={styles.subheader}> To-Do </h2>
                 <div className={styles.scrollBox}>
-                    <TaskTable
+                    {tasks && ( <TaskTable
                         tasks={tasks}
                         setTasks={setTasks}
-                    />
+                    />)}
                 </div>
                 <button
                     className={styles.button}
