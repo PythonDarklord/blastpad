@@ -135,15 +135,6 @@ export default function Home() {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     };
 
-    const checkStatus = (e, name) => {
-        const status = e.target.checked;
-        const newTasks = tasks.map((item) =>
-            item.name === name ? {...item, status: status} : item,
-        );
-        setTasks(newTasks);
-        localStorage.setItem("tasks", JSON.stringify(newTasks));
-    };
-
     const saveNotes = (e) => {
         const note = e.target.value;
         setNotes(note);
@@ -250,8 +241,7 @@ export default function Home() {
                             <div className={styles.scrollBox}>
                                 <TaskTable
                                     tasks = {tasks}
-                                    checkStatus = {checkStatus}
-
+                                    setTasks = {setTasks}
                                 />
                             </div>
                             <button
