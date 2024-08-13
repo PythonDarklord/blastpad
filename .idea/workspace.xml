@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Colors fix">
+      <change afterPath="$PROJECT_DIR$/components/games.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Panel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Panel.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Popup.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Popup.module.css" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +81,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Python\Documents\GitHub\blastpad\components\Panels" />
       <recent name="C:\Users\Python\Documents\GitHub\blastpad\public" />
+      <recent name="C:\Users\Python\Documents\GitHub\blastpad\components\Panels" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +131,7 @@
       <workItem from="1723518665679" duration="3041000" />
       <workItem from="1723555381861" duration="1322000" />
       <workItem from="1723571066272" duration="2605000" />
-      <workItem from="1723583081656" duration="1178000" />
+      <workItem from="1723583081656" duration="3828000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -248,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723583476451</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Colors fix">
+      <option name="closed" value="true" />
+      <created>1723584431291</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723584431291</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

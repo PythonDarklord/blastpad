@@ -6,11 +6,13 @@ import TaskPanel from "@/components/panels/taskPanel"
 import FavoritesPanel from "@/components/panels/favoritesPanel"
 import EmailsPanel from "@/components/panels/emailsPanel"
 import NotesPanel from "@/components/panels/notesPanel"
+import GamesMenu from "@/components/games";
 
 export default function Home() {
     const [settingsPopup, setSettingsPopup] = useState(false);
     const [settings, setSettings] = useState({});
     const [loadedSettings, setLoadedSettings] = useState(false);
+    const [gamesPopup, setGamesPopup] = useState(false);
 
     useEffect(() => {
         document.getElementById("query").focus();
@@ -75,10 +77,16 @@ export default function Home() {
                 <header className={styles.header}>
                     <img
                         onClick={() => setSettingsPopup(true)}
-                        src="settings.png"
+                        src={"settings.png"}
                         className={styles.setcog}
                         alt="Settings Cog"
                     />
+                    <img
+                        onClick={() => setGamesPopup(true)}
+                        src={"games.png"}
+                        className={styles.gamesButton}
+                        alt="Games Button"
+                        />
                     <h1 className={styles.title}> BlastPad </h1>
                 </header>
                 <form onSubmit={handleSubmit} className={styles.searchForm}>
@@ -117,6 +125,11 @@ export default function Home() {
                         settings={settings}
                         setSettings={setSettings}
                         closeMethod={() => setSettingsPopup(false)}
+                    />
+                )}
+                {gamesPopup && (
+                    <GamesMenu
+                        closeMethod={() => setGamesPopup(false)}
                     />
                 )}
             </main>

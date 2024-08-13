@@ -20,10 +20,17 @@
     flex-direction: column;
     background-color: var(--background);
     color: white;
-    -webkit-box-shadow:0px 0px 91px 60px rgba(131,4,177,0.39);
-    -moz-box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
-    box-shadow: 0px 0px 91px 60px rgba(131,4,177,0.39);
+    -webkit-box-shadow:0 0 91px 60px rgba(131,4,177,0.39);
+    -moz-box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
+    box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
 }
+
+.gameScreen {
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--background);
+}
+
 .form {
     display: flex;
     align-items: center;
@@ -59,8 +66,17 @@
     padding: 0.6ch 1ch;
     border: 2px solid white;
     border-radius: 12px;
-
 }
+.button {
+    background-color: var(--background);
+    font-family: var(--font-jetbrains);
+    color: white;
+    font-size: large;
+    padding: 0.6ch 1ch;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
 .popup > form > div {
     display: flex;
     flex-direction: row;
