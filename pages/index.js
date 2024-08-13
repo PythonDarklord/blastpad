@@ -4,8 +4,10 @@ import {useState, useEffect} from "react";
 import AddFavorite from "@/components/addFavorite";
 import SettingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
-import AddTask from "@/components/addTask";
-import TaskTable from "@/components/taskTable.js"
+import TaskPanel from "@/components/panels/taskPanel"
+import FavoritesPanel from "@/components/panels/favoritesPanel"
+import EmailsPanel from "@/components/panels/emailsPanel"
+import NotesPanel from "@/components/panels/notesPanel"
 
 export default function Home() {
     const [favoritePopup, setFavoritePopup] = useState(false);
@@ -15,9 +17,6 @@ export default function Home() {
     const [emailPopup, setEmailPopup] = useState(false);
     const [emails, setEmails] = useState([]);
     const [loadedEmails, setLoadedEmails] = useState(false);
-    const [toDoPopup, setToDoPopup] = useState(false);
-    const [tasks, setTasks] = useState([]);
-    const [loadedTasks, setLoadedTasks] = useState(false);
     const [notes, setNotes] = useState("");
     const [loadedNotes, setLoadedNotes] = useState(false);
     const [settings, setSettings] = useState({});
@@ -57,14 +56,6 @@ export default function Home() {
         }
         setLoadedEmails(true);
 
-        const storedTasks = localStorage.getItem("tasks");
-        if (storedTasks) {
-            const parsedTasks = JSON.parse(storedTasks);
-            setTasks(parsedTasks);
-            console.log(tasks);
-        }
-        setLoadedTasks(true);
-
         const storedNotes = localStorage.getItem("notes");
         if (storedNotes) {
             const parsedNotes = JSON.parse(storedNotes);
@@ -86,9 +77,6 @@ export default function Home() {
         loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
     }, [emails]);
 
-    useEffect(() => {
-        loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
-    }, [tasks]);
 
     useEffect(() => {
         loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
@@ -125,15 +113,6 @@ export default function Home() {
         localStorage.setItem("emails", JSON.stringify(emails));
     };
 
-    const addTask = (e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const priority = e.target.priority.value;
-        const getStatus = false;
-        setToDoPopup(false);
-        setTasks([...tasks, {name: name, priority: priority, status: getStatus}]);
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    };
 
     const saveNotes = (e) => {
         const note = e.target.value;
@@ -232,26 +211,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div
-                        className={styles.subsection}
-                        style={{background: settings.todoColor}}
-                    >
-                        <div className={styles.toDo}>
-                            <h2 className={styles.subheader}> To-Do </h2>
-                            <div className={styles.scrollBox}>
-                                <TaskTable
-                                    tasks = {tasks}
-                                    setTasks = {setTasks}
-                                />
-                            </div>
-                            <button
-                                className={styles.button}
-                                onClick={() => setToDoPopup(true)}
-                            >
-                                Add Task
-                            </button>
-                        </div>
-                    </div>
+                    <TaskPanel/>
 
                     <div
                         className={styles.subsection}
@@ -289,12 +249,6 @@ export default function Home() {
                     <AddEmail
                         closeMethod={() => setEmailPopup(false)}
                         addMethod={addEmail}
-                    />
-                )}
-                {toDoPopup && (
-                    <AddTask
-                        closeMethod={() => setToDoPopup(false)}
-                        addMethod={addTask}
                     />
                 )}
             </main>
