@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Fixed task bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/panels/emailsPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/emailsPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/panels/favoritesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/favoritesPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/panels/notesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/notesPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/panels/taskPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/taskPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Panel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Panel.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Components for all" />
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +122,7 @@
       <workItem from="1723515232944" duration="22000" />
       <workItem from="1723518665679" duration="3041000" />
       <workItem from="1723555381861" duration="1322000" />
-      <workItem from="1723571066272" duration="2208000" />
+      <workItem from="1723571066272" duration="2605000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -237,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723571290259</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Components for all">
+      <option name="closed" value="true" />
+      <created>1723573552499</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723573552499</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +263,7 @@
     <MESSAGE value="Moved Task Panel to it's own component" />
     <MESSAGE value="Moved Notes Panel to it's own component" />
     <MESSAGE value="Fixed task bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed task bug" />
+    <MESSAGE value="Components for all" />
+    <option name="LAST_COMMIT_MESSAGE" value="Components for all" />
   </component>
 </project>
