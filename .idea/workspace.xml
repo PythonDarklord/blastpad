@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Reset Color Button">
-      <change afterPath="$PROJECT_DIR$/components/panels/emailsPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/panels/favoritesPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/panels/notesPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/panels/taskPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/taskTable.js" beforeDir="false" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Moved Task Panel to it's own component">
+      <change beforePath="$PROJECT_DIR$/components/panels/notesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/notesPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Table.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Panel.module.css" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +124,7 @@
       <workItem from="1723426396997" duration="38000" />
       <workItem from="1723515232944" duration="22000" />
       <workItem from="1723518665679" duration="3041000" />
-      <workItem from="1723555381861" duration="737000" />
+      <workItem from="1723555381861" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -212,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723521742399</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Moved Task Panel to it's own component">
+      <option name="closed" value="true" />
+      <created>1723556295989</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723556295989</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +238,7 @@
     <MESSAGE value="Changes by ocean" />
     <MESSAGE value="Changes" />
     <MESSAGE value="Reset Color Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset Color Button" />
+    <MESSAGE value="Moved Task Panel to it's own component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved Task Panel to it's own component" />
   </component>
 </project>

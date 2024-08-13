@@ -17,8 +17,6 @@ export default function Home() {
     const [emailPopup, setEmailPopup] = useState(false);
     const [emails, setEmails] = useState([]);
     const [loadedEmails, setLoadedEmails] = useState(false);
-    const [notes, setNotes] = useState("");
-    const [loadedNotes, setLoadedNotes] = useState(false);
     const [settings, setSettings] = useState({});
     const [loadedSettings, setLoadedSettings] = useState(false);
 
@@ -56,12 +54,6 @@ export default function Home() {
         }
         setLoadedEmails(true);
 
-        const storedNotes = localStorage.getItem("notes");
-        if (storedNotes) {
-            const parsedNotes = JSON.parse(storedNotes);
-            setNotes(parsedNotes);
-        }
-        setLoadedNotes(true);
     }, []);
 
     useEffect(() => {
@@ -76,11 +68,6 @@ export default function Home() {
     useEffect(() => {
         loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
     }, [emails]);
-
-
-    useEffect(() => {
-        loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
-    }, [notes]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -113,12 +100,6 @@ export default function Home() {
         localStorage.setItem("emails", JSON.stringify(emails));
     };
 
-
-    const saveNotes = (e) => {
-        const note = e.target.value;
-        setNotes(note);
-        localStorage.setItem("notes", JSON.stringify(note));
-    };
 
     return (
         <>
@@ -213,25 +194,8 @@ export default function Home() {
 
                     <TaskPanel/>
 
-                    <div
-                        className={styles.subsection}
-                        style={{background: settings.notesColor}}
-                    >
-                        <div className={styles.notes}>
-                            <h2 className={styles.subheader}> Notes </h2>
-                            <form className={styles.scrollBox}>
-                <textarea
-                    id="notes"
-                    name="notes"
-                    className={styles.textBox}
-                    defaultValue={notes}
-                    onChange={(e) => saveNotes(e)}
-                ></textarea>
-                            </form>
-                        </div>
-                    </div>
+                    <NotesPanel/>
                 </div>
-
                 {favoritePopup && (
                     <AddFavorite
                         closeMethod={() => setFavoritePopup(false)}
