@@ -5,330 +5,309 @@ import AddFavorite from "@/components/addFavorite";
 import SettingsMenu from "@/components/settingsMenu";
 import AddEmail from "@/components/addEmail";
 import AddTask from "@/components/addTask";
+import TaskTable from "@/components/taskTable.js"
 
 export default function Home() {
-  const [favoritePopup, setFavoritePopup] = useState(false);
-  const [favorites, setFavorites] = useState([]);
-  const [loadedFavorites, setLoadedFavorites] = useState(false);
-  const [settingsPopup, setSettingsPopup] = useState(false);
-  const [emailPopup, setEmailPopup] = useState(false);
-  const [emails, setEmails] = useState([]);
-  const [loadedEmails, setLoadedEmails] = useState(false);
-  const [toDoPopup, setToDoPopup] = useState(false);
-  const [tasks, setTasks] = useState([]);
-  const [loadedTasks, setLoadedTasks] = useState(false);
-  const [notes, setNotes] = useState("");
-  const [loadedNotes, setLoadedNotes] = useState(false);
-  const [settings, setSettings] = useState({});
-  const [loadedSettings, setLoadedSettings] = useState(false);
+    const [favoritePopup, setFavoritePopup] = useState(false);
+    const [favorites, setFavorites] = useState([]);
+    const [loadedFavorites, setLoadedFavorites] = useState(false);
+    const [settingsPopup, setSettingsPopup] = useState(false);
+    const [emailPopup, setEmailPopup] = useState(false);
+    const [emails, setEmails] = useState([]);
+    const [loadedEmails, setLoadedEmails] = useState(false);
+    const [toDoPopup, setToDoPopup] = useState(false);
+    const [tasks, setTasks] = useState([]);
+    const [loadedTasks, setLoadedTasks] = useState(false);
+    const [notes, setNotes] = useState("");
+    const [loadedNotes, setLoadedNotes] = useState(false);
+    const [settings, setSettings] = useState({});
+    const [loadedSettings, setLoadedSettings] = useState(false);
 
-  useEffect(() => {
-    document.getElementById("query").focus();
-  }, []);
+    useEffect(() => {
+        document.getElementById("query").focus();
+    }, []);
 
-  useEffect(() => {
-    const storedSettings = JSON.parse(localStorage.getItem("settings"));
-    if (storedSettings) {
-      setSettings(storedSettings);
-    } else {
-      setSettings({
-        'favoritesColor': '#F6D454',
-        'emailsColor': '#a54040',
-        'notesColor': '#5dc55d',
-        'todoColor': '#6880ce'
-      });
-    }
-    setLoadedSettings(true)
-  }, []);
+    useEffect(() => {
+        const storedSettings = JSON.parse(localStorage.getItem("settings"));
+        if (storedSettings) {
+            setSettings(storedSettings);
+        } else {
+            setSettings({
+                'favoritesColor': '#F6D454',
+                'emailsColor': '#a54040',
+                'notesColor': '#5dc55d',
+                'todoColor': '#6880ce'
+            });
+        }
+        setLoadedSettings(true)
+    }, []);
 
-  useEffect(() => {
-    const storedFavorites = localStorage.getItem("favorites");
-    if (storedFavorites) {
-      const parsedFavorites = JSON.parse(storedFavorites);
-      setFavorites(parsedFavorites);
-    }
-    setLoadedFavorites(true);
+    useEffect(() => {
+        const storedFavorites = localStorage.getItem("favorites");
+        if (storedFavorites) {
+            const parsedFavorites = JSON.parse(storedFavorites);
+            setFavorites(parsedFavorites);
+        }
+        setLoadedFavorites(true);
 
-    const storedEmails = localStorage.getItem("emails");
-    if (storedEmails) {
-      const parsedEmails = JSON.parse(storedEmails);
-      setEmails(parsedEmails);
-    }
-    setLoadedEmails(true);
+        const storedEmails = localStorage.getItem("emails");
+        if (storedEmails) {
+            const parsedEmails = JSON.parse(storedEmails);
+            setEmails(parsedEmails);
+        }
+        setLoadedEmails(true);
 
-    const storedTasks = localStorage.getItem("tasks");
-    if (storedTasks) {
-      const parsedTasks = JSON.parse(storedTasks);
-      setTasks(parsedTasks);
-      console.log(tasks);
-    }
-    setLoadedTasks(true);
+        const storedTasks = localStorage.getItem("tasks");
+        if (storedTasks) {
+            const parsedTasks = JSON.parse(storedTasks);
+            setTasks(parsedTasks);
+            console.log(tasks);
+        }
+        setLoadedTasks(true);
 
-    const storedNotes = localStorage.getItem("notes");
-    if (storedNotes) {
-      const parsedNotes = JSON.parse(storedNotes);
-      setNotes(parsedNotes);
-    }
-    setLoadedNotes(true);
-  }, []);
+        const storedNotes = localStorage.getItem("notes");
+        if (storedNotes) {
+            const parsedNotes = JSON.parse(storedNotes);
+            setNotes(parsedNotes);
+        }
+        setLoadedNotes(true);
+    }, []);
 
-  useEffect(() => {
-    loadedSettings && localStorage.setItem('settings', JSON.stringify(settings));
-  }, [settings]);
+    useEffect(() => {
+        loadedSettings && localStorage.setItem('settings', JSON.stringify(settings));
+    }, [settings]);
 
-  useEffect(() => {
-    loadedFavorites &&
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
+    useEffect(() => {
+        loadedFavorites &&
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+    }, [favorites]);
 
-  useEffect(() => {
-    loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
-  }, [emails]);
+    useEffect(() => {
+        loadedEmails && localStorage.setItem("emails", JSON.stringify(emails));
+    }, [emails]);
 
-  useEffect(() => {
-    loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+    useEffect(() => {
+        loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
-  useEffect(() => {
-    loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
+    useEffect(() => {
+        loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
+    }, [notes]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.query.value);
-    const query = e.target.query.value;
-    if (query[0] === "/") {
-      window.open("https://" + query.replace("/", ""), "_blank");
-    } else {
-      const encodedQuery = encodeURIComponent(query);
-      const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-      window.open(googleSearchUrl, "_blank");
-    }
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target.query.value);
+        const query = e.target.query.value;
+        if (query[0] === "/") {
+            window.open("https://" + query.replace("/", ""), "_blank");
+        } else {
+            const encodedQuery = encodeURIComponent(query);
+            const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
+            window.open(googleSearchUrl, "_blank");
+        }
+    };
 
-  const addFavorite = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const url = e.target.url.value;
-    setFavoritePopup(false);
-    setFavorites([...favorites, {name: name, url: url}]);
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  };
+    const addFavorite = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const url = e.target.url.value;
+        setFavoritePopup(false);
+        setFavorites([...favorites, {name: name, url: url}]);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+    };
 
-  const addEmail = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    setEmailPopup(false);
-    setEmails([...emails, {name: name, email: email}]);
-    localStorage.setItem("emails", JSON.stringify(emails));
-  };
+    const addEmail = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        setEmailPopup(false);
+        setEmails([...emails, {name: name, email: email}]);
+        localStorage.setItem("emails", JSON.stringify(emails));
+    };
 
-  const addTask = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const priority = e.target.priority.value;
-    const getStatus = false;
-    setToDoPopup(false);
-    setTasks([...tasks, {name: name, priority: priority, status: getStatus}]);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  };
+    const addTask = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const priority = e.target.priority.value;
+        const getStatus = false;
+        setToDoPopup(false);
+        setTasks([...tasks, {name: name, priority: priority, status: getStatus}]);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    };
 
-  const checkStatus = (e, name) => {
-    const status = e.target.checked;
-    const newTasks = tasks.map((item) =>
-      item.name === name ? {...item, status: status} : item,
-    );
-    setTasks(newTasks);
-    localStorage.setItem("tasks", JSON.stringify(newTasks));
-  };
+    const checkStatus = (e, name) => {
+        const status = e.target.checked;
+        const newTasks = tasks.map((item) =>
+            item.name === name ? {...item, status: status} : item,
+        );
+        setTasks(newTasks);
+        localStorage.setItem("tasks", JSON.stringify(newTasks));
+    };
 
-  const saveNotes = (e) => {
-    const note = e.target.value;
-    setNotes(note);
-    localStorage.setItem("notes", JSON.stringify(note));
-  };
+    const saveNotes = (e) => {
+        const note = e.target.value;
+        setNotes(note);
+        localStorage.setItem("notes", JSON.stringify(note));
+    };
 
-  return (
-    <>
-      {/* Tab Metadata */}
+    return (
+        <>
+            {/* Tab Metadata */}
 
-      <Head>
-        <title>BlastPad</title>
-        <meta name="description" content="Prepare for launch!"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" href="/favicon.ico"/>
-      </Head>
+            <Head>
+                <title>BlastPad</title>
+                <meta name="description" content="Prepare for launch!"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
 
-      {/* Header and Searchbar */}
+            {/* Header and Searchbar */}
 
-      <main className={styles.main}>
-        <header className={styles.header}>
-          <img
-            onClick={() => setSettingsPopup(true)}
-            src="settings.png"
-            className={styles.setcog}
-            alt="Settings Cog"
-          />
-          <h1 className={styles.title}> BlastPad </h1>
-        </header>
-        <form onSubmit={handleSubmit} className={styles.searchForm}>
-          <input
-            type="text"
-            placeholder="Prepare for blastoff!"
-            id="query"
-            name="query"
-            className={styles.search}
-            autoComplete="off"
-          />
-        </form>
+            <main className={styles.main}>
+                <header className={styles.header}>
+                    <img
+                        onClick={() => setSettingsPopup(true)}
+                        src="settings.png"
+                        className={styles.setcog}
+                        alt="Settings Cog"
+                    />
+                    <h1 className={styles.title}> BlastPad </h1>
+                </header>
+                <form onSubmit={handleSubmit} className={styles.searchForm}>
+                    <input
+                        type="text"
+                        placeholder="Prepare for blastoff!"
+                        id="query"
+                        name="query"
+                        className={styles.search}
+                        autoComplete="off"
+                    />
+                </form>
 
-        {/* Subsections */}
+                {/* Subsections */}
 
-        <div className={styles.tiles}>
-          <div
-            className={styles.subsection}
-            style={{background: settings.favoritesColor}}
-          >
-            <div className={styles.favorites}>
-              <h2 className={styles.subheader}> Favorites </h2>
-              <div className={styles.scrollBox}>
-                <ul id="favoritesList" className={styles.list}>
-                  {favorites &&
-                    favorites.map((item, index) => (
-                      <li key={index}>
-                        <a href={item.url} target="_blank">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-              <button
-                className={styles.button}
-                onClick={() => setFavoritePopup(true)}
-              >
-                Add Favorite
-              </button>
-            </div>
-          </div>
+                <div className={styles.tiles}>
+                    <div
+                        className={styles.subsection}
+                        style={{background: settings.favoritesColor}}
+                    >
+                        <div className={styles.favorites}>
+                            <h2 className={styles.subheader}> Favorites </h2>
+                            <div className={styles.scrollBox}>
+                                <ul id="favoritesList" className={styles.list}>
+                                    {favorites &&
+                                        favorites.map((item, index) => (
+                                            <li key={index}>
+                                                <a href={item.url} target="_blank">
+                                                    {item.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                </ul>
+                            </div>
+                            <button
+                                className={styles.button}
+                                onClick={() => setFavoritePopup(true)}
+                            >
+                                Add Favorite
+                            </button>
+                        </div>
+                    </div>
 
-          <div
-            className={styles.subsection}
-            style={{background: settings.emailsColor}}
-          >
-            <div className={styles.emails}>
-              <h2 className={styles.subheader}> Emails </h2>
-              <div className={styles.scrollBox}>
-                <ul id="emailsList" className={styles.list}>
-                  {emails &&
-                    emails.map((item, index) => (
-                      <li key={index}>
-                        <a href={"mailto:" + item.email} target="_blank">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-              <button
-                className={styles.button}
-                onClick={() => setEmailPopup(true)}
-              >
-                Add Email
-              </button>
-            </div>
-          </div>
+                    <div
+                        className={styles.subsection}
+                        style={{background: settings.emailsColor}}
+                    >
+                        <div className={styles.emails}>
+                            <h2 className={styles.subheader}> Emails </h2>
+                            <div className={styles.scrollBox}>
+                                <ul id="emailsList" className={styles.list}>
+                                    {emails &&
+                                        emails.map((item, index) => (
+                                            <li key={index}>
+                                                <a href={"mailto:" + item.email} target="_blank">
+                                                    {item.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                </ul>
+                            </div>
+                            <button
+                                className={styles.button}
+                                onClick={() => setEmailPopup(true)}
+                            >
+                                Add Email
+                            </button>
+                        </div>
+                    </div>
 
-          <div
-            className={styles.subsection}
-            style={{background: settings.todoColor}}
-          >
-            <div className={styles.toDo}>
-              <h2 className={styles.subheader}> To-Do </h2>
-              <div className={styles.scrollBox}>
-                <table id="tasksTable" className={styles.table}>
-                  <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Priority</th>
-                    <th>Status</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  {tasks &&
-                    tasks.map((item, index) => (
-                      <tr key={index}>
-                        <td>{item.name}</td>
-                        <td>{item.priority}</td>
-                        <td>
-                          <input
-                            name="status"
-                            id="status"
-                            type="checkbox"
-                            onClick={(e) => checkStatus(e, item.name)}
-                            checked={item.status}
-                          />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <button
-                className={styles.button}
-                onClick={() => setToDoPopup(true)}
-              >
-                Add Task
-              </button>
-            </div>
-          </div>
+                    <div
+                        className={styles.subsection}
+                        style={{background: settings.todoColor}}
+                    >
+                        <div className={styles.toDo}>
+                            <h2 className={styles.subheader}> To-Do </h2>
+                            <div className={styles.scrollBox}>
+                                <TaskTable
+                                    tasks = {tasks}
+                                    checkStatus = {checkStatus}
 
-          <div
-            className={styles.subsection}
-            style={{background: settings.notesColor}}
-          >
-            <div className={styles.notes}>
-              <h2 className={styles.subheader}> Notes </h2>
-              <form className={styles.scrollBox}>
+                                />
+                            </div>
+                            <button
+                                className={styles.button}
+                                onClick={() => setToDoPopup(true)}
+                            >
+                                Add Task
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        className={styles.subsection}
+                        style={{background: settings.notesColor}}
+                    >
+                        <div className={styles.notes}>
+                            <h2 className={styles.subheader}> Notes </h2>
+                            <form className={styles.scrollBox}>
                 <textarea
-                  id="notes"
-                  name="notes"
-                  className={styles.textBox}
-                  defaultValue={notes}
-                  onChange={(e) => saveNotes(e)}
+                    id="notes"
+                    name="notes"
+                    className={styles.textBox}
+                    defaultValue={notes}
+                    onChange={(e) => saveNotes(e)}
                 ></textarea>
-              </form>
-            </div>
-          </div>
-        </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
-        {favoritePopup && (
-          <AddFavorite
-            closeMethod={() => setFavoritePopup(false)}
-            addMethod={addFavorite}
-          />
-        )}
-        {settingsPopup && (
-          <SettingsMenu
-            settings={settings}
-            setSettings={setSettings}
-            closeMethod={() => setSettingsPopup(false)}
-          />
-        )}
-        {emailPopup && (
-          <AddEmail
-            closeMethod={() => setEmailPopup(false)}
-            addMethod={addEmail}
-          />
-        )}
-        {toDoPopup && (
-          <AddTask
-            closeMethod={() => setToDoPopup(false)}
-            addMethod={addTask}
-          />
-        )}
-      </main>
-    </>
-  );
+                {favoritePopup && (
+                    <AddFavorite
+                        closeMethod={() => setFavoritePopup(false)}
+                        addMethod={addFavorite}
+                    />
+                )}
+                {settingsPopup && (
+                    <SettingsMenu
+                        settings={settings}
+                        setSettings={setSettings}
+                        closeMethod={() => setSettingsPopup(false)}
+                    />
+                )}
+                {emailPopup && (
+                    <AddEmail
+                        closeMethod={() => setEmailPopup(false)}
+                        addMethod={addEmail}
+                    />
+                )}
+                {toDoPopup && (
+                    <AddTask
+                        closeMethod={() => setToDoPopup(false)}
+                        addMethod={addTask}
+                    />
+                )}
+            </main>
+        </>
+    );
 }

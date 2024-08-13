@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Reset Color Button">
+      <change afterPath="$PROJECT_DIR$/components/taskTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/Table.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settingsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/settingsMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +20,15 @@
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+      </list>
     </option>
   </component>
   <component name="Git.Settings">
@@ -51,13 +63,16 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.general",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -110,7 +125,7 @@
       <workItem from="1723426360658" duration="30000" />
       <workItem from="1723426396997" duration="38000" />
       <workItem from="1723515232944" duration="22000" />
-      <workItem from="1723518665679" duration="823000" />
+      <workItem from="1723518665679" duration="2398000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -152,7 +167,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723423681832</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519546241</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519546241</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519595529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519595529</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519701276</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519701276</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

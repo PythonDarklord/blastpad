@@ -99,21 +99,6 @@
     margin-top: 1.5%;
 }
 
-.table {
-    padding: 0;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 98%;
-}
-
-.table td {
-    border: 1px solid black;
-}
-
-.table th {
-    border: 1px solid black;
-}
-
 /* Subsection styles */
 .subsection {
     display: flex;
