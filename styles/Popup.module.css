@@ -26,9 +26,37 @@
 }
 
 .gameScreen {
+    position: fixed;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
     width: 80vw;
     height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--background);
+    color: white;
+    -webkit-box-shadow:0 0 91px 60px rgba(131,4,177,0.39);
+    -moz-box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
+    box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
+}
+.gameScreen h2 {
+    position: absolute;
+    top: 10%
+}
+
+.gameScreen textarea {
+    width: 90%;
+    height: 60%;
+    background-color: var(--background);
+    color: white;
+    border-radius: 10px;
+}
+
+.popup h1 {
+    position: absolute;
+    top: 10%;
 }
 
 .form {
@@ -142,6 +170,9 @@
         cursor: pointer;
     }
     .form button {
+        cursor: pointer;
+    }
+    .button{
         cursor: pointer;
     }
 }

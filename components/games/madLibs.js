@@ -1,18 +1,21 @@
 import styles from "@/styles/Popup.module.css";
-import {useState} from "react";
-import MadLibs from "@/components/games/madLibs"
 
+export default function madLibs ({closeMethod}) {
 
-export default function GamesMenu({closeMethod}) {
-    const [madLibsPopup, setMadLibsPopup] = useState(false);
+    let text = "Hello, please enter your name: "
 
-    const launchGame = (game) => {
-        game(true)
+    const runGame = () => {
+
     }
+
+    document.addEventListener("keydown", runGame(Event));
+    if(Event.key === 'Enter') {
+        runGame();
+    }
+
     return (
-        <>
         <div className={styles.fullscreen}>
-            <div className={styles.popup}>
+            <div className={styles.gameScreen}>
                 <button onClick={closeMethod} className={styles.close}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -29,14 +32,11 @@ export default function GamesMenu({closeMethod}) {
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-                <h1> Games </h1>
-                <button className={styles.button} onClick={() => launchGame(setMadLibsPopup)}> Mad Libs</button>
+                <h2>Mad Libs</h2>
+                <textarea defaultValue={text} id={'inputArea'}>
+
+                </textarea>
             </div>
         </div>
-            {madLibsPopup && (
-            <MadLibs
-            closeMethod={() => setMadLibsPopup(false)}
-            />)}
-            </>
     );
 }
