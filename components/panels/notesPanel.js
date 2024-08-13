@@ -1,31 +1,32 @@
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
 
-const [notes, setNotes] = useState("");
-const [loadedNotes, setLoadedNotes] = useState(false);
 
-useEffect(() => {
-    const storedNotes = localStorage.getItem("notes");
-    if (storedNotes) {
-        const parsedNotes = JSON.parse(storedNotes);
-        setNotes(parsedNotes);
-    }
-    setLoadedNotes(true);
-},[]);
+export default function NotesPanel(settings) {
 
-useEffect(() => {
-    loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
-}, [notes]);
+    const [notes, setNotes] = useState("");
+    const [loadedNotes, setLoadedNotes] = useState(false);
 
+    useEffect(() => {
+        const storedNotes = localStorage.getItem("notes");
+        if (storedNotes) {
+            const parsedNotes = JSON.parse(storedNotes);
+            setNotes(parsedNotes);
+        }
+        setLoadedNotes(true);
+    },[]);
 
-const saveNotes = (e) => {
-    const note = e.target.value;
-    setNotes(note);
-    localStorage.setItem("notes", JSON.stringify(note));
-};
+    useEffect(() => {
+        loadedNotes && localStorage.setItem("notes", JSON.stringify(notes));
+    }, [notes]);
 
 
-export default function NotesPanel() {
+    const saveNotes = (e) => {
+        const note = e.target.value;
+        setNotes(note);
+        localStorage.setItem("notes", JSON.stringify(note));
+    };
+
     return(
         <div
             className={styles.subsection}
