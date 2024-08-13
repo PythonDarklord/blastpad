@@ -21,7 +21,7 @@ const checkStatus = (e, name, tasks, setTasks) => {
     localStorage.setItem("tasks", JSON.stringify(newTasks));
 };
 
-export default function TaskPanel(settings) {
+export default function TaskPanel({settings}) {
 
     const [toDoPopup, setToDoPopup] = useState(false);
     const [tasks, setTasks] = useState([]);

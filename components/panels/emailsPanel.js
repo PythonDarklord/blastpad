@@ -2,7 +2,7 @@ import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
 import AddEmail from "@/components/addEmail";
 
-export default function EmailsPanel(settings) {
+export default function EmailsPanel({settings}) {
 
     const [emailPopup, setEmailPopup] = useState(false);
     const [emails, setEmails] = useState([]);

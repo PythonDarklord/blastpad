@@ -2,7 +2,7 @@ import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
 
 
-export default function NotesPanel(settings) {
+export default function NotesPanel({settings}) {
 
     const [notes, setNotes] = useState("");
     const [loadedNotes, setLoadedNotes] = useState(false);

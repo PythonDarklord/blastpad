@@ -5,7 +5,7 @@ import AddFavorite from "@/components/addFavorite";
 
 
 
-export default function FavoritesPanel(settings) {
+export default function FavoritesPanel({settings}) {
     const [favoritePopup, setFavoritePopup] = useState(false);
     const [favorites, setFavorites] = useState([]);
     const [loadedFavorites, setLoadedFavorites] = useState(false);

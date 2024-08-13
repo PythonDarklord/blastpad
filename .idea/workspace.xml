@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Components for all" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Components for all">
+      <change beforePath="$PROJECT_DIR$/components/panels/emailsPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/emailsPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/panels/favoritesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/favoritesPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/panels/notesPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/notesPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/panels/taskPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/taskPanel.js" afterDir="false" />
+    </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +128,7 @@
       <workItem from="1723518665679" duration="3041000" />
       <workItem from="1723555381861" duration="1322000" />
       <workItem from="1723571066272" duration="2605000" />
+      <workItem from="1723583081656" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
