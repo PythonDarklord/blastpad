@@ -21,7 +21,7 @@ const checkStatus = (e, name, tasks, setTasks) => {
     localStorage.setItem("tasks", JSON.stringify(newTasks));
 };
 
-export default function TaskPanel({settings}) {
+export default function TaskPanel({color}) {
 
     const [toDoPopup, setToDoPopup] = useState(false);
     const [tasks, setTasks] = useState([]);
@@ -31,7 +31,7 @@ export default function TaskPanel({settings}) {
         <>
             <div
                 className={styles.subsection}
-                style={{background: settings.todoColor}}
+                style={{background: color}}
             >
                 <div className={styles.toDo}>
                     <h2 className={styles.subheader}> To-Do </h2>

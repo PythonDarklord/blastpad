@@ -2,7 +2,7 @@ import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
 
 
-export default function NotesPanel({settings}) {
+export default function NotesPanel({color}) {
 
     const [notes, setNotes] = useState("");
     const [loadedNotes, setLoadedNotes] = useState(false);
@@ -30,7 +30,7 @@ export default function NotesPanel({settings}) {
     return(
         <div
             className={styles.subsection}
-            style={{background: settings.notesColor}}
+            style={{background: color}}
         >
             <div className={styles.notes}>
                 <h2 className={styles.subheader}> Notes </h2>
