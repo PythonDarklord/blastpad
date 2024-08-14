@@ -2,7 +2,7 @@ import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
 import AddEmail from "@/components/addEmail";
 
-export default function EmailsPanel({settings}) {
+export default function EmailsPanel({color}) {
 
     const [emailPopup, setEmailPopup] = useState(false);
     const [emails, setEmails] = useState([]);
@@ -34,7 +34,7 @@ export default function EmailsPanel({settings}) {
         <>
         <div
             className={styles.subsection}
-            style={{background: settings.emailsColor}}
+            style={{background: color}}
         >
             <div className={styles.emails}>
                 <h2 className={styles.subheader}> Emails </h2>
