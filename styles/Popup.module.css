@@ -54,6 +54,12 @@
     border-radius: 10px;
 }
 
+.gameScreen iframe {
+    width: 98%;
+    height: 70%;
+    border-radius: 10px;
+}
+
 .popup h1 {
     position: absolute;
     top: 10%;

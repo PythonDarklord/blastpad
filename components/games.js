@@ -1,10 +1,12 @@
 import styles from "@/styles/Popup.module.css";
 import {useState} from "react";
 import MadLibs from "@/components/games/madLibs"
+import SpaghettiYeti from "@/components/games/spaghettiYeti"
 
 
 export default function GamesMenu({closeMethod}) {
     const [madLibsPopup, setMadLibsPopup] = useState(false);
+    const [spaghettiYetiPopup, setSpaghettiYetiPopup] = useState(false);
 
     const launchGame = (game) => {
         game(true)
@@ -30,13 +32,18 @@ export default function GamesMenu({closeMethod}) {
                     </svg>
                 </button>
                 <h1> Games </h1>
-                <button className={styles.button} onClick={() => launchGame(setMadLibsPopup)}> Mad Libs</button>
+                <button className={styles.button} onClick={() => launchGame(setMadLibsPopup)}>Mad Libs</button>
+                <button className={styles.button} onClick={() => launchGame(setSpaghettiYetiPopup)}>Spaghetti Yeti</button>
             </div>
         </div>
             {madLibsPopup && (
             <MadLibs
             closeMethod={() => setMadLibsPopup(false)}
             />)}
+            {spaghettiYetiPopup && (
+                <SpaghettiYeti
+                    closeMethod={() => setSpaghettiYetiPopup(false)}
+                />)}
             </>
     );
 }

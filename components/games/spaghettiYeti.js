@@ -1,17 +1,6 @@
 import styles from "@/styles/Popup.module.css";
 
-export default function MadLibs ({closeMethod}) {
-
-    let text = "Hello, please enter your name: "
-
-    const runGame = () => {
-
-    }
-
-    document.addEventListener("keydown", runGame(Event));
-    if(Event.key === 'Enter') {
-        runGame();
-    }
+export default function SpaghettiYeti ({closeMethod}) {
 
     return (
         <div className={styles.fullscreen}>
@@ -32,10 +21,10 @@ export default function MadLibs ({closeMethod}) {
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-                <h2>Mad Libs</h2>
-                <textarea defaultValue={text} id={'inputArea'}>
-
-                </textarea>
+                <h2>Spaghetti Yeti</h2>
+                <iframe src="https://itch.io/embed-upload/9953694?color=878351" allowFullScreen="true"
+                        width="900" height="550"><a href="https://pythondarklord.itch.io/spaghetti-yeti">Play Spaghetti
+                    Yeti on itch.io</a></iframe>
             </div>
         </div>
     );
