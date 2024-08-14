@@ -5,7 +5,7 @@ import AddFavorite from "@/components/addFavorite";
 
 
 
-export default function FavoritesPanel({settings}) {
+export default function FavoritesPanel({color}) {
     const [favoritePopup, setFavoritePopup] = useState(false);
     const [favorites, setFavorites] = useState([]);
     const [loadedFavorites, setLoadedFavorites] = useState(false);
@@ -38,7 +38,7 @@ export default function FavoritesPanel({settings}) {
         <>
         <div
             className={styles.subsection}
-            style={{background: settings.favoritesColor}}
+            style={{background: color}}
         >
             <div className={styles.favorites}>
                 <h2 className={styles.subheader}> Favorites </h2>
