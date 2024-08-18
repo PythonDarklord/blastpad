@@ -1,16 +1,18 @@
 import styles from "@/styles/Popup.module.css";
+import {useState} from "react";
+import MadLibs from "@/components/games/madLibs"
+import SpaghettiYeti from "@/components/games/spaghettiYeti"
 
 
-export function madLibs () {
-    return(
-    <div className={styles.gameScreen}>
-        <h2>Mad Libs</h2>
-    </div>
-    );
-};
+export default function GamesMenu({closeMethod}) {
+    const [madLibsPopup, setMadLibsPopup] = useState(false);
+    const [spaghettiYetiPopup, setSpaghettiYetiPopup] = useState(false);
 
-export default function GamesMenu ({closeMethod}){
+    const launchGame = (game) => {
+        game(true)
+    }
     return (
+        <>
         <div className={styles.fullscreen}>
             <div className={styles.popup}>
                 <button onClick={closeMethod} className={styles.close}>
@@ -30,8 +32,18 @@ export default function GamesMenu ({closeMethod}){
                     </svg>
                 </button>
                 <h1> Games </h1>
-                <button className={styles.button} onClick={madLibs}> Mad Libs </button>
+                <button className={styles.button} onClick={() => launchGame(setMadLibsPopup)}>Mad Libs</button>
+                <button className={styles.button} onClick={() => launchGame(setSpaghettiYetiPopup)}>Spaghetti Yeti</button>
             </div>
         </div>
+            {madLibsPopup && (
+            <MadLibs
+            closeMethod={() => setMadLibsPopup(false)}
+            />)}
+            {spaghettiYetiPopup && (
+                <SpaghettiYeti
+                    closeMethod={() => setSpaghettiYetiPopup(false)}
+                />)}
+            </>
     );
 }
