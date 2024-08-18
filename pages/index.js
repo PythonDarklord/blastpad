@@ -60,7 +60,7 @@ export default function Home() {
         <title>BlastPad</title>
         <meta name="description" content="Prepare for launch!"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/favicon.svg"/>
       </Head>
       {/* Header and Searchbar */}
       <main className={styles.main}>
