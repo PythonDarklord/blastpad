@@ -16,17 +16,20 @@ export default function SearchBar() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className={styles.searchForm}>
-        <input
-          type="text"
-          placeholder="Prepare for blastoff!"
-          id="query"
-          name="query"
-          className={styles.search}
-          autoComplete="off"
-        />
-      </form>
+    <div className={styles.searchForm}>
+      <div className={styles.search}>
+        <form onSubmit={handleSubmit} className={styles.searchForm}>
+          <input
+            type="text"
+            placeholder="Prepare for blastoff!"
+            id="query"
+            name="query"
+            autoComplete="off"
+            className={styles.searchInput}
+          />
+        </form>
+        <img src='/favicon.svg' alt='Blastoff!'/>
+      </div>
     </div>
   );
 }
