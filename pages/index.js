@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import SettingsMenu from "@/components/settingsMenu";
 import TaskPanel from "@/components/panels/taskPanel"
 import FavoritesPanel from "@/components/panels/favoritesPanel"
@@ -38,21 +38,6 @@ export default function Home() {
     loadedSettings && localStorage.setItem('settings', JSON.stringify(settings));
   }, [settings]);
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.query.value);
-    const query = e.target.query.value;
-    if (query[0] === "/") {
-      window.open("https://" + query.replace("/", ""), "_blank");
-    } else {
-      const encodedQuery = encodeURIComponent(query);
-      const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-      window.open(googleSearchUrl, "_blank");
-    }
-  };
-
-
   return (
     <>
       {/* Tab Metadata */}
@@ -64,19 +49,19 @@ export default function Home() {
       </Head>
       {/* Header and Searchbar */}
       <main className={styles.main}>
+        <img
+          onClick={() => setSettingsPopup(true)}
+          src={"settings.png"}
+          className={styles.settingsCog}
+          alt="Settings Cog"
+        />
+        <img
+          onClick={() => setGamesPopup(true)}
+          src={"games.png"}
+          className={styles.gamesButton}
+          alt="Games Button"
+        />
         <header className={styles.header}>
-          <img
-            onClick={() => setSettingsPopup(true)}
-            src={"settings.png"}
-            className={styles.setcog}
-            alt="Settings Cog"
-          />
-          <img
-            onClick={() => setGamesPopup(true)}
-            src={"games.png"}
-            className={styles.gamesButton}
-            alt="Games Button"
-          />
           <h1 className={styles.title}> BlastPad </h1>
         </header>
         <form onSubmit={handleSubmit} className={styles.searchForm}>
