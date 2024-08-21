@@ -38,6 +38,19 @@ export default function Home() {
     loadedSettings && localStorage.setItem('settings', JSON.stringify(settings));
   }, [settings]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.query.value);
+    const query = e.target.query.value;
+    if (query[0] === "/") {
+      window.open("https://" + query.replace("/", ""), "_blank");
+    } else {
+      const encodedQuery = encodeURIComponent(query);
+      const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
+      window.open(googleSearchUrl, "_blank");
+    }
+  };
+
   return (
     <>
       {/* Tab Metadata */}
