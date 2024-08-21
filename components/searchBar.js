@@ -49,7 +49,7 @@ export default function SearchBar() {
         <div>
           <Mods mod={mod}/>
         </div>
-        <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange} onKeyUp={handleKeyPress}>
+        <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange} onKeyDown={handleKeyPress}>
           <input
             type="text"
             placeholder={placeholder}
