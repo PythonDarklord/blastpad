@@ -41,6 +41,7 @@
     color: var(--purple);
     font-size: 70px;
     margin: 0;
+    user-select: none;
 }
 
 .searchForm {
