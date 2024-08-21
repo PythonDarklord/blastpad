@@ -7,6 +7,7 @@
     height: 100vh;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .header {
@@ -17,21 +18,22 @@
     margin-top: 2vh;
 }
 
-.setcog {
+.settingsCog {
     position: absolute;
     left: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 2vw;
     height: 5vh;
     transition-duration: 0.2s;
+    z-index: 99;
 }
 
 .gamesButton {
     position: absolute;
-    Right: 2.5vw;
-    top: 25%;
+    right: 2vw;
+    top: 2vw;
     height: 5vh;
     transition-duration: 0.2s;
+    z-index: 99;
 }
 
 .title {
@@ -39,6 +41,7 @@
     color: var(--purple);
     font-size: 70px;
     margin: 0;
+    user-select: none;
 }
 
 .searchForm {
@@ -53,12 +56,12 @@
     width: 60vw;
     height: 10vh;
     border-radius: 2vh;
-    font-family: var(--font-jetbrains);
+    font-family: var(--font-jetbrains), ui-monospace;
     font-size: xx-large;
     color: rgba(255, 255, 255, 0.658);
-    -webkit-box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
-    -moz-box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
-    box-shadow: 0px 0px 91px 60px rgba(131, 4, 177, 0.39);
+    -webkit-box-shadow: 0 0 91px 60px rgba(131, 4, 177, 0.39);
+    -moz-box-shadow: 0 0 91px 60px rgba(131, 4, 177, 0.39);
+    box-shadow: 0 0 91px 60px rgba(131, 4, 177, 0.39);
     background-color: var(--background);
     padding: 0 1ch;
     margin: 60px;
@@ -111,17 +114,19 @@
 
 @media (pointer: fine) {
 
-    .setcog:hover {
+    .settingsCog:hover {
         cursor: pointer;
-        height: 5.5vh;
-        top: 33%;
+        height: 6vh;
+        top: 1.75vw;
+        left: 1.75vw;
         transform: rotate(90deg);
     }
 
     .gamesButton:hover {
         cursor: pointer;
         height: 6vh;
-        top: 30%;
+        top: 1.75vw;
+        right: 1.75vw;
     }
 
     @media (min-width: 768px) {
