@@ -1,6 +1,7 @@
 import styles from "@/styles/search.module.css";
 import {useState} from "react";
 import Mods from "@/components/mods";
+import Results from "@/components/results";
 
 export default function SearchBar() {
   const [query, setQuery] = useState('')
@@ -63,6 +64,7 @@ export default function SearchBar() {
           </button>
         </form>
       </div>
+      <Results mod={mod} query={query}/>
     </div>
   );
 }
