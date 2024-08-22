@@ -53,10 +53,47 @@
 }
 
 .mod {
-    background-color: rgba(131, 4, 209, 0.65);
-    border: 2px solid #8304d1;
     border-radius: 6px;
     padding: 2px;
+}
+
+.redditMod {
+    background-color: rgba(255, 69, 0, 0.65);
+    border: 2px solid #ff4500;
+}
+
+.spotifyMod {
+    background-color: rgba(30, 215, 96, 0.65);
+    border: 2px solid #1ed760;
+}
+
+.appleMusicMod {
+    background-color: rgba(249, 52, 77, 0.65);
+    border: 2px solid #f9344d;
+}
+
+.fandomMod {
+    background-color: rgba(254, 197, 13, 0.85);
+    border: 2px solid #f71d56;
+}
+
+.youtubeMod {
+    background-color: rgba(255, 0, 0, 0.65);
+    border: 2px solid #ff0000;
+}
+
+.githubMod {
+    background-color: rgba(44, 48, 54, 0.65);
+    border: 2px solid #2c3036;
+}
+
+.googleMod {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-top: 3px solid #ea4335;
+    border-bottom: 3px solid #34a853;
+    border-left: 3px solid #fbbc05;
+    border-right: 3px solid #4285f4;
+    border-radius: 10px;
 }
 
 .searchSubmit {

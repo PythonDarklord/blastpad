@@ -3,6 +3,51 @@ import {useState} from "react";
 import Mods from "@/components/mods";
 import Results from "@/components/results";
 
+const modOptions = {
+  'r/': {
+    'className': styles.redditMod,
+    'name': 'reddit',
+    'placeholder': 'Search for a subreddit',
+    'bubble': 'r/'
+  },
+  'am/': {
+    'className': styles.appleMusicMod,
+    'name': 'appleMusic',
+    'placeholder': 'Search for a song, artist, or album',
+    'bubble': 'am/'
+  },
+  'sp/': {
+    'className': styles.spotifyMod,
+    'name': 'spotify',
+    'placeholder': 'Search for a song, artist, or album',
+    'bubble': 'sp/'
+  },
+  'fand/': {
+    'className': styles.fandomMod,
+    'name': 'fandom',
+    'placeholder': 'Search for a wiki page',
+    'bubble': 'fand/'
+  },
+  'yt/': {
+    'className': styles.youtubeMod,
+    'name': 'youtube',
+    'placeholder': 'Search for a video',
+    'bubble': 'yt/'
+  },
+  'gh/': {
+    'className': styles.githubMod,
+    'name': 'github',
+    'placeholder': 'Search for a user or user/repo',
+    'bubble': 'gh/'
+  },
+  'g/': {
+    'className': styles.googleMod,
+    'name': 'google',
+    'placeholder': 'Search for anything',
+    'bubble': 'G/'
+  }
+}
+
 export default function SearchBar() {
   const [query, setQuery] = useState('')
   const [mod, setMod] = useState('')
@@ -27,11 +72,11 @@ export default function SearchBar() {
   const handleChange = (e) => {
     const newQuery = e.target.value
 
-    if (newQuery === 'r/') {
-      setMod('r/')
+    if (Object.keys(modOptions).includes(newQuery)) {
+      setMod(modOptions[newQuery])
       setQuery('')
       e.target.value = ''
-      setPlaceholder('Enter a subreddit!')
+      setPlaceholder(modOptions[newQuery].placeholder)
     } else {
       setQuery(newQuery)
     }
