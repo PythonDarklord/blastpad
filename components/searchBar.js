@@ -1,50 +1,71 @@
 import styles from "@/styles/search.module.css";
 import {useState} from "react";
 import Mods from "@/components/mods";
-import Results from "@/components/results";
 
 const modOptions = {
   'r/': {
-    'className': styles.redditMod,
-    'name': 'reddit',
-    'placeholder': 'Search for a subreddit',
-    'bubble': 'r/'
+    className: styles.redditMod,
+    name: 'reddit',
+    placeholder: 'Search for a subreddit',
+    bubble: 'r/',
+    encode: false,
+    launch: 'https://reddit.com/r/USER_QUERY'
   },
   'am/': {
-    'className': styles.appleMusicMod,
-    'name': 'appleMusic',
-    'placeholder': 'Search for a song, artist, or album',
-    'bubble': 'am/'
+    className: styles.appleMusicMod,
+    name: 'appleMusic',
+    placeholder: 'Search for a song, artist, or album',
+    bubble: 'Apple Music',
+    encode: true,
+    launch: 'https://music.apple.com/us/search?term=USER_QUERY'
   },
   'sp/': {
-    'className': styles.spotifyMod,
-    'name': 'spotify',
-    'placeholder': 'Search for a song, artist, or album',
-    'bubble': 'sp/'
+    className: styles.spotifyMod,
+    name: 'spotify',
+    placeholder: 'Search for a song, artist, or album',
+    bubble: 'Spotify',
+    encode: true,
+    launch: 'https://open.spotify.com/search/USER_QUERY'
   },
   'fand/': {
-    'className': styles.fandomMod,
-    'name': 'fandom',
-    'placeholder': 'Search for a wiki page',
-    'bubble': 'fand/'
+    className: styles.fandomMod,
+    name: 'fandom',
+    placeholder: 'Search for a wiki page',
+    bubble: 'Fandom',
+    encode: true,
+    launch: 'https://community.fandom.com/wiki/Special:Search?query=USER_QUERY&scope=cross-wiki'
   },
   'yt/': {
-    'className': styles.youtubeMod,
-    'name': 'youtube',
-    'placeholder': 'Search for a video',
-    'bubble': 'yt/'
+    className: styles.youtubeMod,
+    name: 'youtube',
+    placeholder: 'Search for a video',
+    bubble: 'YouTube',
+    encode: true,
+    launch: 'https://www.youtube.com/results?search_query=USER_QUERY'
   },
   'gh/': {
-    'className': styles.githubMod,
-    'name': 'github',
-    'placeholder': 'Search for a user or user/repo',
-    'bubble': 'gh/'
+    className: styles.githubMod,
+    name: 'github',
+    placeholder: 'Search for a user or user/repo',
+    bubble: 'Github',
+    encode: false,
+    launch: 'https://github.com/USER_QUERY'
   },
   'g/': {
-    'className': styles.googleMod,
-    'name': 'google',
-    'placeholder': 'Search for anything',
-    'bubble': 'G/'
+    className: styles.googleMod,
+    name: 'google',
+    placeholder: 'Search for anything',
+    bubble: 'Google',
+    encode: true,
+    launch: 'https://www.google.com/search?q=USER_QUERY'
+  },
+  '//': {
+    className: styles.googleMod,
+    name: 'url',
+    placeholder: 'Enter a URL',
+    bubble: 'https://',
+    encode: true,
+    launch: 'https://USER_QUERY'
   }
 }
 
@@ -55,18 +76,17 @@ export default function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.query.value);
     const newQuery = e.target.query.value;
-    if (mod.length > 0 && newQuery.length > 0) {
-      window.open(`https://reddit.com/r/${newQuery}`, '_blank')
-    } else if (newQuery[0] === "/") {
-      window.open("https://" + newQuery.replace("/", ""), "_blank");
+    if (mod) {
+      window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery));
     } else {
-      const encodedQuery = encodeURIComponent(newQuery);
-      const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-      window.open(googleSearchUrl, "_blank");
+      try {
+        new URL(newQuery);
+        window.open(newQuery);
+      } catch (error) {
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`);
+      }
     }
-
   };
 
   const handleChange = (e) => {
@@ -109,7 +129,6 @@ export default function SearchBar() {
           </button>
         </form>
       </div>
-      <Results mod={mod} query={query}/>
     </div>
   );
 }
