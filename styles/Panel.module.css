@@ -13,7 +13,6 @@
     border: 1px solid black;
 }
 
-
 .scrollBox {
     margin-left: auto;
     margin-right: auto;
@@ -47,9 +46,10 @@
     height: 15%;
     width: 25%;
     margin-top: 1.5%;
+    z-index: 90;
+    position: relative;
+    user-select: none;
 }
-
-
 
 /* Subsection styles */
 .subsection {
@@ -58,11 +58,10 @@
     align-items: center;
     border-radius: 15px;
     margin: 5px 0;
-    align-self: flex-start;
-    text-align: center;
     position: relative;
-    bottom: 0;
     transition-duration: 0.2s;
+    height: 100%;
+    width: 100%;
 }
 
 .subheader {
@@ -70,33 +69,12 @@
     font-size: 25px;
     text-align: left;
     margin: 1vi;
+    user-select: none;
 }
 
 .list {
     list-style-type: none;
     padding: 0;
-}
-
-/* Tile Specifications */
-
-.favorites {
-    height: 381px;
-    width: 34vw;
-}
-
-.emails {
-    height: 381px;
-    width: 64vw;
-}
-
-.toDo {
-    height: 381px;
-    width: 64vw;
-}
-
-.notes {
-    height: 381px;
-    width: 34vw;
 }
 
 @media (pointer: fine) {

@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 100vh;
     margin: 0;
     padding: 0;
     position: relative;
@@ -85,7 +84,11 @@
     flex-direction: row;
 }
 
-
+.tileContainer {
+    width: 97vw;
+    max-width: 97vw;
+    overflow-x: hidden;
+}
 
 
 @media (max-width: 850px) {

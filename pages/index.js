@@ -2,11 +2,8 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import {useEffect, useState} from "react";
 import SettingsMenu from "@/components/settingsMenu";
-import TaskPanel from "@/components/panels/taskPanel"
-import FavoritesPanel from "@/components/panels/favoritesPanel"
-import EmailsPanel from "@/components/panels/emailsPanel"
-import NotesPanel from "@/components/panels/notesPanel"
 import GamesMenu from "@/components/games";
+import TileLayout from "@/components/tileLayout"
 
 export default function Home() {
   const [settingsPopup, setSettingsPopup] = useState(false);
@@ -87,27 +84,9 @@ export default function Home() {
             autoComplete="off"
           />
         </form>
-
-        {/* Subsections */}
-
-        <div className={styles.tiles}>
-          <FavoritesPanel
-            color={settings.favoritesColor}
-          />
-
-          <EmailsPanel
-            color={settings.emailsColor}
-          />
-
-          <TaskPanel
-            color={settings.todoColor}
-          />
-
-          <NotesPanel
-            color={settings.notesColor}
-          />
+        <div className={styles.tileContainer}>
+          <TileLayout settings={settings}/>
         </div>
-
         {settingsPopup && (
           <SettingsMenu
             settings={settings}
