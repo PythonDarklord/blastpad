@@ -60,7 +60,7 @@ const modOptions = {
     launch: 'https://www.google.com/search?q=USER_QUERY'
   },
   '//': {
-    className: styles.googleMod,
+    className: styles.urlMod,
     name: 'url',
     placeholder: 'Enter a URL',
     bubble: 'https://',
@@ -78,15 +78,16 @@ export default function SearchBar() {
     e.preventDefault();
     const newQuery = e.target.query.value;
     if (mod) {
-      window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery));
+      window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery), '_self');
     } else {
       try {
         new URL(newQuery);
-        window.open(newQuery);
+        window.open(newQuery, '_self');
       } catch (error) {
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`);
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`, '_self');
       }
     }
+    e.target.reset();
   };
 
   const handleChange = (e) => {
