@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import SettingsMenu from "@/components/settingsMenu";
 import GamesMenu from "@/components/games";
 import TileLayout from "@/components/tileLayout"
+import SearchBar from "@/components/searchBar";
 
 export default function Home() {
   const [settingsPopup, setSettingsPopup] = useState(false);
@@ -75,16 +76,7 @@ export default function Home() {
         <header className={styles.header}>
           <h1 className={styles.title}> BlastPad </h1>
         </header>
-        <form onSubmit={handleSubmit} className={styles.searchForm}>
-          <input
-            type="text"
-            placeholder="Prepare for blastoff!"
-            id="query"
-            name="query"
-            className={styles.search}
-            autoComplete="off"
-          />
-        </form>
+        <SearchBar/>
         <div className={styles.tileContainer}>
           <TileLayout settings={settings}/>
         </div>
