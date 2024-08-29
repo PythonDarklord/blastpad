@@ -48,6 +48,7 @@ const TileLayout = ({settings}) => {
       isResizable={true}
       compactType="vertical"
       preventCollision={false}
+      isDraggable={settings.draggableTiles}
       resizeHandles={["se", 'sw']}
     >
       <div key='a' className={styles.draggable}>

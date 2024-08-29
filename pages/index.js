@@ -24,7 +24,8 @@ export default function Home() {
         'favoritesColor': '#F6D454',
         'emailsColor': '#a54040',
         'notesColor': '#5dc55d',
-        'todoColor': '#6880ce'
+        'todoColor': '#6880ce',
+        'draggableTiles': false
       });
     }
     setLoadedSettings(true)
