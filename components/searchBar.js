@@ -46,10 +46,18 @@ const modOptions = {
   'gh/': {
     className: styles.githubMod,
     name: 'github',
-    placeholder: 'Search for a user or user/repo',
+    placeholder: 'Enter a user or user/repo',
     bubble: 'Github',
     encode: false,
     launch: 'https://github.com/USER_QUERY'
+  },
+  'ghs/': {
+      className: styles.githubMod,
+      name: 'github search',
+      placeholder: 'Search Github',
+      bubble: 'Github Search',
+      encode: true,
+      launch: 'https://github.com/search?q=USER_QUERY&type=repositories'
   },
   'g/': {
     className: styles.googleMod,
@@ -58,6 +66,14 @@ const modOptions = {
     bubble: 'Google',
     encode: true,
     launch: 'https://www.google.com/search?q=USER_QUERY'
+  },
+  'az/': {
+      className: styles.amazonMod,
+      name: 'amazon',
+      placeholder: 'Search for a product',
+      bubble: 'Amazon',
+      encode: true,
+      launch: 'https://www.amazon.com/s?k=USER_QUERY'
   },
   '//': {
     className: styles.urlMod,
@@ -113,9 +129,7 @@ export default function SearchBar() {
   return (
     <div className={styles.searchForm}>
       <div className={styles.search}>
-        <div>
           <Mods mod={mod}/>
-        </div>
         <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange} onKeyDown={handleKeyPress}>
           <input
             type="text"
