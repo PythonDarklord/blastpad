@@ -2,11 +2,8 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import {useEffect, useState} from "react";
 import SettingsMenu from "@/components/settingsMenu";
-import TaskPanel from "@/components/panels/taskPanel"
-import FavoritesPanel from "@/components/panels/favoritesPanel"
-import EmailsPanel from "@/components/panels/emailsPanel"
-import NotesPanel from "@/components/panels/notesPanel"
 import GamesMenu from "@/components/games";
+import TileLayout from "@/components/tileLayout"
 import SearchBar from "@/components/searchBar";
 
 export default function Home() {
@@ -28,7 +25,8 @@ export default function Home() {
         'favoritesColor': '#F6D454',
         'emailsColor': '#a54040',
         'notesColor': '#5dc55d',
-        'todoColor': '#6880ce'
+        'todoColor': '#6880ce',
+        'draggableTiles': false
       });
     }
     setLoadedSettings(true)
@@ -79,27 +77,9 @@ export default function Home() {
           <h1 className={styles.title}> BlastPad </h1>
         </header>
         <SearchBar/>
-
-        {/* Subsections */}
-
-        <div className={styles.tiles}>
-          <FavoritesPanel
-            color={settings.favoritesColor}
-          />
-
-          <EmailsPanel
-            color={settings.emailsColor}
-          />
-
-          <TaskPanel
-            color={settings.todoColor}
-          />
-
-          <NotesPanel
-            color={settings.notesColor}
-          />
+        <div className={styles.tileContainer}>
+          <TileLayout settings={settings}/>
         </div>
-
         {settingsPopup && (
           <SettingsMenu
             settings={settings}
