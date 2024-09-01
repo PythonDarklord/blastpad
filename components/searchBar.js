@@ -1,6 +1,7 @@
 import styles from "@/styles/search.module.css";
 import {useState} from "react";
 import Mods from "@/components/mods";
+import Results from "./results";
 
 const modOptions = {
   'r/': {
@@ -88,6 +89,7 @@ const modOptions = {
 export default function SearchBar() {
   const [query, setQuery] = useState('')
   const [mod, setMod] = useState('')
+  const [selectedResult, setSelectedResult] = useState(-1)
   const [placeholder, setPlaceholder] = useState('Prepare for blastoff!')
 
   const handleSubmit = (e) => {
@@ -123,13 +125,16 @@ export default function SearchBar() {
     if (query.length === 0 && e.key === 'Backspace') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
+    } else if ( e.key === 'Enter') {
+      setMod('')
+      setPlaceholder('Prepare for blastoff!')
     }
   }
 
   return (
-    <div className={styles.searchForm}>
+    <div className={styles.searchContainer}>
       <div className={styles.search}>
-          <Mods mod={mod}/>
+        <Mods mod={mod}/>
         <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange} onKeyDown={handleKeyPress}>
           <input
             type="text"
@@ -144,6 +149,7 @@ export default function SearchBar() {
           </button>
         </form>
       </div>
+      <Results mod={mod} query={query}/>
     </div>
   );
 }
