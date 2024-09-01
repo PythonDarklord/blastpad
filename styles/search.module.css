@@ -5,6 +5,14 @@
     width: 100%;
 }
 
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
 .search {
     border: 2px solid var(--background);
     width: 80vw;
@@ -19,7 +27,7 @@
     background-color: var(--background);
     padding: 0 1ch;
     margin: 60px;
-    transition-duration: 0.2s;
+    transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
