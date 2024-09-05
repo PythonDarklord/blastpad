@@ -53,12 +53,12 @@ const modOptions = {
     launch: 'https://github.com/USER_QUERY'
   },
   'ghs/': {
-      className: styles.githubMod,
-      name: 'github search',
-      placeholder: 'Search Github',
-      bubble: 'Github Search',
-      encode: true,
-      launch: 'https://github.com/search?q=USER_QUERY&type=repositories'
+    className: styles.githubMod,
+    name: 'github search',
+    placeholder: 'Search Github',
+    bubble: 'Github Search',
+    encode: true,
+    launch: 'https://github.com/search?q=USER_QUERY&type=repositories'
   },
   'g/': {
     className: styles.googleMod,
@@ -69,12 +69,12 @@ const modOptions = {
     launch: 'https://www.google.com/search?q=USER_QUERY'
   },
   'az/': {
-      className: styles.amazonMod,
-      name: 'amazon',
-      placeholder: 'Search for a product',
-      bubble: 'Amazon',
-      encode: true,
-      launch: 'https://www.amazon.com/s?k=USER_QUERY'
+    className: styles.amazonMod,
+    name: 'amazon',
+    placeholder: 'Search for a product',
+    bubble: 'Amazon',
+    encode: true,
+    launch: 'https://www.amazon.com/s?k=USER_QUERY'
   },
   '//': {
     className: styles.urlMod,
@@ -125,31 +125,40 @@ export default function SearchBar() {
     if (query.length === 0 && e.key === 'Backspace') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
-    } else if ( e.key === 'Enter') {
+    } else if (e.key === 'Enter') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setSelectedResult(selectedResult - 1)
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setSelectedResult(selectedResult + 1)
     }
   }
 
   return (
     <div className={styles.searchContainer}>
-      <div className={styles.search}>
-        <Mods mod={mod}/>
-        <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange} onKeyDown={handleKeyPress}>
-          <input
-            type="text"
-            placeholder={placeholder}
-            id="query"
-            name="query"
-            autoComplete="off"
-            className={styles.searchInput}
-          />
-          <button type='submit' className={styles.searchSubmit}>
-            <img src='/favicon.svg' alt='Blastoff!' height="60%"/>
-          </button>
-        </form>
+      <div className={styles.searchBar}>
+        <div className={styles.searchBarInner}>
+          <Mods mod={mod}/>
+          <form onSubmit={handleSubmit} className={styles.searchForm} onChange={handleChange}
+                onKeyDown={handleKeyPress}>
+            <input
+              type="text"
+              placeholder={placeholder}
+              id="query"
+              name="query"
+              autoComplete="off"
+              className={styles.searchInput}
+            />
+            <button type='submit' className={styles.searchSubmit}>
+              <img src='/favicon.svg' alt='Blastoff!' height="60%"/>
+            </button>
+          </form>
+        </div>
+        <Results mod={mod} query={query} selected={selectedResult}/>
       </div>
-      <Results mod={mod} query={query}/>
     </div>
   );
 }
