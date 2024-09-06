@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="begin to polish spotify results" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="ide files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +119,7 @@
     &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;npm.test build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ocean\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -165,15 +167,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="npm.dev" />
       <item itemvalue="npm.test build" />
+      <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -229,6 +227,13 @@
       <workItem from="1725167553602" duration="2190000" />
       <workItem from="1725506711834" duration="3760000" />
       <workItem from="1725511386388" duration="733000" />
+      <workItem from="1725588558517" duration="511000" />
+      <workItem from="1725589083026" duration="22000" />
+      <workItem from="1725589111004" duration="767000" />
+      <workItem from="1725589927983" duration="794000" />
+      <workItem from="1725590741011" duration="126000" />
+      <workItem from="1725590884774" duration="75000" />
+      <workItem from="1725590974804" duration="808000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -510,13 +515,36 @@
       <option name="project" value="LOCAL" />
       <updated>1725512118666</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="ide files">
+      <option name="closed" value="true" />
+      <created>1725588764566</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1725588764566</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -528,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved Notes Panel to it's own component" />
     <MESSAGE value="Fixed task bug" />
     <MESSAGE value="Components for all" />
     <MESSAGE value="Colors fix" />
@@ -553,7 +580,8 @@
     <MESSAGE value="widen search bar to accommodate larger mods" />
     <MESSAGE value="Layouts saved to localstorage" />
     <MESSAGE value="begin to polish spotify results" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin to polish spotify results" />
+    <MESSAGE value="ide files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
