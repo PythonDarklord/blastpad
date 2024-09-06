@@ -13,6 +13,10 @@
     padding: 10px 0;
 }
 
+.result a {
+    color: var(--purple);
+}
+
 .result img {
     padding-right: 10px;
 }
@@ -22,5 +26,12 @@
 }
 
 .selected {
-    background-color: var(--purple);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (pointer: fine) {
+    .result:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+    }
 }

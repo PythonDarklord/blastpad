@@ -18,7 +18,7 @@ async function getToken() {
   return data.access_token;
 }
 
-export default function Results({mod, query, selected, resultOpened, setResultOpened, setResultsCount}) {
+export default function Results({mod, query, selected, resultOpened, setResultOpened, setResultsCount, newTab}) {
   const [token, setToken] = useState(null);
   const [results, setResults] = useState([])
 
@@ -30,8 +30,7 @@ export default function Results({mod, query, selected, resultOpened, setResultOp
     switch (mod.name) {
       case "spotify":
         if (token && query) {
-          searchSpotify(query, token).then((results) => setResults(results));
-          setResultsCount(results.tracks?.items?.length);
+          searchSpotify(query, token).then((results) => {setResults(results); setResultsCount(results.tracks.items.length);});
         }
         break;
       default:
@@ -43,7 +42,7 @@ export default function Results({mod, query, selected, resultOpened, setResultOp
     if (resultOpened) {
       switch (mod.name) {
         case "spotify":
-          window.open(results.tracks.items[selected].external_urls.spotify, "_blank");
+          window.open(results.tracks.items[selected].external_urls.spotify, newTab ? '_blank' : '_self');
           setResultOpened(false)
           break;
         default:
@@ -59,12 +58,11 @@ export default function Results({mod, query, selected, resultOpened, setResultOp
   return (
     <div className={styles.resultsContainer}>
       {results.tracks?.items?.map((item, index) => (
-        <div key={item.id} className={styles.result + (index === selected ? ' ' + styles.selected : '')}>
+        <div key={item.id} className={styles.result + (index === selected ? ' ' + styles.selected : '')} onClick={() => window.open(item.external_urls.spotify, newTab ? '_blank' : '_self')}>
           <img src={item.album.images[0].url} alt={item.name} style={{width: '50px', height: '50px'}}/>
-          <a href={item.external_urls?.spotify} target="_blank">{item.name}</a>
+          <a href={item.external_urls?.spotify} target={newTab ? '_blank' : '_self'}>{item.name}</a>
         </div>
       ))}
-      {selected}
     </div>
   )
 }

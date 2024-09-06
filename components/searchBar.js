@@ -127,6 +127,7 @@ export default function SearchBar() {
   }
 
   const handleKeyPress = (e) => {
+    console.log(e)
     if (query.length === 0 && e.key === 'Backspace') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
@@ -166,7 +167,7 @@ export default function SearchBar() {
             </button>
           </form>
         </div>
-        <Results mod={mod} query={query} selected={selectedResult} resultOpened={resultOpened} setResultOpened={setResultOpened} setResultsCount={setResultsCount} newTab={newTab} setNewTab={setNewTab}/>
+        <Results mod={mod} query={query} selected={selectedResult} resultOpened={resultOpened} setResultOpened={setResultOpened} setResultsCount={setResultsCount} newTab={newTab}/>
       </div>
     </div>
   );
