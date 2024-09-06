@@ -18,7 +18,7 @@ async function getToken() {
   return data.access_token;
 }
 
-export default function Results({mod, query, selected}) {
+export default function Results({mod, query, selected, resultOpened, setResultOpened, setResultsCount}) {
   const [token, setToken] = useState(null);
   const [results, setResults] = useState([])
 
@@ -27,10 +27,34 @@ export default function Results({mod, query, selected}) {
   }, []);
 
   useEffect(() => {
-    if (mod.name === "spotify" && token) {
-      searchSpotify(query, token).then((results) => setResults(results));
+    switch (mod.name) {
+      case "spotify":
+        if (token && query) {
+          searchSpotify(query, token).then((results) => setResults(results));
+          setResultsCount(results.tracks?.items?.length);
+        }
+        break;
+      default:
+        break;
     }
   }, [query, token, mod.name]);
+
+  useEffect(() => {
+    if (resultOpened) {
+      switch (mod.name) {
+        case "spotify":
+          window.open(results.tracks.items[selected].external_urls.spotify, "_blank");
+          setResultOpened(false)
+          break;
+        default:
+          break;
+      }
+    }
+  }, [resultOpened]);
+
+  if (!mod || !query) {
+    return
+  }
 
   return (
     <div className={styles.resultsContainer}>

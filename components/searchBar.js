@@ -91,11 +91,16 @@ export default function SearchBar() {
   const [mod, setMod] = useState('')
   const [selectedResult, setSelectedResult] = useState(-1)
   const [placeholder, setPlaceholder] = useState('Prepare for blastoff!')
+  const [resultOpened, setResultOpened] = useState(false)
+  const [resultsCount, setResultsCount] = useState(0)
+  const [newTab, setNewTab] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newQuery = e.target.query.value;
-    if (mod) {
+    if (selectedResult !== -1) {
+      setResultOpened(true);
+    } else if (mod) {
       window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery), '_self');
     } else {
       try {
@@ -125,15 +130,19 @@ export default function SearchBar() {
     if (query.length === 0 && e.key === 'Backspace') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
-    } else if (e.key === 'Enter') {
-      setMod('')
-      setPlaceholder('Prepare for blastoff!')
-    } else if (e.key === 'ArrowUp') {
+      setSelectedResult(-1)
+    } else if (e.key === 'ArrowUp' && selectedResult >= 0) {
       e.preventDefault()
       setSelectedResult(selectedResult - 1)
-    } else if (e.key === 'ArrowDown') {
+    } else if (e.key === 'ArrowDown' && selectedResult < resultsCount - 1) {
       e.preventDefault()
       setSelectedResult(selectedResult + 1)
+    } else if (e.key === 'Enter') {
+      if (e.shiftKey){
+        setNewTab(true)
+      } else {
+        setNewTab(false)
+      }
     }
   }
 
@@ -157,7 +166,7 @@ export default function SearchBar() {
             </button>
           </form>
         </div>
-        <Results mod={mod} query={query} selected={selectedResult}/>
+        <Results mod={mod} query={query} selected={selectedResult} resultOpened={resultOpened} setResultOpened={setResultOpened} setResultsCount={setResultsCount} newTab={newTab} setNewTab={setNewTab}/>
       </div>
     </div>
   );
