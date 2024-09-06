@@ -62,13 +62,13 @@ export default function Home() {
       {/* Header and Searchbar */}
       <main className={styles.main}>
         <img
-          onClick={() => setSettingsPopup(true)}
+          onClick={() => setSettingsPopup(!settingsPopup)}
           src={"settings.png"}
           className={styles.settingsCog}
           alt="Settings Cog"
         />
         <img
-          onClick={() => setGamesPopup(true)}
+          onClick={() => setGamesPopup(!gamesPopup)}
           src={"games.png"}
           className={styles.gamesButton}
           alt="Games Button"
