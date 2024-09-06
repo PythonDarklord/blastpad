@@ -101,13 +101,13 @@ export default function SearchBar() {
     if (selectedResult !== -1) {
       setResultOpened(true);
     } else if (mod) {
-      window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery), '_self');
+      window.open(mod.launch.replace('USER_QUERY', mod.encode ? encodeURIComponent(newQuery) : newQuery), newTab ? '_blank' : '_self');
     } else {
       try {
         new URL(newQuery);
         window.open(newQuery, '_self');
       } catch (error) {
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`, '_self');
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`, newTab ? '_blank' : '_self');
       }
     }
     e.target.reset();
@@ -138,7 +138,7 @@ export default function SearchBar() {
       e.preventDefault()
       setSelectedResult(selectedResult + 1)
     } else if (e.key === 'Enter') {
-      if (e.shiftKey){
+      if (e.ctrlKey) {
         setNewTab(true)
       } else {
         setNewTab(false)
