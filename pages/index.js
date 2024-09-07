@@ -5,12 +5,14 @@ import SettingsMenu from "@/components/settingsMenu";
 import GamesMenu from "@/components/games";
 import TileLayout from "@/components/tileLayout"
 import SearchBar from "@/components/searchBar";
+import AppsMenu from "@/components/appsMenu"
 
 export default function Home() {
     const [settingsPopup, setSettingsPopup] = useState(false);
     const [settings, setSettings] = useState({});
     const [loadedSettings, setLoadedSettings] = useState(false);
     const [gamesPopup, setGamesPopup] = useState(false);
+    const [appsPopup, setAppsPopup] = useState(false);
 
     useEffect(() => {
         document.getElementById("query").focus();
@@ -68,7 +70,7 @@ export default function Home() {
                     alt="Settings Cog"
                 />
                 <img
-                    onClick={() => setSettingsPopup(true)}
+                    onClick={() => setAppsPopup(true)}
                     src={"apps.svg"}
                     className={styles.apps}
                     alt="Google Apps"
@@ -96,6 +98,11 @@ export default function Home() {
                 {gamesPopup && (
                     <GamesMenu
                         closeMethod={() => setGamesPopup(false)}
+                    />
+                )}
+                {appsPopup && (
+                    <AppsMenu
+                        closeMethod={() => setAppsPopup(false)}
                     />
                 )}
             </main>
