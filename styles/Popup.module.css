@@ -168,6 +168,11 @@
     .form button {
         font-size: large;
     }
+    .googleApps img {
+        height: 40px;
+        width: 40px;
+        margin: 0 10px;
+    }
 }
 @media (max-height: 1100px) {
     .form {
@@ -182,6 +187,11 @@
     .form {
         gap: 0.05vh;
         font-size: 22px;
+    }
+    .googleApps img {
+        margin: 0 5px;
+        height: 20px;
+        width: 20px;
     }
 }
 @media (pointer: fine) {
