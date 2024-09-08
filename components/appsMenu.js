@@ -20,7 +20,19 @@ export default function AppsMenu({closeMethod, setSettings, settings}) {
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     </button>
-                    <a href="https://www.google.com"><img src={"newTabDefault.svg"} alt={"New Tab Default button"} width="64" height="64"/> </a>
+                    <div className={styles.googleApps}>
+
+                        <a href="https://www.google.com"><img src={"newTabDefault.svg"} alt={"New Tab Default button"}
+                                                              width="64" height="64"/> </a>
+                        <a href="https://drive.google.com/drive/u/0/home"><img src={"drive.svg"} alt={"Google Drive button"}
+                                                              width="64" height="64"/> </a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><img src={"mail.svg"} alt={"Mail button"}
+                                                              width="64" height="64"/> </a>
+                        <a href="https://www.youtube.com/?authuser=0"><img src={"youtube.svg"} alt={"YouTube button"}
+                                                              width="64" height="64"/> </a>
+                        <a href="https://calendar.google.com/calendar/u/0/r"><img src={"calendar.svg"} alt={"Calendar button"}
+                                                              width="64" height="64"/> </a>
+                    </div>
                 </div>
             </div>
     );

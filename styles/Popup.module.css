@@ -26,6 +26,18 @@
     box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
 }
 
+.googleApps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.googleApps img{
+    margin: 0 20px;
+    transition-duration: 0.5s;
+}
+
 .gameScreen {
     position: fixed;
     border: 2px solid var(--purple);
@@ -181,5 +193,9 @@
     }
     .button{
         cursor: pointer;
+    }
+    .googleApps img:hover {
+        height: 128px;
+        width: 128px;
     }
 }
