@@ -61,6 +61,13 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                     <input className={styles.colorInput} id="notesColor" name="notesColor" type="color"
                            defaultValue={settings.notesColor}></input>
                 </div>
+                <div>
+                    <label htmlFor="dragNDrop">Drag and Drop: </label>
+                    <label className={styles.switch}>
+                        <input type="checkbox"/>
+                            <span className={styles.slider}></span>
+                    </label>
+                </div>
 
                 <div>
                     <button onClick={() => defaultSettings(settings, setSettings)}> Reset to

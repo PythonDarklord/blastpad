@@ -2,15 +2,13 @@ import styles from "@/styles/Popup.module.css";
 
 export default function MadLibs ({closeMethod}) {
 
-    let text = "Hello, please enter your name: "
+    let text = "Enter your name: "
 
-    const runGame = () => {
-
-    }
-
-    document.addEventListener("keydown", runGame(Event));
-    if(Event.key === 'Enter') {
-        runGame();
+    const checkEnter = (e) => {
+        if (e.key === "Enter") {
+            text = "Thank you"
+        }
+        return text;
     }
 
     return (
@@ -33,10 +31,10 @@ export default function MadLibs ({closeMethod}) {
                     </svg>
                 </button>
                 <h2>Mad Libs</h2>
-                <textarea defaultValue={text} id={'inputArea'}>
-
+                <textarea value = {text} id={'inputArea'} disabled>
                 </textarea>
-            </div>
+                <input id="input" type={"text"} onKeyDown={(e) => checkEnter(e)}></input>
+                </div>
         </div>
     );
 }
