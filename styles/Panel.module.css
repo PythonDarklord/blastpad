@@ -46,7 +46,7 @@
     height: 15%;
     width: 25%;
     margin-top: 1.5%;
-    z-index: 90;
+    z-index: 99;
     position: relative;
     user-select: none;
 }
