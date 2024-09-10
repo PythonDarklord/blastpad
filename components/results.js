@@ -1,49 +1,91 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import styles from "@/styles/results.module.css";
+import SpotifyResults from "./spotifyResults";
+import RedditResults from "./redditResults";
 
 async function searchSpotify(query, token) {
-  const response = await fetch('/api/spotify-search', {
-    method: 'POST',
+  const response = await fetch("/api/spotify-search", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ query, token }),
   });
   return await response.json();
 }
 
-async function getToken() {
+async function searchReddit(query, token) {
+  const response = await fetch("/api/reddit-search", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query, token }),
+  });
+  return await response.json();
+}
+
+async function getSpotifyToken() {
   const response = await fetch("/api/spotify-token");
   const data = await response.json();
   return data.access_token;
 }
 
-export default function Results({mod, query, selected, resultOpened, setResultOpened, setResultsCount, newTab}) {
-  const [token, setToken] = useState(null);
-  const [results, setResults] = useState([])
+async function getRedditToken() {
+  const response = await fetch("/api/reddit-token");
+  const data = await response.json();
+  return data.accessToken;
+}
+
+export default function Results({
+  mod,
+  query,
+  selected,
+  resultOpened,
+  setResultOpened,
+  setResultsCount,
+  newTab,
+}) {
+  const [tokens, setTokens] = useState({});
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
-    getToken().then((token) => setToken(token));
+    getSpotifyToken().then((token) => setTokens((prevTokens) => ({ ...prevTokens, spotify: token })));
+    getRedditToken().then((token) => setTokens((prevTokens) => ({ ...prevTokens, reddit: token })));
   }, []);
 
   useEffect(() => {
     switch (mod.name) {
       case "spotify":
-        if (token && query) {
-          searchSpotify(query, token).then((results) => {setResults(results); setResultsCount(results.tracks.items.length);});
+        if (tokens.spotify && query) {
+          searchSpotify(query, tokens.spotify).then((results) => {
+            setResults(results);
+            setResultsCount(results.tracks.items.length);
+          });
+        }
+        break;
+      case "reddit":
+        if (tokens.reddit && query) {
+          searchReddit(query, tokens.reddit).then((results) => {
+            setResults(results);
+            setResultsCount(results.subreddits.slice(0, 4).length);
+          });
         }
         break;
       default:
         break;
     }
-  }, [query, token, mod.name]);
+  }, [query, tokens, mod.name]);
 
   useEffect(() => {
     if (resultOpened) {
       switch (mod.name) {
         case "spotify":
-          window.open(results.tracks.items[selected].external_urls.spotify, newTab ? '_blank' : '_self');
-          setResultOpened(false)
+          window.open(
+            results.tracks.items[selected].external_urls.spotify,
+            newTab ? "_blank" : "_self"
+          );
+          setResultOpened(false);
           break;
         default:
           break;
@@ -52,17 +94,21 @@ export default function Results({mod, query, selected, resultOpened, setResultOp
   }, [resultOpened]);
 
   if (!mod || !query) {
-    return
+    return;
   }
 
   return (
     <div className={styles.resultsContainer}>
-      {results.tracks?.items?.map((item, index) => (
-        <div key={item.id} className={styles.result + (index === selected ? ' ' + styles.selected : '')} onClick={() => window.open(item.external_urls.spotify, newTab ? '_blank' : '_self')}>
-          <img src={item.album.images[0].url} alt={item.name} style={{width: '50px', height: '50px'}}/>
-          <a href={item.external_urls?.spotify} target={newTab ? '_blank' : '_self'}>{item.name}</a>
-        </div>
-      ))}
+      {(() => {
+        switch (mod.name) {
+          case "spotify":
+            return <SpotifyResults results={results} selected={selected} />;
+          case "reddit":
+            return <RedditResults results={results} selected={selected} />;
+          default:
+            return <p style={{ margin: 0 }}>No results found</p>;
+        }
+      })()}
     </div>
-  )
+  );
 }

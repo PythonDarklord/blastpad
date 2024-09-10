@@ -110,7 +110,7 @@ export default function SearchBar() {
         window.open(`https://www.google.com/search?q=${encodeURIComponent(newQuery)}`, newTab ? '_blank' : '_self');
       }
     }
-    e.target.reset();
+    //e.target.reset();
   };
 
   const handleChange = (e) => {
@@ -127,7 +127,6 @@ export default function SearchBar() {
   }
 
   const handleKeyPress = (e) => {
-    console.log(e)
     if (query.length === 0 && e.key === 'Backspace') {
       setMod('')
       setPlaceholder('Prepare for blastoff!')
