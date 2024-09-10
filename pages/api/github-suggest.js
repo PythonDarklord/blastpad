@@ -26,12 +26,17 @@ async function searchGithub(query) {
   const repo = query.split('/')[1];
   let response
 
-  if (repo) {
-    response = await octokit.rest.search.repos({
-      q: `${repo} owner:${user}`,
-      order: "desc",
-      per_page: 4,
+  console.log(`user: ${user}, repo: ${repo}`)
+
+  if (typeof(repo) !== 'undefined') {
+    response = await octokit.rest.repos.listForUser({
+      username: user,
+      per_page: 100,
     });
+    if (repo.length > 0) {
+      response.data = response.data.filter(item => item.name.toLowerCase().includes(repo.toLowerCase()));
+    }
+    response.data = response.data.slice(0, 4);
   } else {
     response = await octokit.rest.search.users({
       q: query,
