@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="ide files">
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="open results from reddit with enter key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/results.js" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
@@ -234,6 +235,7 @@
       <workItem from="1725590741011" duration="126000" />
       <workItem from="1725590884774" duration="75000" />
       <workItem from="1725590974804" duration="808000" />
+      <workItem from="1725944066980" duration="122000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -556,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed task bug" />
     <MESSAGE value="Components for all" />
     <MESSAGE value="Colors fix" />
     <MESSAGE value="pass colors to tiles instead of entire settings json" />
@@ -581,7 +582,8 @@
     <MESSAGE value="Layouts saved to localstorage" />
     <MESSAGE value="begin to polish spotify results" />
     <MESSAGE value="ide files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
+    <MESSAGE value="open results from reddit with enter key" />
+    <option name="LAST_COMMIT_MESSAGE" value="open results from reddit with enter key" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />

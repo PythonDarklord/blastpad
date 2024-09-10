@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import styles from "@/styles/results.module.css";
 import SpotifyResults from "./spotifyResults";
 import RedditResults from "./redditResults";
@@ -83,6 +83,13 @@ export default function Results({
         case "spotify":
           window.open(
             results.tracks.items[selected].external_urls.spotify,
+            newTab ? "_blank" : "_self"
+          );
+          setResultOpened(false);
+          break;
+        case "reddit":
+          window.open(
+            `https://www.reddit.com/r/${results.subreddits[selected].name}`,
             newTab ? "_blank" : "_self"
           );
           setResultOpened(false);
