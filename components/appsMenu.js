@@ -50,6 +50,14 @@ export default function AppsMenu({closeMethod, setSettings, settings}) {
                             <a href="https://www.humblebundle.com/"><img src={"humble.svg"}
                                                                          alt={"Humble Bundle button"}
                                                                          width="64" height="64"/> </a>
+                            <a href="https://read.amazon.com/kindle-library"><img src={"book.svg"}
+                                                                         alt={"Kindle button"}
+                                                                         width="64" height="64"/> </a>
+                        </div>
+                        <div>
+                            <a href="https://libbyapp.com/shelf"><img src={"libby.svg"}
+                                                                                  alt={"Libby button"}
+                                                                                  width="64" height="64"/> </a>
                         </div>
                     </div>
                 </div>
