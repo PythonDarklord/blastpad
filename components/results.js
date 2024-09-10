@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import styles from "@/styles/results.module.css";
 import SpotifyResults from "./spotifyResults";
 import RedditResults from "./redditResults";
+import GithubResults from "@/components/githubResults";
 
 async function searchSpotify(query, token) {
   const response = await fetch("/api/spotify-search", {
@@ -21,6 +22,17 @@ async function searchReddit(query, token) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query, token }),
+  });
+  return await response.json();
+}
+
+async function searchGithub(query) {
+  const response = await fetch("/api/github-search", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({query}),
   });
   return await response.json();
 }
@@ -72,6 +84,15 @@ export default function Results({
           });
         }
         break;
+      case "github":
+        if (query) {
+          searchGithub(query).then((results) => {
+            console.log(results)
+            setResults(results);
+            setResultsCount(results.items?.length);
+          });
+        }
+        break;
       default:
         break;
     }
@@ -112,6 +133,8 @@ export default function Results({
             return <SpotifyResults results={results} selected={selected} />;
           case "reddit":
             return <RedditResults results={results} selected={selected} />;
+          case "github":
+            return <GithubResults results={results} selected={selected}/>;
           default:
             return <p style={{ margin: 0 }}>No results found</p>;
         }
