@@ -22,12 +22,22 @@ async function searchGithub(query) {
     },
   });
 
-  const response = await octokit.rest.search.repos({
-    q: query,
-    sort: "stars",
-    order: "desc",
-    per_page: 4,
-  });
+  const user = query.split('/')[0];
+  const repo = query.split('/')[1];
+  let response
+
+  if (repo) {
+    response = await octokit.rest.search.repos({
+      q: `${repo} owner:${user}`,
+      order: "desc",
+      per_page: 4,
+    });
+  } else {
+    response = await octokit.rest.search.users({
+      q: query,
+      per_page: 4,
+    });
+  }
 
   return response.data;
 }

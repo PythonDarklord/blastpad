@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import styles from "@/styles/results.module.css";
 import SpotifyResults from "./spotifyResults";
 import RedditResults from "./redditResults";
+import GithubSearchResults from "@/components/githubSearchResults";
 import GithubResults from "@/components/githubResults";
 
 async function searchSpotify(query, token) {
@@ -28,6 +29,17 @@ async function searchReddit(query, token) {
 
 async function searchGithub(query) {
   const response = await fetch("/api/github-search", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({query}),
+  });
+  return await response.json();
+}
+
+async function githubSuggest(query) {
+  const response = await fetch("/api/github-suggest", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -84,9 +96,17 @@ export default function Results({
           });
         }
         break;
-      case "github":
+      case "github search":
         if (query) {
           searchGithub(query).then((results) => {
+            setResults(results);
+            setResultsCount(results.items?.length);
+          });
+        }
+        break;
+      case "github":
+        if (query) {
+          githubSuggest(query).then((results) => {
             console.log(results)
             setResults(results);
             setResultsCount(results.items?.length);
@@ -133,6 +153,8 @@ export default function Results({
             return <SpotifyResults results={results} selected={selected} />;
           case "reddit":
             return <RedditResults results={results} selected={selected} />;
+          case "github search":
+            return <GithubSearchResults results={results} selected={selected}/>;
           case "github":
             return <GithubResults results={results} selected={selected}/>;
           default:
