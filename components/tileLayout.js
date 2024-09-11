@@ -78,15 +78,15 @@ const TileLayout = ({settings}) => {
         <FavoritesPanel color={settings.favoritesColor}/>
       </div>
 
-      <div key="b">
+      <div key="b" className={styles.draggable}>
         <EmailsPanel color={settings.emailsColor}/>
       </div>
 
-      <div key="c">
+      <div key="c" className={styles.draggable}>
         <TaskPanel color={settings.todoColor}/>
       </div>
 
-      <div key="d">
+      <div key="d" className={styles.draggable}>
         <NotesPanel color={settings.notesColor}/>
       </div>
     </ResponsiveGridLayout>}
