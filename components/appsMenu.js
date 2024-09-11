@@ -21,20 +21,17 @@ export default function AppsMenu({closeMethod, setSettings, settings}) {
                         </svg>
                     </button>
                     <div className={styles.googleApps}>
-                        <div>
                             <a href="https://www.google.com"><img src={"newTabDefault.svg"} alt={"New Tab Default button"}
                                                                   width="64" height="64"/> </a>
                             <a href="https://drive.google.com/drive/u/0/home"><img src={"drive.svg"}
                                                                                    alt={"Google Drive button"}
                                                                                    width="64" height="64"/> </a>
-                        </div>
-                        <div>
                             <a href="https://mail.google.com/mail/u/0/#inbox"><img src={"mail.svg"} alt={"Mail button"}
                                                                                    width="64" height="64"/> </a>
                             <a href="https://www.youtube.com/?authuser=0"><img src={"youtube.svg"} alt={"YouTube button"}
                                                                                width="64" height="64"/> </a>
-                        </div>
-                        <div>
+                    </div>
+                    <div className={styles.googleApps}>
                             <a href="https://calendar.google.com/calendar/u/0/r"><img src={"calendar.svg"}
                                                                                       alt={"Calendar button"}
                                                                                       width="64" height="64"/> </a>
@@ -45,20 +42,17 @@ export default function AppsMenu({closeMethod, setSettings, settings}) {
                                     width="64" height="64"/>
                                 </div>
                                 </a>
-                        </div>
-                        <div>
                             <a href="https://www.humblebundle.com/"><img src={"humble.svg"}
                                                                          alt={"Humble Bundle button"}
                                                                          width="64" height="64"/> </a>
                             <a href="https://read.amazon.com/kindle-library"><img src={"book.svg"}
                                                                          alt={"Kindle button"}
                                                                          width="64" height="64"/> </a>
-                        </div>
-                        <div>
+                    </div>
+                    <div className={styles.googleApps}>
                             <a href="https://libbyapp.com/shelf"><img src={"libby.svg"}
                                                                                   alt={"Libby button"}
                                                                                   width="64" height="64"/> </a>
-                        </div>
                     </div>
                 </div>
             </div>

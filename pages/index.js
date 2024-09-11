@@ -24,10 +24,10 @@ export default function Home() {
             setSettings(storedSettings);
         } else {
             setSettings({
-                'favoritesColor': '#F6D454',
-                'emailsColor': '#a54040',
-                'notesColor': '#5dc55d',
-                'todoColor': '#6880ce',
+                'favoritesColor': '#75659c',
+                'emailsColor': '#BFACC8',
+                'notesColor': '#8b878f',
+                'todoColor': '#783F8E',
                 'draggableTiles': false
             });
         }

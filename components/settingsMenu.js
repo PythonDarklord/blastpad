@@ -13,10 +13,10 @@ const updateSettings = (e, settings, setSettings) => {
 const defaultSettings = (settings, setSettings) => {
     const defaultSettings = {
         ...settings,
-        'favoritesColor': '#F6D454',
-        'emailsColor': '#a54040',
-        'notesColor': '#5dc55d',
-        'todoColor': '#6880ce',
+        'favoritesColor': '#75659c',
+        'emailsColor': '#BFACC8',
+        'notesColor': '#8b878f',
+        'todoColor': '#783F8E',
         'draggableTiles': false
     };
     setSettings(defaultSettings);
