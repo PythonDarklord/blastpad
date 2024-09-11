@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import SettingsMenu from "@/components/settingsMenu";
 import GamesMenu from "@/components/games";
-import TileLayout from "@/components/tileLayout"
+import TileLayout from "@/components/tileLayout";
 import SearchBar from "@/components/searchBar";
 import AppsMenu from "@/components/appsMenu"
 

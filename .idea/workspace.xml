@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="github search results api">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/results.js" afterDir="false" />
+    </list>
+    <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
+    <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="CodyActiveAccount">
+    <option name="activeAccountId" value="VXNlcjoxNTk1MjA=" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;PythonDarklord&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;assignee&quot;: &quot;PythonDarklord&quot;
+  }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMZCyec54TPHo&quot;,
+        &quot;number&quot;: 1
+      },
+      &quot;lastSeen&quot;: 1723958635270
+    }
+  ]
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/asorge29/blastpad.git&quot;,
+    &quot;accountId&quot;: &quot;48892cc1-7dfd-40e8-80a6-1f76f0cd4796&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;asorge29&quot;,
+    &quot;repository&quot;: &quot;blastpad&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;bc77fc95&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2kOVZf48AMUhkqbL82AbaUWgcM1" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;results&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/klgarchsite&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/asorge/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\asorge29_blastpad\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\asorge29_blastpad" />
+      <recent name="K:\Github\asorge29_blastpad\components" />
+      <recent name="C:\Users\Python\Documents\GitHub\blastpad\public" />
+      <recent name="C:\Users\Python\Documents\GitHub\blastpad\components\Panels" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test build" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2">
+        <option name="NpmBeforeRunTask" enabled="true">
+          <package-json value="$PROJECT_DIR$/package.json" />
+          <command value="run" />
+          <scripts>
+            <script value="build" />
+          </scripts>
+          <node-interpreter value="project" />
+          <envs />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="npm.test build" />
+      <item itemvalue="npm.dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="" />
+      <changelist id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
+      <created>1723154667174</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723154667174</updated>
+      <workItem from="1723154668677" duration="31000" />
+      <workItem from="1723154705655" duration="26000" />
+      <workItem from="1723339816612" duration="6358000" />
+      <workItem from="1723349852290" duration="2762000" />
+      <workItem from="1723408125070" duration="35000" />
+      <workItem from="1723412937394" duration="1000" />
+      <workItem from="1723416411621" duration="5096000" />
+      <workItem from="1723423407750" duration="311000" />
+      <workItem from="1723426360658" duration="30000" />
+      <workItem from="1723426396997" duration="38000" />
+      <workItem from="1723515232944" duration="22000" />
+      <workItem from="1723518665679" duration="3041000" />
+      <workItem from="1723555381861" duration="1322000" />
+      <workItem from="1723571066272" duration="2605000" />
+      <workItem from="1723583081656" duration="3828000" />
+      <workItem from="1723599074392" duration="2480000" />
+      <workItem from="1723605858693" duration="3000" />
+      <workItem from="1723957914737" duration="771000" />
+      <workItem from="1723958778219" duration="45000" />
+      <workItem from="1723958914342" duration="71000" />
+      <workItem from="1724087860164" duration="7321000" />
+      <workItem from="1724206659758" duration="6086000" />
+      <workItem from="1724251304647" duration="2781000" />
+      <workItem from="1724302496992" duration="2839000" />
+      <workItem from="1724375528765" duration="3041000" />
+      <workItem from="1724706323508" duration="9399000" />
+      <workItem from="1724790794077" duration="91000" />
+      <workItem from="1724790897913" duration="66000" />
+      <workItem from="1724790975574" duration="4537000" />
+      <workItem from="1724977697594" duration="3526000" />
+      <workItem from="1725145478106" duration="19000" />
+      <workItem from="1725167209841" duration="331000" />
+      <workItem from="1725167553602" duration="2190000" />
+      <workItem from="1725506711834" duration="3760000" />
+      <workItem from="1725511386388" duration="733000" />
+      <workItem from="1725588558517" duration="511000" />
+      <workItem from="1725589083026" duration="22000" />
+      <workItem from="1725589111004" duration="767000" />
+      <workItem from="1725589927983" duration="794000" />
+      <workItem from="1725590741011" duration="126000" />
+      <workItem from="1725590884774" duration="75000" />
+      <workItem from="1725590974804" duration="808000" />
+      <workItem from="1725944066980" duration="122000" />
+      <workItem from="1725993308570" duration="3065000" />
+    </task>
+    <task id="LOCAL-00001" summary="Edited Color saving method">
+      <option name="closed" value="true" />
+      <created>1723347130051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723347130051</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Edited Color saving method">
+      <option name="closed" value="true" />
+      <created>1723347183250</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723347183250</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Colors save when changed">
+      <option name="closed" value="true" />
+      <created>1723352567223</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723352567223</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1723421728690</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723421728690</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1723423681832</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723423681832</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519546241</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519546241</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519595529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519595529</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723519701276</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723519701276</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723521282751</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723521282751</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Reset Color Button">
+      <option name="closed" value="true" />
+      <created>1723521742399</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723521742399</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Moved Task Panel to it's own component">
+      <option name="closed" value="true" />
+      <created>1723556295989</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723556295989</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Moved Notes Panel to it's own component">
+      <option name="closed" value="true" />
+      <created>1723556709161</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723556709161</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed task bug">
+      <option name="closed" value="true" />
+      <created>1723571290259</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723571290259</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Components for all">
+      <option name="closed" value="true" />
+      <created>1723573552499</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723573552499</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Colors fix">
+      <option name="closed" value="true" />
+      <created>1723583476451</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723583476451</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Colors fix">
+      <option name="closed" value="true" />
+      <created>1723584431291</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723584431291</updated>
+    </task>
+    <task id="LOCAL-00017" summary="pass colors to tiles instead of entire settings json">
+      <option name="closed" value="true" />
+      <created>1723599470711</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723599470711</updated>
+    </task>
+    <task id="LOCAL-00018" summary="remove ide files">
+      <option name="closed" value="true" />
+      <created>1723599489338</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1723599489338</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add white background to favicon.ico">
+      <option name="closed" value="true" />
+      <created>1723957961904</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1723957961904</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Clean up the settings and games menu icons">
+      <option name="closed" value="true" />
+      <created>1724122500507</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724122500507</updated>
+    </task>
+    <task id="LOCAL-00021" summary="migrate search to component">
+      <option name="closed" value="true" />
+      <created>1724132873767</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724132873767</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update search bar to accommodate predictive results and modifiers">
+      <option name="closed" value="true" />
+      <created>1724134625116</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724134625116</updated>
+    </task>
+    <task id="LOCAL-00023" summary="put back the submit function (oops)">
+      <option name="closed" value="true" />
+      <created>1724206725536</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724206725536</updated>
+    </task>
+    <task id="LOCAL-00024" summary="make title not selectable">
+      <option name="closed" value="true" />
+      <created>1724209872634</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724209872634</updated>
+    </task>
+    <task id="LOCAL-00025" summary="reddit quick launch">
+      <option name="closed" value="true" />
+      <created>1724211232735</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724211232735</updated>
+    </task>
+    <task id="LOCAL-00026" summary="minor adjustments">
+      <option name="closed" value="true" />
+      <created>1724212964369</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724212964369</updated>
+    </task>
+    <task id="LOCAL-00027" summary="reddit results test">
+      <option name="closed" value="true" />
+      <created>1724253709636</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724253709636</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Implement json system for mods">
+      <option name="closed" value="true" />
+      <created>1724305375741</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724305375741</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added basic mods and fallback submit actions">
+      <option name="closed" value="true" />
+      <created>1724707864102</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724707864102</updated>
+    </task>
+    <task id="LOCAL-00030" summary="url mod styling">
+      <option name="closed" value="true" />
+      <created>1724718135980</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724718135980</updated>
+    </task>
+    <task id="LOCAL-00031" summary="url mod styling, open results in same tab, reset form on submit">
+      <option name="closed" value="true" />
+      <created>1724718165721</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724718165722</updated>
+    </task>
+    <task id="LOCAL-00032" summary="basic system for drag, drop, and resize">
+      <option name="closed" value="true" />
+      <created>1724793910573</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724793910573</updated>
+    </task>
+    <task id="LOCAL-00033" summary="widen search bar to accommodate larger mods">
+      <option name="closed" value="true" />
+      <created>1724993351292</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724993351292</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Layouts saved to localstorage">
+      <option name="closed" value="true" />
+      <created>1724994230044</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724994230044</updated>
+    </task>
+    <task id="LOCAL-00035" summary="begin to polish spotify results">
+      <option name="closed" value="true" />
+      <created>1725512118666</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1725512118666</updated>
+    </task>
+    <task id="LOCAL-00036" summary="ide files">
+      <option name="closed" value="true" />
+      <created>1725588764566</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1725588764566</updated>
+    </task>
+    <task id="LOCAL-00037" summary="github search results api">
+      <option name="closed" value="true" />
+      <created>1725987696199</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1725987696199</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Colors fix" />
+    <MESSAGE value="pass colors to tiles instead of entire settings json" />
+    <MESSAGE value="remove ide files" />
+    <MESSAGE value="Add white background to favicon.ico" />
+    <MESSAGE value="Clean up the settings and games menu icons" />
+    <MESSAGE value="Changes by ocean" />
+    <MESSAGE value="migrate search to component" />
+    <MESSAGE value="update search bar to accommodate predictive results and modifiers" />
+    <MESSAGE value="put back the submit function (oops)" />
+    <MESSAGE value="make title not selectable" />
+    <MESSAGE value="reddit quick launch" />
+    <MESSAGE value="minor adjustments" />
+    <MESSAGE value="reddit results test" />
+    <MESSAGE value="Implement json system for mods" />
+    <MESSAGE value="Addded basic mods and fallback submit actions" />
+    <MESSAGE value="Added basic mods and fallback submit actions" />
+    <MESSAGE value="url mod styling" />
+    <MESSAGE value="url mod styling, open results in same tab, reset form on submit" />
+    <MESSAGE value="basic system for drag, drop, and resize" />
+    <MESSAGE value="widen search bar to accommodate larger mods" />
+    <MESSAGE value="Layouts saved to localstorage" />
+    <MESSAGE value="begin to polish spotify results" />
+    <MESSAGE value="ide files" />
+    <MESSAGE value="open results from reddit with enter key" />
+    <MESSAGE value="github search results api" />
+    <option name="LAST_COMMIT_MESSAGE" value="github search results api" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

@@ -5,10 +5,17 @@
     width: 100%;
 }
 
-.search {
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.searchBar {
     border: 2px solid var(--background);
     width: 80vw;
-    height: 10vh;
     border-radius: 2vh;
     font-family: var(--font-jetbrains), ui-monospace;
     font-size: xx-large;
@@ -17,24 +24,30 @@
     -moz-box-shadow: 0 0 91px 60px rgba(131, 4, 177, 0.39);
     box-shadow: 0 0 91px 60px rgba(131, 4, 177, 0.39);
     background-color: var(--background);
-    padding: 0 1ch;
+    padding: 1ch;
     margin: 60px;
-    transition-duration: 0.2s;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+.searchBarInner {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row nowrap;
-}
-
-.searchForm {
-    height: 100%;
+    position: relative;
+    font-size: xx-large;
     width: 100%;
+    height: 100%;
 }
 
 .searchInput {
     border: none;
     width: 100%;
-    height: 100%;
     font-family: var(--font-jetbrains), ui-monospace;
     font-size: xx-large;
     color: inherit;
@@ -42,10 +55,9 @@
     transition: 0.3s ease-in-out;
 }
 
-.search:focus-within {
+.searchBar:focus-within {
     outline: 2px solid var(--purple);
-    width: 90vw;
-    height: 10vh;
+    width: 85vw;
 }
 
 .searchInput:focus {
@@ -110,24 +122,24 @@
     border: none;
     outline: none;
     background-color: inherit;
-    height: 100%;
+    height: 50px;
 }
 
 .searchSubmit > img {
     transition-duration: 0.2s;
+    height: 100%;
 }
 
 @media (max-width: 850px) {
 
-    .search {
+    .searchBar {
         font-size: 20px;
         width: 80vw;
     }
 
-    .search:focus {
+    .searchBar:focus {
         outline: 2px solid var(--purple);
         width: 80vw;
-        height: 10vh;
     }
 
 }
@@ -138,13 +150,12 @@
     }
 
     .searchSubmit > img:hover {
-        height: 70%;
+        height: 110%;
     }
 
     @media (min-width: 768px) {
-        .search:hover {
-            width: 90vw;
-            height: 10vh;
+        .searchBar:hover {
+            width: 85vw;
         }
     }
 }

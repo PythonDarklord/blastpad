@@ -1,0 +1,37 @@
+.resultsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid var(--purple);
+    padding: 10px 0;
+}
+
+.result a {
+    color: var(--purple);
+}
+
+.result img {
+    padding-right: 10px;
+}
+
+.result:first-child {
+    border-top: none;
+}
+
+.selected {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (pointer: fine) {
+    .result:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+    }
+}
