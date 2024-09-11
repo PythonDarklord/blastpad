@@ -109,7 +109,7 @@ export default function Results({
           githubSuggest(query).then((results) => {
             console.log(results)
             setResults(results);
-            setResultsCount(results.items?.length);
+            setResultsCount(results.items ? results.items.length : results.length);
           });
         }
         break;
@@ -133,6 +133,14 @@ export default function Results({
             `https://www.reddit.com/r/${results.subreddits[selected].name}`,
             newTab ? "_blank" : "_self"
           );
+          setResultOpened(false);
+          break;
+        case "github search":
+          window.open(results.items[selected].html_url, newTab ? "_blank" : "_self");
+          setResultOpened(false);
+          break;
+        case "github":
+          window.open(results.items ? results.items[selected].html_url : results[selected].html_url, newTab ? "_blank" : "_self");
           setResultOpened(false);
           break;
         default:

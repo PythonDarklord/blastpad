@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="github search results api">
-      <change afterPath="$PROJECT_DIR$/components/githubSearchResults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/github-suggest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/githubResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/githubResults.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/github-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/github-search.js" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
