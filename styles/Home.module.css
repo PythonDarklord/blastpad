@@ -51,33 +51,32 @@
     user-select: none;
 }
 
-
-
-.tiles {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: flex-start;
-    flex-direction: row;
-}
-
 .tileContainer {
     width: 97vw;
     max-width: 97vw;
     overflow-x: hidden;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+    .settingsCog, .apps {
+        height: 35px;
+    }
+    .settingsCog {
+        left: 4vw;
+        top: 3.5vh;
+    }
+    .apps {
+        left: auto;
+        right: 4vw;
+        top: 3.5vh;
+    }
     .title {
         font-size: 48px;
     }
-
-    .tiles {
-        margin: 38vb 0;
-        flex-direction: row;
-        align-content: center;
+    .tileContainer {
+        width: 100%;
+    }
+    .gamesButton {
+        display: none;
     }
 
 }
