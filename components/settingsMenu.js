@@ -2,7 +2,8 @@ import styles from "@/styles/Popup.module.css";
 
 const updateSettings = (e, settings, setSettings) => {
     const id = e.target.id;
-    const value = e.target.value;
+    let value = e.target.value;
+
     const updatedSettings = {
         ...settings, [id]: value,
     };
@@ -12,10 +13,11 @@ const updateSettings = (e, settings, setSettings) => {
 const defaultSettings = (settings, setSettings) => {
     const defaultSettings = {
         ...settings,
-        'favoritesColor': '#F6D454',
-        'emailsColor': '#a54040',
-        'notesColor': '#5dc55d',
-        'todoColor': '#6880ce'
+        'favoritesColor': '#75659c',
+        'emailsColor': '#BFACC8',
+        'notesColor': '#8b878f',
+        'todoColor': '#783F8E',
+        'draggableTiles': false
     };
     setSettings(defaultSettings);
 }
@@ -60,6 +62,13 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                     <label htmlFor="notesColor">Notes Color: </label>
                     <input className={styles.colorInput} id="notesColor" name="notesColor" type="color"
                            defaultValue={settings.notesColor}></input>
+                </div>
+                <div>
+                    <label htmlFor="draggableTiles">Drag and Drop: </label>
+                    <label className={styles.switch}>
+                        <input type="checkbox" id="draggableTiles" name={"draggableTiles"} />
+                            <span className={styles.slider}></span>
+                    </label>
                 </div>
 
                 <div>

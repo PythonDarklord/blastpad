@@ -34,6 +34,14 @@
     transition-duration: 0.2s;
     z-index: 99;
 }
+.apps {
+    position: absolute;
+    left: 7vw;
+    top: 2vw;
+    height: 5vh;
+    transition-duration: 0.2s;
+    z-index: 99;
+}
 
 .title {
     text-align: center;
@@ -89,6 +97,13 @@
         height: 6vh;
         top: 1.75vw;
         right: 1.75vw;
+    }
+
+    .apps:hover {
+        cursor: pointer;
+        height: 6vh;
+        top: 1.75vw;
+        left: 6.75vw;
     }
 
 }

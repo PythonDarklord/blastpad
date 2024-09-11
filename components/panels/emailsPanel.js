@@ -52,10 +52,10 @@ export default function EmailsPanel({color}) {
         Add Email
       </button>
     </div>
-
-    {emailPopup && (<AddEmail
-      closeMethod={() => setEmailPopup(false)}
-      addMethod={addEmail}
-    />)}
-  </>);
+        {emailPopup && (<AddEmail
+            closeMethod={() => setEmailPopup(false)}
+            addMethod={addEmail}
+        />)}
+  </>
+  );
 }

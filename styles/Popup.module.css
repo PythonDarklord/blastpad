@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    z-index: 99;
 }
 .popup {
     position: fixed;
@@ -23,6 +24,33 @@
     -webkit-box-shadow:0 0 91px 60px rgba(131,4,177,0.39);
     -moz-box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
     box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
+    z-index: 99;
+}
+
+.googleApps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 40vh;
+    flex-direction: row;
+}
+
+.googleApps img{
+    margin: 0 20px;
+    transition-duration: 0.5s;
+}
+
+.steamdb {
+    border-radius: 15px;
+    background-color: white;
+    padding: 0;
+    height: 64px;
+    width: 64px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.5s;
 }
 
 .gameScreen {
@@ -142,6 +170,59 @@
     background-color: var(--background);
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--purple);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--purple);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
 @media (max-width: 850px) {
     .form {
         gap: 3vh;
@@ -154,6 +235,17 @@
     }
     .form button {
         font-size: large;
+    }
+    .googleApps img {
+        height: 40px;
+        width: 40px;
+        margin: 0 10px;
+    }
+    .steamdb {
+        height: 40px;
+        width: 40px;
+        margin: 0 10px;
+        border-radius: 15px;
     }
 }
 @media (max-height: 1100px) {
@@ -170,6 +262,17 @@
         gap: 0.05vh;
         font-size: 22px;
     }
+    .googleApps img {
+        margin: 0 5px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .steamdb {
+        margin: 0 5px;
+        height: 20px;
+        width: 20px;
+    }
 }
 @media (pointer: fine) {
     .close {
@@ -180,5 +283,13 @@
     }
     .button{
         cursor: pointer;
+    }
+    .googleApps img:hover {
+        height: 128px;
+        width: 128px;
+    }
+    .steamdb:hover {
+        height: 128px;
+        width: 128px;
     }
 }
