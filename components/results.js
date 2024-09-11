@@ -107,7 +107,6 @@ export default function Results({
       case "github":
         if (query) {
           githubSuggest(query).then((results) => {
-            console.log(results)
             setResults(results);
             setResultsCount(results.items ? results.items.length : results.length);
           });

@@ -26,8 +26,6 @@ async function searchGithub(query) {
   const repo = query.split('/')[1];
   let response
 
-  console.log(`user: ${user}, repo: ${repo}`)
-
   if (typeof(repo) !== 'undefined') {
     response = await octokit.rest.repos.listForUser({
       username: user,
