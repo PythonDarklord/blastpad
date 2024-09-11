@@ -14,7 +14,7 @@
     border: 2px solid var(--purple);
     border-radius: 10px;
     width: 40vw;
-    height: 40vh;
+    padding: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
