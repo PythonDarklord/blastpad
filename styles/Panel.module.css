@@ -89,30 +89,9 @@
     }
 }
 
-@media (max-width: 850px) {
-
-    .subsection {
-        width: 90%;
-    }
-
-    .favorites {
-        width: 100%;
-    }
-
-    .emails {
-        width: 100%;
-    }
-
-    .toDo {
-        width: 100%;
-    }
-
-    .notes {
-        width: 100%;
-    }
-
+@media (max-width: 768px) {
     .button {
-        font-size: 12px;
+        font-size: 18px;
         height: 20%;
         width: 30%;
         margin-top: 1.5%;
