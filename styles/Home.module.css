@@ -79,6 +79,24 @@
         display: none;
     }
 
+    @media (pointer: fine) {
+        .apps:hover {
+            cursor: pointer;
+            height: 6vh;
+            top: 1.75vw;
+            right: 1.75vw;
+        }
+    }
+
+}
+
+@media (min-width: 769px) {
+    .apps:hover {
+        cursor: pointer;
+        height: 6vh;
+        top: 1.75vw;
+        left: 6.75vw;
+    }
 }
 
 @media (pointer: fine) {
@@ -96,13 +114,6 @@
         height: 6vh;
         top: 1.75vw;
         right: 1.75vw;
-    }
-
-    .apps:hover {
-        cursor: pointer;
-        height: 6vh;
-        top: 1.75vw;
-        left: 6.75vw;
     }
 
 }

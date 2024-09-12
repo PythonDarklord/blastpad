@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="github search results api">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_20_2024_8_10_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_20_2024_8_10_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2024_8_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2024_8_25_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2024_8_25_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2024_8_25_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/addFavorite.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/addFavorite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/addTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/addTask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Panel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Panel.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Popup.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Popup.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
