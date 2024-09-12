@@ -1,13 +1,23 @@
 export const runtime = "edge";
 
-export default async function handler(req, res) {
+export default async function handler(req) {
   try {
-    const { query, token } = req.body;
+    const { query, token } = await req.json();
     const data = await searchReddit(query, token);
-    res.status(200).json(data);
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (error) {
     console.error("Error fetching Reddit data:", error);
-    res.status(500).json({ error: "Failed to fetch data from Reddit." });
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }
 

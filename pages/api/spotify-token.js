@@ -1,11 +1,11 @@
 export const runtime = "edge";
 
-export default async function handler(req, res) {
+export default async function handler(req) {
   try {
     const token = await getToken();
-    res.status(200).json(token);
+    return new Response(JSON.stringify(token), { status: 200 });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch token' });
+    return new Response(JSON.stringify({ error: 'Failed to fetch token' }), { status: 500 });
   }
 }
 

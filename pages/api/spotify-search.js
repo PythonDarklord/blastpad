@@ -1,12 +1,12 @@
 export const runtime = "edge";
 
-export default async function handler(req, res) {
+export default async function handler(req) {
   try {
-    const { query, token } = await req.body;
+    const { query, token } = await req.json();
     const data = await searchSpotify(query, token);
-    res.status(200).json(data);
+    return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
-    res.status(500).json({ error: e});
+    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
   }
 }
 
