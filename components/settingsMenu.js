@@ -76,6 +76,10 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                         Default
                     </button>
                 </div>
+                <div>
+                    <button onClick={() => localStorage.clear()}> Clear all Data
+                    </button>
+                </div>
             </form>
         </div>
     </div>);
