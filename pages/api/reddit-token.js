@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 const REDDIT_TOKEN_URL = "https://www.reddit.com/api/v1/access_token";
 
 const getAppAccessToken = async () => {

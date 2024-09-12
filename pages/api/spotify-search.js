@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 export default async function handler(req, res) {
   try {
     const { query, token } = await req.body;
