@@ -1,6 +1,66 @@
 
 .panel {
-    background-color: var("--background");
+    background: var(--background);
+    border: 2px solid var(--purple);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    border-radius: 15px;
+    z-index: 99;
+}
+
+.close {
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: var(--background);
+}
+
+.dropdown {
+    width: 10vw;
+    height: 3vh;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-jetbrains);
+    background-color: var(--background);
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.25vh;
+    font-size: x-large;
+}
+.form input {
+    outline: white;
+    background-color: var(--background);
+    border: 2px solid white;
+    font-size: large;
+    font-family: var(--font-jetbrains);
+    color: white;
+    padding: 0.6ch 1ch;
+    border-radius: 12px;
+}
+.form button {
+    background-color: var(--background);
+    font-family: var(--font-jetbrains);
+    color: white;
+    font-size: large;
+    padding: 0.6ch 1ch;
+    border: 2px solid white;
+    border-radius: 12px;
 }
 
 .table {
@@ -51,7 +111,7 @@
     height: 15%;
     width: 25%;
     margin-top: 1.5%;
-    z-index: 99;
+    z-index: 98;
     position: relative;
     user-select: none;
 }
@@ -91,6 +151,12 @@
     .button:hover {
         background-color: var(--buttonHover);
         color: white;
+    }
+    .close {
+        cursor: pointer;
+    }
+    .form button {
+        cursor: pointer;
     }
 }
 

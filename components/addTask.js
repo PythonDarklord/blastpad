@@ -1,9 +1,8 @@
-import styles from "@/styles/Popup.module.css";
+import styles from "@/styles/Panel.module.css";
 
 export default function AddTask({ closeMethod, addMethod }) {
   return (
-    <div className={styles.fullscreen}>
-      <div className={styles.popup}>
+    <div className={styles.panel}>
         <button onClick={closeMethod} className={styles.close}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +37,6 @@ export default function AddTask({ closeMethod, addMethod }) {
             <button>Add</button>
           </div>
         </form>
-      </div>
     </div>
   );
 }
