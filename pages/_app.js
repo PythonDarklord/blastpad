@@ -14,6 +14,17 @@ export default function MyApp({Component, pageProps}) {
         }
 
         gtag("js", new Date());
+        gtag("config", 'G-84FXE5M316');
+    }, []);
+    useEffect(() => {
+        // Initialize dataLayer
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
         gtag("config", GTM_ID);
     }, []);
 
