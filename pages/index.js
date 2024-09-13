@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import SettingsMenu from "@/components/settingsMenu";
 import GamesMenu from "@/components/games";
 import TileLayout from "@/components/tileLayout";
@@ -47,6 +47,15 @@ export default function Home() {
                 <meta name="description" content="Prepare for launch!"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/favicon.svg"/>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-84FXE5M316"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments)}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-84FXE5M316');
+                </script>
             </Head>
             {/* Header and Searchbar */}
             <main className={styles.main}>
