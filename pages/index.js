@@ -6,7 +6,6 @@ import GamesMenu from "@/components/games";
 import TileLayout from "@/components/tileLayout";
 import SearchBar from "@/components/searchBar";
 import AppsMenu from "@/components/appsMenu"
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default function Home() {
     const [settingsPopup, setSettingsPopup] = useState(false);
@@ -48,20 +47,15 @@ export default function Home() {
                 <meta name="description" content="Prepare for launch!"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/favicon.svg"/>
-                <!-- Google tag (gtag.js) -->
-                <script async
-                        src={'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}'}></script>
-                <script>
-                    dangerouslySetInnerHTML={{
-                    _html: '             window.dataLayer = window.dataLayer || [];\n' +
-                        '                    function gtag(){dataLayer.push(arguments)}\n' +
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-84FXE5M316"></script>
+                <script id={"google-analytics"}>
+                    {
+                        '                    window.dataLayer = window.dataLayer || [];\n' +
+                        '                    function gtag(){dataLayer.push(arguments);}\n' +
                         '                    gtag(\'js\', new Date());\n' +
                         '\n' +
-                        `                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',);
-                            page_path: window.location.pathname,
-                            });
-                            `,
-                }}
+                        '                    gtag(\'config\', \'G-84FXE5M316\');'
+                    }
 
                 </script>
             </Head>

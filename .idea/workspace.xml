@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Google Tags Deleted">
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Google Tags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
@@ -242,7 +242,7 @@
       <workItem from="1726149668963" duration="26000" />
       <workItem from="1726149704118" duration="5000" />
       <workItem from="1726149716651" duration="843000" />
-      <workItem from="1726194535626" duration="309000" />
+      <workItem from="1726194535626" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -564,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726194092668</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Google Tags">
+      <option name="closed" value="true" />
+      <created>1726194942312</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1726194942312</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,9 +628,9 @@
     <MESSAGE value="open results from reddit with enter key" />
     <MESSAGE value="github search results api" />
     <MESSAGE value="edge runtime constants" />
-    <MESSAGE value="Google Tags" />
     <MESSAGE value="Google Tags Deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Google Tags Deleted" />
+    <MESSAGE value="Google Tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google Tags" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
