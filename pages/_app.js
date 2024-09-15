@@ -28,6 +28,19 @@ export default function MyApp({Component, pageProps}) {
         gtag("config", GTM_ID);
     }, []);
 
+    useEffect(() => {
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16498348917/b5KcCNiz6NIZEPWmg7s9',
+            'value': 1.0,
+            'currency': 'USD'
+        }, []);
+    })
+
+
     return (
         <>
             {/* Google Tag Manager */}
@@ -57,6 +70,7 @@ export default function MyApp({Component, pageProps}) {
           `,
                 }}
             />
+
             {/* End Google Tag Manager */}
             <Component {...pageProps} />
         </>
