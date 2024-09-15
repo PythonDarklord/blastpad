@@ -87,10 +87,11 @@ export default function Home() {
                 <div className={styles.tileContainer}>
                     <TileLayout settings={settings}/>
                 </div>
-                <a style={{color: "white", backgroundColor: "gray", padding: "15px", borderRadius: "15px"}}
+                <a className={styles.coffee}
                    href={"https://www.venmo.com/u/PythonDarklord"}>
                     <div>
-                        <h2>Buy a Dev a Coffee!</h2>
+                        <img src={"coffee.svg"} alt="Coffee Logo"/>
+                        <h2>Buy us a Coffee?</h2>
                     </div>
                 </a>
                 {settingsPopup && (
