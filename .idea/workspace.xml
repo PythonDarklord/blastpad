@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Venmo">
-      <change afterPath="$PROJECT_DIR$/public/coffee.svg" afterDir="false" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Buy us a Coffee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Panel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Panel.module.css" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
@@ -133,9 +131,9 @@
       <recent name="D:\Github\asorge29_blastpad\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Python\Documents\GitHub\blastpad\public" />
       <recent name="D:\Github\asorge29_blastpad" />
       <recent name="K:\Github\asorge29_blastpad\components" />
-      <recent name="C:\Users\Python\Documents\GitHub\blastpad\public" />
       <recent name="C:\Users\Python\Documents\GitHub\blastpad\components\Panels" />
     </key>
   </component>
@@ -251,7 +249,7 @@
       <workItem from="1726274321985" duration="1000" />
       <workItem from="1726350181307" duration="2189000" />
       <workItem from="1726371210114" duration="2453000" />
-      <workItem from="1726421794258" duration="1219000" />
+      <workItem from="1726421794258" duration="5244000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -629,7 +627,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726374636759</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Buy us a Coffee">
+      <option name="closed" value="true" />
+      <created>1726424275567</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1726424275567</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean up the settings and games menu icons" />
     <MESSAGE value="Changes by ocean" />
     <MESSAGE value="migrate search to component" />
     <MESSAGE value="update search bar to accommodate predictive results and modifiers" />
@@ -687,7 +692,8 @@
     <MESSAGE value="Google Tags Deleted" />
     <MESSAGE value="Google Tags" />
     <MESSAGE value="Venmo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Venmo" />
+    <MESSAGE value="Buy us a Coffee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buy us a Coffee" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
