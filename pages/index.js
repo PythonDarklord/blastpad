@@ -88,7 +88,7 @@ export default function Home() {
                     <TileLayout settings={settings}/>
                 </div>
                 <a style={{color: "white", backgroundColor: "gray", padding: "15px", borderRadius: "15px"}}
-                   href={"https://www.venmo.com/u/blastpad"}>
+                   href={"https://www.venmo.com/u/PythonDarklord"}>
                     <div>
                         <h2>Buy a Dev a Coffee!</h2>
                     </div>
