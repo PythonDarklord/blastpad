@@ -1,8 +1,6 @@
 import styles from "@/styles/Popup.module.css";
 
-let checked = false;
-
-const updateSettings = (e, settings, setSettings) => {
+const updateSettings = (e, settings, setSettings, checked) => {
     const id = e.target.id;
     let value = e.target.value;
     if (id === "draggableTiles") {
@@ -29,6 +27,8 @@ const defaultSettings = (settings, setSettings) => {
 
 export default function SettingsMenu({closeMethod, setSettings, settings}) {
 
+    let checked = settings.draggableTiles;
+
     return (<div className={styles.fullscreen}>
         <div className={styles.popup}>
             <button onClick={closeMethod} className={styles.close}>
@@ -47,7 +47,7 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <form className={styles.form} onChange={(e) => updateSettings(e, settings, setSettings)}>
+            <form className={styles.form} onChange={(e) => updateSettings(e, settings, setSettings, checked)}>
                 <h2>Settings</h2>
                 <div>
                     <label htmlFor="favoritesColor">Favorites Color: </label>
