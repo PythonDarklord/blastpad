@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Buy us a Coffee">
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="Tasks list work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/panels/taskPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/panels/taskPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/settingsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/settingsMenu.js" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
@@ -52,17 +52,24 @@
     &quot;assignee&quot;: &quot;PythonDarklord&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMZCyec54TPHo&quot;,
-        &quot;number&quot;: 1
+      "id": {
+        "id": "PR_kwDOMZCyec54TPHo",
+        "number": 1
       },
-      &quot;lastSeen&quot;: 1723958635270
+      "lastSeen": 1723958635270
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMZCyec54p286",
+        "number": 2
+      },
+      "lastSeen": 1726436851936
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/PythonDarklord/blastpad.git&quot;,
@@ -249,15 +256,7 @@
       <workItem from="1726274321985" duration="1000" />
       <workItem from="1726350181307" duration="2189000" />
       <workItem from="1726371210114" duration="2453000" />
-      <workItem from="1726421794258" duration="9316000" />
-    </task>
-    <task id="LOCAL-00001" summary="Edited Color saving method">
-      <option name="closed" value="true" />
-      <created>1723347130051</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1723347130051</updated>
+      <workItem from="1726421794258" duration="10877000" />
     </task>
     <task id="LOCAL-00002" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -643,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726432749643</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Tasks list work">
+      <option name="closed" value="true" />
+      <created>1726436331898</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1726436331898</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes by ocean" />
     <MESSAGE value="migrate search to component" />
     <MESSAGE value="update search bar to accommodate predictive results and modifiers" />
     <MESSAGE value="put back the submit function (oops)" />
@@ -701,7 +707,8 @@
     <MESSAGE value="Google Tags" />
     <MESSAGE value="Venmo" />
     <MESSAGE value="Buy us a Coffee" />
-    <option name="LAST_COMMIT_MESSAGE" value="Buy us a Coffee" />
+    <MESSAGE value="Tasks list work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tasks list work" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />

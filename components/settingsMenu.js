@@ -1,9 +1,13 @@
 import styles from "@/styles/Popup.module.css";
 
+let checked = false;
+
 const updateSettings = (e, settings, setSettings) => {
     const id = e.target.id;
     let value = e.target.value;
-
+    if (id === "draggableTiles") {
+        value = checked;
+    }
     const updatedSettings = {
         ...settings, [id]: value,
     };
@@ -22,7 +26,9 @@ const defaultSettings = (settings, setSettings) => {
     setSettings(defaultSettings);
 }
 
+
 export default function SettingsMenu({closeMethod, setSettings, settings}) {
+
     return (<div className={styles.fullscreen}>
         <div className={styles.popup}>
             <button onClick={closeMethod} className={styles.close}>
@@ -66,7 +72,8 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                 <div>
                     <label htmlFor="draggableTiles">Drag and Drop: </label>
                     <label className={styles.switch}>
-                        <input type="checkbox" id="draggableTiles" name={"draggableTiles"} />
+                        <input checked={settings.draggableTiles} type="checkbox" id="draggableTiles"
+                               name={"draggableTiles"} onClick={() => checked = !checked}/>
                             <span className={styles.slider}></span>
                     </label>
                 </div>
