@@ -1,4 +1,5 @@
 import styles from "@/styles/Popup.module.css";
+import defaultSettings from "@/public/defaultSettings.json";
 
 const updateSettings = (e, settings, setSettings, checked) => {
     const id = e.target.id;
@@ -13,14 +14,7 @@ const updateSettings = (e, settings, setSettings, checked) => {
 };
 
 const defaultSettings = (settings, setSettings) => {
-    const defaultSettings = {
-        ...settings,
-        'favoritesColor': '#75659c',
-        'emailsColor': '#BFACC8',
-        'notesColor': '#8b878f',
-        'todoColor': '#783F8E',
-        'draggableTiles': false
-    };
+    const defaultSettings = defaultSettings;
     setSettings(defaultSettings);
 }
 
