@@ -1,9 +1,11 @@
 import styles from "@/styles/Popup.module.css";
 
-const updateSettings = (e, settings, setSettings) => {
+const updateSettings = (e, settings, setSettings, checked) => {
     const id = e.target.id;
     let value = e.target.value;
-
+    if (id === "draggableTiles") {
+        value = checked;
+    }
     const updatedSettings = {
         ...settings, [id]: value,
     };
@@ -22,7 +24,11 @@ const defaultSettings = (settings, setSettings) => {
     setSettings(defaultSettings);
 }
 
+
 export default function SettingsMenu({closeMethod, setSettings, settings}) {
+
+    let checked = settings.draggableTiles;
+
     return (<div className={styles.fullscreen}>
         <div className={styles.popup}>
             <button onClick={closeMethod} className={styles.close}>
@@ -41,7 +47,7 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <form className={styles.form} onChange={(e) => updateSettings(e, settings, setSettings)}>
+            <form className={styles.form} onChange={(e) => updateSettings(e, settings, setSettings, checked)}>
                 <h2>Settings</h2>
                 <div>
                     <label htmlFor="favoritesColor">Favorites Color: </label>
@@ -66,7 +72,8 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                 <div>
                     <label htmlFor="draggableTiles">Drag and Drop: </label>
                     <label className={styles.switch}>
-                        <input type="checkbox" id="draggableTiles" name={"draggableTiles"} />
+                        <input checked={settings.draggableTiles} type="checkbox" id="draggableTiles"
+                               name={"draggableTiles"} onClick={() => checked = !checked}/>
                             <span className={styles.slider}></span>
                     </label>
                 </div>

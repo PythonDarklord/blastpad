@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import {Octokit} from "@octokit/rest";
 import {createAppAuth} from "@octokit/auth-app";
 

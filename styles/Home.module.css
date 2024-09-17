@@ -9,6 +9,26 @@
     position: relative;
 }
 
+.coffee {
+    color: white;
+    background-color: #a66da5;
+    border-radius: 15px;
+    padding: 0 25px;
+    margin: 10px 0;
+    transition-duration: 0.3s;
+    position: relative;
+    bottom: 0;
+}
+
+.coffee img {
+    float: left;
+    margin: 10px;
+}
+
+.coffee h2 {
+    float: left;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -114,6 +134,11 @@
         height: 6vh;
         top: 1.75vw;
         right: 1.75vw;
+    }
+
+    .coffee:hover {
+        position: relative;
+        bottom: 0.3vw;
     }
 
 }

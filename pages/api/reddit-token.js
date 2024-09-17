@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 const REDDIT_TOKEN_URL = "https://www.reddit.com/api/v1/access_token";
 
 const getAppAccessToken = async () => {
@@ -24,13 +26,24 @@ const getAppAccessToken = async () => {
   }
 };
 
-export default async function handler(req, res) {
+export default async function handler(req) {
   if (req.method === 'GET') {
     try {
       const accessToken = await getAppAccessToken();
-      res.status(200).json({ accessToken });
+      return new Response(JSON.stringify({ accessToken }), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     } catch (error) {
-      res.status(500).json({ error: 'Failed to get access token' });
+      console.error("Error:", error);
+      return new Response(JSON.stringify({ error: "Failed to get access token." }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     }
   } else {
     res.setHeader('Allow', ['GET']);
