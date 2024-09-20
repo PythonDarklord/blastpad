@@ -13,12 +13,6 @@ const updateSettings = (e, settings, setSettings, checked) => {
     setSettings(updatedSettings);
 };
 
-const defaultSettings = (settings, setSettings) => {
-    const defaultSettings = defaultSettings;
-    setSettings(defaultSettings);
-}
-
-
 export default function SettingsMenu({closeMethod, setSettings, settings}) {
 
     let checked = settings.draggableTiles;
@@ -73,7 +67,7 @@ export default function SettingsMenu({closeMethod, setSettings, settings}) {
                 </div>
 
                 <div>
-                    <button onClick={() => defaultSettings(settings, setSettings)}> Reset to
+                    <button onClick={() => setSettings(defaultSettings)}> Reset to
                         Default
                     </button>
                 </div>

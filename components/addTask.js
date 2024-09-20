@@ -34,7 +34,7 @@ export default function AddTask({ closeMethod, addMethod }) {
             </select>
           </div>
           <div>
-            <button>Add</button>
+            <input type="submit" value="Add Task"></input>
           </div>
         </form>
     </div>
