@@ -77,6 +77,10 @@
     border: 1px solid black;
 }
 
+.table, .table th, .table td {
+    border-collapse: collapse;
+}
+
 .scrollBox {
     margin-left: auto;
     margin-right: auto;
