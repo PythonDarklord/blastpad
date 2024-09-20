@@ -6,6 +6,7 @@ import GamesMenu from "@/components/games";
 import TileLayout from "@/components/tileLayout";
 import SearchBar from "@/components/searchBar";
 import AppsMenu from "@/components/appsMenu"
+import defaultSettings from "@/public/defaultSettings.json";
 
 export default function Home() {
     const [settingsPopup, setSettingsPopup] = useState(false);
@@ -23,13 +24,7 @@ export default function Home() {
         if (storedSettings) {
             setSettings(storedSettings);
         } else {
-            setSettings({
-                'favoritesColor': '#75659c',
-                'emailsColor': '#BFACC8',
-                'notesColor': '#8b878f',
-                'todoColor': '#783F8E',
-                'draggableTiles': false
-            });
+            setSettings(defaultSettings);
         }
         setLoadedSettings(true)
     }, []);

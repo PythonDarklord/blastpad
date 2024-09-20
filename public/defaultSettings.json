@@ -1,0 +1,22 @@
+{
+  "favoritesColor": {
+    "value": "#75659c",
+    "type": "color"
+  },
+  "emailsColor": {
+    "value": "#BFACC8",
+    "type": "color"
+  },
+  "notesColor": {
+    "value": "#8b878f",
+    "type": "color"
+  },
+  "todoColor": {
+    "value": "#783F8E",
+    "type": "color"
+  },
+  "draggableTiles": {
+    "value": "on",
+    "type": "checkbox"
+  }
+}

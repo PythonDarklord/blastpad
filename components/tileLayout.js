@@ -70,24 +70,24 @@ const TileLayout = ({settings}) => {
       isResizable={true}
       compactType="vertical"
       preventCollision={false}
-      isDraggable={settings.draggableTiles}
+      isDraggable={settings.draggableTiles.value}
       resizeHandles={["se", 'sw']}
       onLayoutChange={(layout, layouts) => setLayouts(layouts)}
     >
       <div key='a' className={styles.draggable}>
-        <FavoritesPanel color={settings.favoritesColor}/>
+        <FavoritesPanel color={settings.favoritesColor.value}/>
       </div>
 
       <div key="b" className={styles.draggable}>
-        <EmailsPanel color={settings.emailsColor}/>
+        <EmailsPanel color={settings.emailsColor.value}/>
       </div>
 
       <div key="c" className={styles.draggable}>
-        <TaskPanel color={settings.todoColor}/>
+        <TaskPanel color={settings.todoColor.value}/>
       </div>
 
       <div key="d" className={styles.draggable}>
-        <NotesPanel color={settings.notesColor}/>
+        <NotesPanel color={settings.notesColor.value}/>
       </div>
     </ResponsiveGridLayout>}
   </>);
