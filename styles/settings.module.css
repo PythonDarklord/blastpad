@@ -1,0 +1,24 @@
+.settingsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.settingsForm input[type=color] {
+    width: 5ch;
+    height: 5ch;
+    border-radius: 6px;
+}
+
+.settingsFormItem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}

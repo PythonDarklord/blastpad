@@ -9,6 +9,29 @@ export default function TaskPanel({color}) {
   const [tasks, setTasks] = useState([]);
   const [loadedTasks, setLoadedTasks] = useState(false);
 
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      const parsedTasks = JSON.parse(storedTasks);
+      setTasks(parsedTasks);
+      console.log(tasks);
+    }
+    setLoadedTasks(true);
+  }, [])
+
+  useEffect(() => {
+    loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  const checkStatus = (e, name) => {
+    const status = e.target.checked;
+    const newTasks = tasks.map((item) =>
+        item.name === name ? {...item, status: status} : item,
+    );
+    setTasks(newTasks);
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
+  };
+
   const addTask = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -27,12 +50,40 @@ export default function TaskPanel({color}) {
       >
         <h2 className={styles.subheader}> To-Do </h2>
         <div className={styles.scrollBox}>
-          {tasks && (<TaskTable
-              tasks={tasks}
-              setTasks={setTasks}
-              setLoadedTasks={setLoadedTasks}
-              loadedTasks={loadedTasks}
-          />)}
+          <table id="tasksTable" className={styles.table}>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {tasks &&
+              (tasks.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.name}</td>
+                  <td>{item.priority}</td>
+                  <td>
+                    <input
+                      name="status"
+                      id="status"
+                      type="checkbox"
+                      onClick={(e) => checkStatus(e, item.name)}
+                      checked={item.status}
+                    />
+                  </td>
+                  <td>
+                    <button onClick={() => {
+                      const updatedTasks = tasks.filter(task => task.name !== item.name)
+                      setTasks(updatedTasks)
+                      localStorage.setItem("tasks", JSON.stringify(updatedTasks))
+                    }}>Remove</button>
+                  </td>
+                </tr>
+              )))}
+            </tbody>
+          </table>
         </div>
         <button
           className={styles.button}
@@ -44,68 +95,9 @@ export default function TaskPanel({color}) {
       {toDoPopup && (
         <AddTask
           closeMethod={() => setToDoPopup(false)}
-          addMethod={() => addTask}
+          addMethod={addTask}
         />
       )}
     </>
-  );
-}
-
-export function TaskTable({setTasks, tasks, setLoadedTasks, loadedTasks}) {
-
-  useEffect(() => {
-    const storedTasks = localStorage.getItem("tasks");
-    if (storedTasks) {
-      const parsedTasks = JSON.parse(storedTasks);
-      setTasks(parsedTasks);
-      console.log(tasks);
-    }
-    setLoadedTasks(true);
-  }, [])
-
-  useEffect(() => {
-    loadedTasks && localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
-  const checkStatus = (e, name, tasks, setTasks) => {
-    const status = e.target.checked;
-    const newTasks = tasks.map((item) =>
-        item.name === name ? {...item, status: status} : item,
-    );
-    setTasks(newTasks);
-    localStorage.setItem("tasks", JSON.stringify(newTasks));
-  };
-
-  return (
-    <table id="tasksTable" className={styles.table}>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Priority</th>
-        <th>Status</th>
-      </tr>
-      </thead>
-      <tbody>
-      {tasks &&
-        (tasks.map((item, index) => (
-          <tr key={index}>
-            <td>{item.name}</td>
-            <td>{item.priority}</td>
-            <td>
-              <input
-                name="status"
-                id="status"
-                type="checkbox"
-                onClick={(e) => checkStatus(e, item.name, tasks, setTasks)}
-                checked={item.status}
-              />
-            </td>
-            <td>
-              <button> Remove</button>
-            </td>
-          </tr>
-        )))}
-      </tbody>
-    </table>
   );
 }
