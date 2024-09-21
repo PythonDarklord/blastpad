@@ -17,7 +17,7 @@ const updateSettings = (e, settings, setSettings, checked) => {
 };
 
 export default function SettingsMenu({ closeMethod, setSettings, settings }) {
-  let checked = settings.draggableTiles;
+  let checked = settings.draggableTiles.value;
 
   return (
     <div className={styles.fullscreen}>
@@ -87,7 +87,7 @@ export default function SettingsMenu({ closeMethod, setSettings, settings }) {
             <label htmlFor="draggableTiles">Drag and Drop: </label>
             <label className={styles.switch}>
               <input
-                checked={settings.draggableTiles}
+                  checked={settings.draggableTiles.value}
                 type="checkbox"
                 id="draggableTiles"
                 name={"draggableTiles"}
@@ -98,12 +98,12 @@ export default function SettingsMenu({ closeMethod, setSettings, settings }) {
           </div>
         </form>
         <div>
-          <button onClick={() => setSettings(defaultSettings)} classname={styles.button}>
+          <button onClick={() => setSettings(defaultSettings)} className={styles.button}>
             Reset to Default
           </button>
         </div>
         <div>
-          <button onClick={() => localStorage.clear()} classname={styles.button}> Clear all Data</button>
+          <button onClick={() => localStorage.clear()} className={styles.button}> Clear all Data</button>
         </div>
       </div>
     </div>
