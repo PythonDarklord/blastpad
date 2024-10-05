@@ -7,6 +7,7 @@ import TileLayout from "@/components/tileLayout";
 import SearchBar from "@/components/searchBar";
 import AppsMenu from "@/components/appsMenu"
 import defaultSettings from "@/public/defaultSettings.json";
+import InboxViewer from "@/components/inboxViewer"
 
 export default function Home() {
     const [settingsPopup, setSettingsPopup] = useState(false);
@@ -14,6 +15,7 @@ export default function Home() {
     const [loadedSettings, setLoadedSettings] = useState(false);
     const [gamesPopup, setGamesPopup] = useState(false);
     const [appsPopup, setAppsPopup] = useState(false);
+    const [inboxPopup, setInboxPopup] = useState(false);
 
     useEffect(() => {
         document.getElementById("query").focus();
@@ -70,6 +72,12 @@ export default function Home() {
                     alt="Google Apps"
                 />
                 <img
+                    onClick={() => setInboxPopup(true)}
+                    src={"mail.svg"}
+                    className={styles.email}
+                    alt="Inbox Viewer"
+                />
+                <img
                     onClick={() => setGamesPopup(true)}
                     src={"games.png"}
                     className={styles.gamesButton}
@@ -104,6 +112,11 @@ export default function Home() {
                 {appsPopup && (
                     <AppsMenu
                         closeMethod={() => setAppsPopup(false)}
+                    />
+                )}
+                {inboxPopup && (
+                    <InboxViewer
+                        closeMethod={() => setInboxPopup(false)}
                     />
                 )}
             </main>
