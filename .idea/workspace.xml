@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="github search results api">
-      <change afterPath="$PROJECT_DIR$/pages/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/defaultSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/settings.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
+    <list default="true" id="474f5f09-db44-4301-a753-599e0b4c9a21" name="Changes" comment="button and slider style fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tileLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/tileLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <list id="0ff4a95e-60ad-4948-9fe3-2e15a94c182c" name="Changes by ocean" comment="Changes by ocean" />
     <list id="41ac3258-b4f9-4b6f-830a-8f6231cfc002" name="no commit" comment="" />
@@ -100,36 +94,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
-    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Python/Documents/GitHub/blastpad",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.test build.executor": "Run",
-    "settings.editor.selected.configurable": "editor.preferences.appearance",
-    "ts.external.directory.path": "C:\\Users\\ocean\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Python/Documents/GitHub/blastpad&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Python\Documents\GitHub\blastpad" />
@@ -174,8 +168,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="npm.test build" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.test build" />
     </list>
     <recent_temporary>
       <list>
@@ -186,7 +180,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
       </set>
     </attachedChunks>
   </component>
@@ -248,6 +242,27 @@
       <workItem from="1726149704118" duration="5000" />
       <workItem from="1726149716651" duration="843000" />
       <workItem from="1726545788139" duration="2662000" />
+      <workItem from="1726962725886" duration="1694000" />
+      <workItem from="1731205417688" duration="87000" />
+      <workItem from="1731205884141" duration="5000" />
+      <workItem from="1731205927909" duration="20000" />
+      <workItem from="1731206772332" duration="10000" />
+      <workItem from="1731206923257" duration="31000" />
+      <workItem from="1731207920517" duration="7000" />
+      <workItem from="1731208045516" duration="2000" />
+      <workItem from="1731208183629" duration="20000" />
+      <workItem from="1731208888256" duration="19000" />
+      <workItem from="1731210504301" duration="27000" />
+      <workItem from="1731210753833" duration="30000" />
+      <workItem from="1731210828171" duration="74000" />
+      <workItem from="1731210937636" duration="6000" />
+      <workItem from="1731212519874" duration="45000" />
+      <workItem from="1731212753605" duration="38000" />
+      <workItem from="1731212912221" duration="25000" />
+      <workItem from="1731213104141" duration="57000" />
+      <workItem from="1731213354812" duration="12000" />
+      <workItem from="1731213409741" duration="133000" />
+      <workItem from="1731254431190" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Color saving method">
       <option name="closed" value="true" />
@@ -545,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725987696199</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="button and slider style fix">
+      <option name="closed" value="true" />
+      <created>1726936573402</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1726936573402</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Colors fix" />
     <MESSAGE value="pass colors to tiles instead of entire settings json" />
     <MESSAGE value="remove ide files" />
     <MESSAGE value="Add white background to favicon.ico" />
@@ -603,7 +625,8 @@
     <MESSAGE value="ide files" />
     <MESSAGE value="open results from reddit with enter key" />
     <MESSAGE value="github search results api" />
-    <option name="LAST_COMMIT_MESSAGE" value="github search results api" />
+    <MESSAGE value="button and slider style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="button and slider style fix" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
