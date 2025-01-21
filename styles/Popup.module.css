@@ -29,6 +29,10 @@
     z-index: 220;
 }
 
+.popupTrigger {
+    height: 5vh;
+    transition-duration: 0.2s;
+}
 .googleApps {
     display: flex;
     align-items: center;

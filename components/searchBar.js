@@ -1,7 +1,7 @@
 import styles from "@/styles/search.module.css";
 import {useState} from "react";
 import Mods from "@/components/mods";
-import Results from "./results";
+import Results from "./results/results";
 
 const modOptions = {
   'r/': {

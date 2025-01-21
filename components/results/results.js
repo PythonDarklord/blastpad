@@ -2,8 +2,8 @@ import {useEffect, useState} from "react";
 import styles from "@/styles/results.module.css";
 import SpotifyResults from "./spotifyResults";
 import RedditResults from "./redditResults";
-import GithubSearchResults from "@/components/githubSearchResults";
-import GithubResults from "@/components/githubResults";
+import GithubSearchResults from "@/components/results/githubSearchResults";
+import GithubResults from "@/components/results/githubResults";
 
 async function searchSpotify(query, token) {
   const response = await fetch("/api/spotify-search", {
