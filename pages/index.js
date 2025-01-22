@@ -7,10 +7,9 @@ import TileLayout from "@/components/tileLayout";
 import SearchBar from "@/components/searchBar";
 import AppsPopup from "@/components/popups/appsPopup"
 import InboxPopup from "@/components/popups/inboxPopup"
-import {SettingsContext, useSettingsContext} from "@/components/settingsContext";
+import {SettingsContext} from "@/components/settingsContext";
 
 export default function Home() {
-  const {settings, setSettings} = useSettingsContext();
 
   useEffect(() => {
     document.getElementById("query").focus();
@@ -41,7 +40,7 @@ export default function Home() {
         <main className={styles.main}>
           <header className={styles.header}>
             <div className={styles.popupTriggerContainer}>
-              <SettingsPopup settings={settings} setSettings={setSettings}/>
+              <SettingsPopup/>
               <AppsPopup/>
             </div>
             <h1 className={styles.title}> BlastPad </h1>
@@ -52,7 +51,7 @@ export default function Home() {
           </header>
           <SearchBar/>
           <div className={styles.tileContainer}>
-            <TileLayout settings={settings}/>
+            <TileLayout/>
           </div>
           <a className={styles.coffee}
              href={"https://www.venmo.com/u/PythonDarklord"}>

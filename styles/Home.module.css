@@ -43,10 +43,7 @@
     padding: 0 50px;
 }
 
-.popupTrigger {
-    height: 5vh;
-    transition-duration: 0.2s;
-}
+
 
 .title {
     text-align: center;
@@ -63,23 +60,6 @@
 }
 
 @media (pointer: fine) {
-
-    .settingsCog:hover {
-        cursor: pointer;
-        height: 6vh;
-        top: 1.75vw;
-        left: 1.75vw;
-        transform: rotate(90deg);
-    }
-
-    .gamesButton:hover {
-        cursor: pointer;
-        height: 6vh;
-        top: 1.75vw;
-        right: 1.75vw;
-    }
-
-
     .coffee:hover {
         position: relative;
         bottom: 0.3vw;
@@ -88,72 +68,12 @@
 }
 
 @media (max-width: 768px) {
-    .settingsCog, .apps {
-        height: 35px;
-    }
-    .settingsCog {
-        left: 4vw;
-        top: 3.5vh;
-    }
-    .apps {
-        left: auto;
-        right: 4vw;
-        top: 3.5vh;
-    }
 
-    .email {
-        left: auto;
-        right: 10vw;
-        top: 3.5vh;
-    }
     .title {
         font-size: 48px;
     }
     .tileContainer {
         width: 100%;
-    }
-    .gamesButton {
-        display: none;
-    }
-
-    @media (pointer: fine) {
-        .apps:hover {
-            cursor: pointer;
-            height: 6vh;
-            top: 2.75vw;
-            right: 2.75vw;
-        }
-
-        .settingsCog:hover {
-            cursor: pointer;
-            height: 6vh;
-            top: 2.75vw;
-            left: 2.75vw;
-        }
-
-        .email:hover {
-            cursor: pointer;
-            height: 6vh;
-            top: 2.75vw;
-            right: 9.75vw;
-        }
-    }
-
-}
-
-@media (min-width: 769px) {
-    .apps:hover {
-        cursor: pointer;
-        height: 6vh;
-        top: 1.75vw;
-        left: 6.75vw;
-    }
-
-    .email:hover {
-        cursor: pointer;
-        height: 6vh;
-        top: 1.75vw;
-        right: 7.75vw;
     }
 }
 

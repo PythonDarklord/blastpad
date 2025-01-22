@@ -1,25 +1,22 @@
 import styles from "@/styles/Popup.module.css";
 import defaultSettings from "@/public/defaultSettings.json";
 import {useState} from "react";
+import {useSettingsContext} from "@/components/settingsContext";
 
-const updateSettings = (e, settings, setSettings, checked) => {
+const updateSettings = (e, settings, setSettings) => {
   const id = e.target.id;
-  let value = e.target.value;
-  if (id === "draggableTiles") {
-    value = checked;
-  }
   setSettings((prevSettings) => ({
     ...prevSettings,
     [id]: {
       ...prevSettings[id],
-      value: value,
+      value: e.target.type === "checkbox" ? e.target.checked : e.target.value,
     },
   }));
 };
 
-export default function SettingsPopup({setSettings, settings}) {
+export default function SettingsPopup() {
+  const {settings, setSettings} = useSettingsContext();
   const [settingsOpen, setSettingsOpen] = useState(false);
-  //let checked = settings.draggableTiles.value;
 
   return (
     <>
@@ -49,7 +46,7 @@ export default function SettingsPopup({setSettings, settings}) {
           </button>
           <form
             className={styles.form}
-            onChange={(e) => updateSettings(e, settings, setSettings, checked)}
+            onChange={(e) => updateSettings(e, settings, setSettings)}
           >
             <h2>Settings</h2>
             <div>
@@ -100,7 +97,6 @@ export default function SettingsPopup({setSettings, settings}) {
                   type="checkbox"
                   id="draggableTiles"
                   name={"draggableTiles"}
-                  onClick={() => (checked = !checked)}
                 />
                 <span className={styles.slider}></span>
               </label>

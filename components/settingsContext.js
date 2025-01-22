@@ -15,7 +15,6 @@ const SettingsContext = ({children}) => {
       setSettings(defaultSettings);
     }
     setLoadedSettings(true)
-    console.log(settings);
   }, []);
 
 
