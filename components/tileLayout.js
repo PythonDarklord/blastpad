@@ -7,11 +7,14 @@ import EmailsPanel from "@/components/panels/emailsPanel";
 import TaskPanel from "@/components/panels/taskPanel";
 import NotesPanel from "@/components/panels/notesPanel";
 import styles from '@/styles/grid.module.css';
+import {useSettingsContext} from "@/components/settingsContext";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-const TileLayout = ({settings}) => {
+const TileLayout = () => {
 
+  const {settings} = useSettingsContext();
+  
   const defaultLayouts = {
     lg: [{i: "a", x: 0, y: 0, w: 2, h: 1}, {i: "b", x: 2, y: 0, w: 3, h: 1}, {i: "c", x: 0, y: 1, w: 3, h: 1}, {
       i: "d",
